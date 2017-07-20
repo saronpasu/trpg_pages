@@ -33,7 +33,7 @@
                     windowArgs += 'chrome=yes';
                     var mar = window.open(null, '_mar', windowArgs).document;
 
-                    mar.title = '🐰 マジヒロ茶パレメーカー ver.1.02 🐰';
+                    mar.title = '🐰 マジヒロ茶パレメーカー ver.1.03 🐰';
                     var msgInfo = document.createElement('div');
                     msgInfo.innerText = 'テキストエリアに生成された茶パレが入ります。コピペで保存してくださいませ';
                     mar.body.appendChild(msgInfo);
@@ -80,7 +80,13 @@
 
                     function getByIdSelected(obj, id) {
                         var select = obj.getElementById(id);
-                        return select.options[ select.selectedIndex ].value;
+                        var result = null;
+                        result = select.options[ select.selectedIndex ].value;
+                        if(result == null) {
+                            return '';
+                        } else {
+                            return result;
+                        }
                     };
 
                     function getSkillById(id) {
@@ -253,7 +259,7 @@
                     out += '　ここから下は特技\n\n';
                     out += getSkillById('skills.0');
                     var start_count = 1;
-                    var max_skill_count = 21;
+                    var max_skill_count = 81;
                     for(var i = 1; i < max_skill_count; i++) {
                         var skill_id = 'skills.'+('000'+i).slice(-3);
                         if(source.getElementById(skill_id) != null) {
@@ -265,7 +271,7 @@
                     out += '// ============================= \n';
                     out += '　ここから下はアイテム及びハイドアウト\n\n';
                     out += getItemById('items.0');
-                    var max_item_count = 21;
+                    var max_item_count = 41;
                     for(var i = 1; i < max_item_count; i++) {
                         var item_id = 'items.'+('000'+i).slice(-3);
                         if(source.getElementById(item_id) != null) {
@@ -292,7 +298,7 @@
         <div>バージョンと機能とか
             <li>version.1.0　とりあえずできた</li>
             <li>version.1.01　不具合修正</li>
-            <li>version.1.02　要望対応</li>
+            <li>version.1.03　要望対応</li>
         </div>
         <div>アプデ方法、アンインストール方法
             <li>ブックマークバーから削除して登録しなおすだけ</li>
