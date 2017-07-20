@@ -136,7 +136,9 @@
                     out += '　ヒーローフォース\n';
                     out += 'ヒーローフォース1='+getById(source, 'specials.0.name')+':'+ getById(source, 'specials.0.effect') +'\n';
                     out += 'ヒーローフォース2='+getById(source, 'specials.001.name')+':'+ getById(source, 'specials.001.effect') +'\n';
-                    out += 'ヒーローフォース3='+getById(source, 'specials.002.name')+':'+ getById(source, 'specials.002.effect') +'\n';
+                    if(source.getElementById('specials.002') != null) {
+                        out += 'ヒーローフォース3='+getById(source, 'specials.002.name')+'='+ getById(source, 'specials.002.effect') +'\n';
+                    }
                     if(source.getElementById('specials.003') != null) {
                         out += 'ヒーローフォース3='+getById(source, 'specials.003.name')+'='+ getById(source, 'specials.003.effect') +'\n';
                     }
@@ -189,10 +191,15 @@
                     out += '//ヒーローフォース=';
                     out += '['+ getById(source, 'specials.0.name')+'|';
                     out += getById(source, 'specials.001.name')+'|';
-                    out += getById(source, 'specials.002.name')+']\n';
+                    if(source.getElementById('specials.002') != null) {
+                        out += getById(source, 'specials.002.name');
+                    }
+                    out += ']\n';
                     out += '//'+ getById(source, 'specials.0.name')+'='+ getById(source, 'specials.0.effect') +'\n';
                     out += '//'+ getById(source, 'specials.001.name')+'='+ getById(source, 'specials.001.effect') +'\n';
-                    out += '//'+ getById(source, 'specials.002.name')+'='+ getById(source, 'specials.002.effect') +'\n';
+                    if(source.getElementById('specials.002') != null) {
+                        out += '//'+ getById(source, 'specials.002.name')+'='+ getById(source, 'specials.002.effect') +'\n';
+                    }
                     if(source.getElementById('specials.003') != null) {
                         out += '//'+ getById(source, 'specials.003.name')+'='+ getById(source, 'specials.003.effect') +'\n';
                     }
