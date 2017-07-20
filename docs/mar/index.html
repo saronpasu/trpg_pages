@@ -33,7 +33,7 @@
                     windowArgs += 'chrome=yes';
                     var mar = window.open(null, '_mar', windowArgs).document;
 
-                    mar.title = '🐰 マジヒロ茶パレメーカー ver.1.03 🐰';
+                    mar.title = '🐰 マジヒロ茶パレメーカー ver.1.04 🐰';
                     var msgInfo = document.createElement('div');
                     msgInfo.innerText = 'テキストエリアに生成された茶パレが入ります。コピペで保存してくださいませ';
                     mar.body.appendChild(msgInfo);
@@ -75,12 +75,20 @@
                     /* ここからメイン処理 */
                     /* 汎用関数 */
                     function getById(obj, id) {
-                        return obj.getElementById(id).value;
+                        var elem = obj.getElementById(id);
+                        if(elem != null) {
+                            return elem.value;
+                        } else {
+                            return '';
+                        }
                     };
 
                     function getByIdSelected(obj, id) {
                         var select = obj.getElementById(id);
                         var result = null;
+                        if(select == null) {
+                            return '';
+                        }
                         result = select.options[ select.selectedIndex ].value;
                         if(result == null) {
                             return '';
@@ -140,8 +148,13 @@
                     out += 'キャラクター名:{キャラクター名}\\nヒーロー名:{ヒーロー名}\\n　性別:{性別}　年齢:{年齢}　変身前の姿:{変身前の姿}\\n　クラス:{クラス構成}　ヒーローフォース:{ヒーローフォース}\n';
                     out += '\n';
                     out += '　ヒーローフォース\n';
+                    if(source.getElementById('specials.0') != null) {
+                        out += 'ヒーローフォース1='+getById(source, 'specials.0.name')+':'+ getById(source, 'specials.0.effect') +'\n';
+                    }
                     out += 'ヒーローフォース1='+getById(source, 'specials.0.name')+':'+ getById(source, 'specials.0.effect') +'\n';
-                    out += 'ヒーローフォース2='+getById(source, 'specials.001.name')+':'+ getById(source, 'specials.001.effect') +'\n';
+                    if(source.getElementById('specials.001') != null) {
+                        out += 'ヒーローフォース2='+getById(source, 'specials.001.name')+':'+ getById(source, 'specials.001.effect') +'\n';
+                    }
                     if(source.getElementById('specials.002') != null) {
                         out += 'ヒーローフォース3='+getById(source, 'specials.002.name')+'='+ getById(source, 'specials.002.effect') +'\n';
                     }
@@ -195,8 +208,12 @@
                         out += getById(source, 'classes.002.level') +'\n';
                     }
                     out += '//ヒーローフォース=';
-                    out += '['+ getById(source, 'specials.0.name')+'|';
-                    out += getById(source, 'specials.001.name')+'|';
+                    if(source.getElementById('specials.0') != null) {
+                        out += '['+ getById(source, 'specials.0.name')+'|';
+                    }
+                    if(source.getElementById('specials.001') != null) {
+                        out += getById(source, 'specials.001.name')+'|';
+                    }
                     if(source.getElementById('specials.002') != null) {
                         out += getById(source, 'specials.002.name');
                     }
@@ -299,6 +316,7 @@
             <li>version.1.0　とりあえずできた</li>
             <li>version.1.01　不具合修正</li>
             <li>version.1.03　要望対応</li>
+            <li>version.1.04　不具合修正</li>
         </div>
         <div>アプデ方法、アンインストール方法
             <li>ブックマークバーから削除して登録しなおすだけ</li>
