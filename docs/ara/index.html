@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>アリアン2Eキャラシサイトからユナドリウムのコマを作るやつ</title>
+    </head>
+    <body>
+        <div><a href="https://charasheet.vampire-blood.net/ara2_pc_making.html">アリアン2Eキャラシサイト</a>からユナドリウムのコマをツクールくん</div>
+        <div>使い方
+            <li>1.「<a href="javascript:(function(){
+
+                    var scr1 = document.createElement('script');
+                    scr1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js';
+                    document.body.appendChild(scr1);
+                    var scr2 = document.createElement('script');
+                    scr2.src = 'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js';
+                    document.body.appendChild(scr2);
+
+                    var source = window.document;
+                    var sourceURL = window.document.location;
+                    var validPattern = /^http(s)?:\/\/charasheet\.vampire-blood\.net\//;
+                    if(validPattern.test(sourceURL) == false) {
+                        return;
+                    }
+
+                    /* ここからメイン処理 */
+                    /* 汎用関数 */
+                    function getByName(obj, name) {
+                        var elem = obj.getElementsByName(name)[0];
+                        if(elem != null) {
+                            return  elem.value;
+                        } else {
+                            return '';
+                        }
+                    }
+
+                    function getByNameSelected(obj, name) {
+                        var select = obj.getElementsByName(name)[0];
+                        var result = null;
+                        if(select == null) {
+                            return '';
+                        }
+                        result = select.options[ select.selectedIndex ].value;
+                        if(result == null) {
+                            return '';
+                        } else {
+                            return result;
+                        }
+                    };
+
+                    function getById(obj, id) {
+                        var elem = obj.getElementById(id);
+                        if(elem != null) {
+                            return elem.value;
+                        } else {
+                            return '';
+                        }
+                    };
+
+                    function nonZeroAndEmpty(obj, name) {
+                        var value = getByName(obj, name);
+                        return (value != '' && value != '0');
+                    }
+
+                    /* データを取得したりとかする部分 */
+
+                    /* キャラ名を先に取得 */
+                    char_name = getByName(source, 'pc_name');
+
+                    /* Begin: 共通の雛形を生成 */
+                    xml = document.createElement('character');
+                    xml.setAttribute('location.x', '0');
+                    xml.setAttribute('location.y', '0');
+                    xml.setAttribute('posZ', '0');
+
+                    char = document.createElement('data');
+                    char.setAttribute('name', 'character');
+
+                    img = document.createElement('data');
+                    img.setAttribute('name', 'image');
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'image');
+                    elem.setAttribute('name', 'imageIdentifier');
+                    elem.innerText = 'null';
+                    img.appendChild(elem);
+                    char.appendChild(img);
+
+                    common = document.createElement('data');
+                    common.setAttribute('name', 'common');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'name');
+                    elem.innerText = getByName(source, 'pc_name');
+                    common.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'size');
+                    elem.innerText = '1';
+                    common.appendChild(elem);
+                    char.appendChild(common);
+
+                    detail = document.createElement('data');
+                    detail.setAttribute('name', 'detail');
+                    /* End: 共通の雛形を生成 */
+
+                    /* Begin: 共通のリソースを取得 */
+                    resource = document.createElement('data');
+                    resource.setAttribute('name', 'リソース');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'HP');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', getByName(source, 'NP8'));
+                    elem.innerText = getByName(source, 'NP8');
+                    resource.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'MP');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', getByName(source, 'NP9'));
+                    elem.innerText = getByName(source, 'NP9');
+                    resource.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'フェイト');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', getByNameSelected(source, 'SL_fate'));
+                    elem.innerText = getByNameSelected(source, 'SL_fate');
+                    resource.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '行動値');
+                    elem.innerText = getByName(source, 'BSUM6');
+                    resource.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '移動力');
+                    elem.innerText = getByName(source, 'BSUM7');
+                    resource.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '物防');
+                    elem.innerText = getByName(source, 'BSUM4');
+                    resource.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '魔防');
+                    elem.innerText = getByName(source, 'BSUM5');
+                    resource.appendChild(elem);
+                    /* End: 共通のリソースを取得 */
+
+                    /* Begin: 能力値の取得 */
+                    power = document.createElement('data');
+                    power.setAttribute('name', '能力値');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '筋力');
+                    elem.innerText = getByName(source, 'NP1');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '器用');
+                    elem.innerText = getByName(source, 'NP2');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '敏捷');
+                    elem.innerText = getByName(source, 'NP3');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '知力');
+                    elem.innerText = getByName(source, 'NP4');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '感知');
+                    elem.innerText = getByName(source, 'NP5');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '精神');
+                    elem.innerText = getByName(source, 'NP6');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '幸運');
+                    elem.innerText = getByName(source, 'NP7');
+                    power.appendChild(elem);
+                    /* End: 能力値の取得 */
+
+                    /* Begin: 判定値の取得 */
+                    roll_param = document.createElement('data');
+                    roll_param.setAttribute('name', '判定値');
+                    r_hit = document.createElement('data');
+                    r_hit.setAttribute('name', '命中');
+                    r_hit_right = document.createElement('data');
+                    r_hit_right.setAttribute('name', '右手');
+                    r_hit_right.innerText = `${getByName(source, 'dice_meichu')}D6+${getByName(source, 'BSUM1R')}`;
+                    r_hit.appendChild(r_hit_right);
+                    r_hit_left = document.createElement('data');
+                    r_hit_left.setAttribute('name', '左手');
+                    r_hit_left.innerText = `${getByName(source, 'dice_meichu')}D6+${getByName(source, 'BSUM1L')}`;
+                    r_hit.appendChild(r_hit_left);
+                    r_attack = document.createElement('data');
+                    r_attack.setAttribute('name', '攻撃');
+                    r_attack_right = document.createElement('data');
+                    r_attack_right.setAttribute('name', '右手');
+                    r_attack_right.innerText = `${getByName(source, 'dice_attack')}D6+${getByName(source, 'BSUM2R')}`;
+                    r_attack.appendChild(r_attack_right);
+                    r_attack_left = document.createElement('data');
+                    r_attack_left.setAttribute('name', '右手');
+                    r_attack_left.innerText = `${getByName(source, 'dice_attack')}D6+${getByName(source, 'BSUM2R')}`;
+                    r_attack.appendChild(r_attack_left);
+                    r_avoid = document.createElement('data');
+                    r_avoid.setAttribute('name', '回避');
+                    r_avoid.innerText = `${getByName(source, 'dice_kaihi')}D6+${getByName(source, 'BSUM3')}`;
+                    r_magick = null;
+                    if(nonZeroAndEmpty(source, 'dice_majutu')) {
+                        r_magick = document.createElement('data');
+                        r_magick.setAttribute('name', '魔術');
+                        r_magick.innerText = `${getByName(source, 'dice_majutu')}D6+${getByName(source, 'THG6')}`;
+                    }
+                    r_alchemy = null;
+                    if(nonZeroAndEmpty(source, 'dice_renkin')) {
+                        r_alchemy = document.createElement('data');
+                        r_alchemy.setAttribute('name', '練金');
+                        r_alchemy.innerText = `${getByName(source, 'dice_renkin')}D6+${getByName(source, 'THG8')}`;
+                    }
+                    r_song = null;
+                    if(nonZeroAndEmpty(source, 'dice_juka')) {
+                        r_song = document.createElement('data');
+                        r_song.setAttribute('name', '呪歌');
+                        r_song.innerText = `${getByName(source, 'dice_juka')}D6+${getByName(source, 'THG7')}`;
+                    }
+                    r_searchtrap = document.createElement('data');
+                    r_searchtrap.setAttribute('name', 'トラップ探知');
+                    r_searchtrap.innerText = `${getByName(source, 'dice_wanatanti')}D6+${getByName(source, 'THG1')}`;
+                    r_removetrap = document.createElement('data');
+                    r_removetrap.setAttribute('name', 'トラップ解除');
+                    r_removetrap.innerText = `${getByName(source, 'dice_wanakaijo')}D6+${getByName(source, 'THG2')}`;
+                    r_hazardsence = document.createElement('data');
+                    r_hazardsence.setAttribute('name', '危険感知');
+                    r_hazardsence.innerText = `${getByName(source, 'dice_kanti')}D6+${getByName(source, 'THG3')}`;
+                    r_enemyidentification = document.createElement('data');
+                    r_enemyidentification.setAttribute('name', 'エネミー識別');
+                    r_enemyidentification.innerText = `${getByName(source, 'dice_sikibetu')}D6+${getByName(source, 'THG4')}`;
+                    r_itemidentification = document.createElement('data');
+                    r_itemidentification.setAttribute('name', 'アイテム鑑定');
+                    r_itemidentification.innerText = `${getByName(source, 'dice_kantei')}D6+${getByName(source, 'THG5')}`;
+                    /* 取得した判定値を順番に設定 */
+                    roll_param.appendChild(r_hit);
+                    roll_param.appendChild(r_avoid);
+                    if(r_magick) {
+                        roll_param.appendChild(r_magick);
+                    }
+                    if(r_alchemy) {
+                        roll_param.appendChild(r_alchemy);
+                    }
+                    if(r_song) {
+                        roll_param.appendChild(r_song);
+                    }
+                    roll_param.appendChild(r_searchtrap);
+                    roll_param.appendChild(r_removetrap);
+                    roll_param.appendChild(r_hazardsence);
+                    roll_param.appendChild(r_enemyidentification);
+                    roll_param.appendChild(r_itemidentification);
+
+                    /* End: 判定値の取得 */
+
+                    /* Begin: 装備の取得 */
+                    equipment = document.createElement('data');
+                    equipment.setAttribute('name', '装備');
+                    weapon = document.createElement('data');
+                    weapon.setAttribute('name', '武器');
+
+                    if(getByName(source, 'IR_name') != '') {
+                        r_hand = document.createElement('data');
+                        r_hand.setAttribute('name', getById(source, 'IR_name'));
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', 'データ');
+                        elem.setAttribute('type', 'note');
+                        txt = '';
+                        txt += (nonZeroAndEmpty(source, 'BIR1') ? `命中[${getByName(source, 'BIR1')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIR2') ? `攻撃[${getByName(source, 'BIR2')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIR3') ? `回避[${getByName(source, 'BIR3')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIR4') ? `物防[${getByName(source, 'BIR4')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIR5') ? `魔防[${getByName(source, 'BIR5')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIR6') ? `行動[${getByName(source, 'BIR6')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIR7') ? `移動[${getByName(source, 'BIR7')}]` : '');
+                        txt += (getByName(source, 'BIR8') != '' ? `射程[${getByName(source, 'BIR8')}]` : '');
+                        txt += (getByName(source, 'BIR9') != '' ? `種別[${getByName(source, 'BIR9')}]` : '');
+                        txt += (getByName(source, 'BIR10') != '' ? `Lv[${getByName(source, 'BIR10')}]` : '');
+                        txt += (getByName(source, 'IR_weight') != '' ? `重量[${getByName(source, 'IR_weight')}]` : '');
+                        txt += (getByName(source, 'IR_price') != '' ? `価格[${getByName(source, 'IR_price')}]` : '');
+                        elem.innerText = txt;
+                        r_hand.appendChild(elem);
+                        weapon.appendChild(r_hand);
+                    }
+                    if(getByName(source, 'IL_name') != '') {
+                        l_hand = document.createElement('data');
+                        l_hand.setAttribute('name', getById(source, 'IL_name'));
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', 'データ');
+                        elem.setAttribute('type', 'note');
+                        txt = '';
+                        txt += (nonZeroAndEmpty(source, 'BIL1') ? `命中[${getByName(source, 'BIL1')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIL2') ? `攻撃[${getByName(source, 'BIL2')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIL3') ? `回避[${getByName(source, 'BIL3')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIL4') ? `物防[${getByName(source, 'BIL4')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIL5') ? `魔防[${getByName(source, 'BIL5')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIL6') ? `行動[${getByName(source, 'BIL6')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIL7') ? `移動[${getByName(source, 'BIL7')}]` : '');
+                        txt += (getByName(source, 'BIL8') != '' ? `射程[${getByName(source, 'BIL8')}]` : '');
+                        txt += (getByName(source, 'BIL9') != '' ? `種別[${getByName(source, 'BIL9')}]` : '');
+                        txt += (getByName(source, 'BIL10') != '' ? `Lv[${getByName(source, 'BIL10')}]` : '');
+                        txt += (getByName(source, 'IL_weight') != '' ? `重量[${getByName(source, 'IL_weight')}]` : '');
+                        txt += (getByName(source, 'IL_price') != '' ? `価格[${getByName(source, 'IL_price')}]` : '');
+                        elem.innerText = txt;
+                        l_hand.appendChild(elem);
+                        weapon.appendChild(l_hand);
+                    }
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '重量');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', getByName(source, 'weight_arms_sum'));
+                    elem.innerText = getByName(source, 'weight_arms_max');
+                    weapon.appendChild(elem);
+
+                    armor = document.createElement('data');
+                    armor.setAttribute('name', '防具等');
+                    if(getByName(source, 'IH_name') != '') {
+                        ar_head = document.createElement('data');
+                        ar_head.setAttribute('name', getByName(source, 'IH_name'));
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', 'データ');
+                        elem.setAttribute('type', 'note');
+                        txt = '';
+                        txt += (nonZeroAndEmpty(source, 'BIH1') ? `命中[${getByName(source, 'BIH1')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIH2') ? `攻撃[${getByName(source, 'BIH2')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIH3') ? `回避[${getByName(source, 'BIH3')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIH4') ? `物防[${getByName(source, 'BIH4')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIH5') ? `魔防[${getByName(source, 'BIH5')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIH6') ? `行動[${getByName(source, 'BIH6')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIH7') ? `移動[${getByName(source, 'BIH7')}]` : '');
+                        txt += (getByName(source, 'BIH8') != '' ? `射程[${getByName(source, 'BIH8')}]` : '');
+                        txt += (getByName(source, 'BIH9') != '' ? `種別[${getByName(source, 'BIH9')}]` : '');
+                        txt += (getByName(source, 'BIH10') != '' ? `Lv[${getByName(source, 'BIH10')}]` : '');
+                        txt += (getByName(source, 'IH_weight') != '' ? `重量[${getByName(source, 'IH_weight')}]` : '');
+                        txt += (getByName(source, 'IH_price') != '' ? `価格[${getByName(source, 'IH_price')}]` : '');
+                        elem.innerText = txt;
+                        ar_head.appendChild(elem);
+                        armor.appendChild(ar_head);
+                    }
+
+                    if(getByName(source, 'IB_name') != '') {
+                        ar_body = document.createElement('data');
+                        ar_body.setAttribute('name', getByName(source, 'IB_name'));
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', 'データ');
+                        elem.setAttribute('type', 'note');
+                        txt = '';
+                        txt += (nonZeroAndEmpty(source, 'BIB1') ? `命中[${getByName(source, 'BIB1')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIB2') ? `攻撃[${getByName(source, 'BIB2')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIB3') ? `回避[${getByName(source, 'BIB3')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIB4') ? `物防[${getByName(source, 'BIB4')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIB5') ? `魔防[${getByName(source, 'BIB5')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIB6') ? `行動[${getByName(source, 'BIB6')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIB7') ? `移動[${getByName(source, 'BIB7')}]` : '');
+                        txt += (getByName(source, 'BIB8') != '' ? `射程[${getByName(source, 'BIB8')}]` : '');
+                        txt += (getByName(source, 'BIB9') != '' ? `種別[${getByName(source, 'BIB9')}]` : '');
+                        txt += (getByName(source, 'BIB10') != '' ? `Lv[${getByName(source, 'BIB10')}]` : '');
+                        txt += (getByName(source, 'IB_weight') != '' ? `重量[${getByName(source, 'IB_weight')}]` : '');
+                        txt += (getByName(source, 'IB_price') != '' ? `価格[${getByName(source, 'IB_price')}]` : '');
+                        elem.innerText = txt;
+                        ar_body.appendChild(elem);
+                        armor.appendChild(ar_body);
+                    }
+
+                    if(getByName(source, 'IS_name') != '') {
+                        ar_support = document.createElement('data');
+                        ar_support.setAttribute('name', getByName(source, 'IS_name'));
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', 'データ');
+                        elem.setAttribute('type', 'note');
+                        txt = '';
+                        txt += (nonZeroAndEmpty(source, 'BIS1') ? `命中[${getByName(source, 'BIS1')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIS2') ? `攻撃[${getByName(source, 'BIS2')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIS3') ? `回避[${getByName(source, 'BIS3')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIS4') ? `物防[${getByName(source, 'BIS4')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIS5') ? `魔防[${getByName(source, 'BIS5')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIS6') ? `行動[${getByName(source, 'BIS6')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIS7') ? `移動[${getByName(source, 'BIS7')}]` : '');
+                        txt += (getByName(source, 'BIS8') != '' ? `射程[${getByName(source, 'BIS8')}]` : '');
+                        txt += (getByName(source, 'BIS9') != '' ? `種別[${getByName(source, 'BIS9')}]` : '');
+                        txt += (getByName(source, 'BIS10') != '' ? `Lv[${getByName(source, 'BIS10')}]` : '');
+                        txt += (getByName(source, 'IS_weight') != '' ? `重量[${getByName(source, 'IS_weight')}]` : '');
+                        txt += (getByName(source, 'IS_price') != '' ? `価格[${getByName(source, 'IS_price')}]` : '');
+                        elem.innerText = txt;
+                        ar_support.appendChild(elem);
+                        armor.appendChild(ar_support);
+                    }
+
+                    if(getByName(source, 'IA_name') != '') {
+                        ar_accessory = document.createElement('data');
+                        ar_accessory.setAttribute('name', getByName(source, 'IA_name'));
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', 'データ');
+                        elem.setAttribute('type', 'note');
+                        txt = '';
+                        txt += (nonZeroAndEmpty(source, 'BIA1') ? `命中[${getByName(source, 'BIA1')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIA2') ? `攻撃[${getByName(source, 'BIA2')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIA3') ? `回避[${getByName(source, 'BIA3')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIA4') ? `物防[${getByName(source, 'BIA4')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIA5') ? `魔防[${getByName(source, 'BIA5')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIA6') ? `行動[${getByName(source, 'BIA6')}]` : '');
+                        txt += (nonZeroAndEmpty(source, 'BIA7') ? `移動[${getByName(source, 'BIA7')}]` : '');
+                        txt += (getByName(source, 'BIA8') != '' ? `射程[${getByName(source, 'BIA8')}]` : '');
+                        txt += (getByName(source, 'BIA9') != '' ? `種別[${getByName(source, 'BIA9')}]` : '');
+                        txt += (getByName(source, 'BIA10') != '' ? `Lv[${getByName(source, 'BIA10')}]` : '');
+                        txt += (getByName(source, 'IA_weight') != '' ? `重量[${getByName(source, 'IA_weight')}]` : '');
+                        txt += (getByName(source, 'IA_price') != '' ? `価格[${getByName(source, 'IA_price')}]` : '');
+                        elem.innerText = txt;
+                        ar_accessory.appendChild(elem);
+                        armor.appendChild(ar_accessory);
+                    }
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '重量');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', getByName(source, 'weight_body_sum'));
+                    elem.innerText = getByName(source, 'weight_body_max');
+                    armor.appendChild(elem);
+                    equipment.appendChild(weapon);
+                    equipment.appendChild(armor);
+                    /* End: 装備の取得 */
+
+                    /* Begin: 道具類の取得 */
+                    item_info = document.createElement('data');
+                    item_info.setAttribute('name', '所持品');
+                    source_items = document.evaluate('//*[@id=\'Table_item\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    for(var i=0; i < source_items.snapshotLength; i++) {
+                        item = source_items.snapshotItem(i);
+                        if(item.children[0].innerText == '名称') {
+
+                            continue;
+                        }
+                        if(item.children[0].innerText.match(/重量制限 修正/)) {
+
+                            break;
+                        }
+                        if(item.children[0].children[0].value == '') {
+
+                            continue;
+                        }
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', item.children[0].children[0].value);
+                        txt = '';
+                        txt += (item.children[1].children[0].value != '' ? `重量[${item.children[1].children[0].value}]` : '');
+                        txt += (item.children[2].children[0].value != '' ? `価格[${item.children[2].children[0].value}]` : '');
+                        txt += (item.children[3].children[0].value != '' ? `効果:${item.children[3].children[0].value}` : '');
+                        elem.innerText = txt;
+                        item_info.appendChild(elem);
+                    }
+
+                    item_weight = document.createElement('data');
+                    item_weight.setAttribute('name', '重量');
+                    item_weight.setAttribute('type', 'numberResource');
+                    item_weight.setAttribute('currentValue', getByName(source, 'weight_item_sum'));
+                    item_weight.innerText = getByName(source, 'weight_item_max');
+                    wallet = document.createElement('data');
+                    wallet.setAttribute('name', '所持金');
+                    wallet.innerText = getByName(source, 'money');
+                    deposit = document.createElement('data');
+                    deposit.setAttribute('name', '預金・借金');
+                    deposit.innerText = (getByName(source, 'dept') != '' ? getByName(source, 'dept') : '0');
+                    /* 道具類の情報を順番に設定 */
+                    item_info.appendChild(item_weight);
+                    item_info.appendChild(wallet);
+                    item_info.appendChild(deposit);
+
+                    /* End: 道具類の取得 */
+
+                    /* Begin: スキルの取得 */
+                    skill_info = document.createElement('data');
+                    skill_info.setAttribute('name', 'スキル');
+                    source_class_skills = document.evaluate('//*[@id=\'Table_skill\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+
+                    for(var i=0; i < source_class_skills.snapshotLength; i++) {
+                        skill = source_class_skills.snapshotItem(i);
+
+                        if(skill == null) {
+                            break;
+                        }
+
+                        if(skill.children[1].innerText == 'スキル') {
+                            continue;
+                        }
+
+                        if(skill.children[2].innerText == '★') {
+                            elem = document.createElement('data');
+                            elem.setAttribute('name', skill.children[1].children[1].value);
+                            txt = '';
+                            txt += 'SL[1]';
+                            txt += (skill.children[3].children[0].value != '' ? `タイミング[${skill.children[3].children[0].value}]` : '');
+                            txt += (skill.children[4].children[0].value != '' ? `判定[${skill.children[4].children[0].value}]` : '');
+                            txt += (skill.children[5].children[0].value != '' ? `対象[${skill.children[5].children[0].value}]` : '');
+                            txt += (skill.children[6].children[0].value != '' ? `射程[${skill.children[6].children[0].value}]` : '');
+                            txt += (skill.children[7].children[0].value != '' ? `コスト[${skill.children[7].children[0].value}]` : '');
+                            txt += (skill.children[8].children[0].value != '' ? `制限[${skill.children[8].children[0].value}]` : '');
+                            txt += (skill.children[9].children[0].value != '' ? `効果[${skill.children[9].children[0].value}]` : '');
+                            txt += '取得元[種族]';
+                            elem.innerText = txt;
+                            skill_info.appendChild(elem);
+                            continue;
+                        }
+                        if(skill.children[1].children[0].value != '') {
+                            elem = document.createElement('data');
+                            elem.setAttribute('name', skill.children[1].children[0].value);
+                            txt = '';
+                            txt += `SL[${skill.children[2].children[1].value}]`;
+                            txt += (skill.children[3].children[0].value != '' ? `タイミング[${skill.children[3].children[0].value}]` : '');
+                            txt += (skill.children[4].children[0].value != '' ? `判定[${skill.children[4].children[0].value}]` : '');
+                            txt += (skill.children[5].children[0].value != '' ? `対象[${skill.children[5].children[0].value}]` : '');
+                            txt += (skill.children[6].children[0].value != '' ? `射程[${skill.children[6].children[0].value}]` : '');
+                            txt += (skill.children[7].children[0].value != '' ? `コスト[${skill.children[7].children[0].value}]` : '');
+                            txt += (skill.children[8].children[0].value != '' ? `制限[${skill.children[8].children[0].value}]` : '');
+                            txt += (skill.children[9].children[0].value != '' ? `効果[${skill.children[9].children[0].value}]` : '');
+                            txt += (skill.children[10].children[0].value != '' ? `取得元[${skill.children[10].children[0].value}]` : '');
+                            elem.innerText = txt;
+                            skill_info.appendChild(elem);
+                            continue;
+                        }
+                        if(skill.children[1].children[0].value == '') {
+                            continue;
+                        }
+
+                    }
+
+                    source_basic_skills = document.evaluate('//*[@id=\'Table_ippanskill\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    for(var i=0; i < source_basic_skills.snapshotLength; i++) {
+                        skill = source_basic_skills.snapshotItem(i);
+
+                        if(skill == null) {
+                            break;
+                        }
+
+                        if(skill.children[1].innerText == '一般スキル') {
+                            continue;
+                        }
+
+                        if(skill.children[1].children[0].value != '') {
+                            elem = document.createElement('data');
+                            elem.setAttribute('name', skill.children[1].children[0].value);
+                            txt = '';
+                            txt += `SL[${skill.children[2].children[1].value}]`;
+                            txt += (skill.children[3].children[0].value != '' ? `タイミング[${skill.children[3].children[0].value}]` : '');
+                            txt += (skill.children[4].children[0].value != '' ? `判定[${skill.children[4].children[0].value}]` : '');
+                            txt += (skill.children[5].children[0].value != '' ? `対象[${skill.children[5].children[0].value}]` : '');
+                            txt += (skill.children[6].children[0].value != '' ? `射程[${skill.children[6].children[0].value}]` : '');
+                            txt += (skill.children[7].children[0].value != '' ? `コスト[${skill.children[7].children[0].value}]` : '');
+                            txt += (skill.children[8].children[0].value != '' ? `制限[${skill.children[8].children[0].value}]` : '');
+                            txt += (skill.children[9].children[0].value != '' ? `効果[${skill.children[9].children[0].value}]` : '');
+                            txt += (skill.children[10].children[0].value != '' ? `取得元[${skill.children[10].children[0].value}]` : '');
+                            elem.innerText = txt;
+                            skill_info.appendChild(elem);
+                            continue;
+                        }
+                        if(skill.children[1].children[0].value == '') {
+                            continue;
+                        }
+
+                    }
+
+                    /* End: スキルの取得 */
+
+                    /* Begin: キャラ情報の取得 */
+
+                    char_info = document.createElement('data');
+                    char_info.setAttribute('name', 'キャラクター情報');
+                    class_info = document.createElement('data');
+                    class_info.setAttribute('name', 'クラス');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'メイン');
+                    elem.innerText = getByNameSelected(source, 'SL_main_class');
+                    class_info.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'サポートクラス');
+                    elem.innerText = getByNameSelected(source, 'SL_support_class');
+                    class_info.appendChild(elem);
+                    char_level = document.createElement('data');
+                    char_level.setAttribute('name', 'キャラクターレベル');
+                    char_level.innerText = getByNameSelected(source, 'SL_level');
+                    race = document.createElement('data');
+                    race.setAttribute('name', '種族');
+                    race.innerText = getByName(source, 'shuzoku');
+                    gender = document.createElement('data');
+                    gender.setAttribute('name', '性別');
+                    gender.innerText = getByName(source, 'sex');
+                    age = document.createElement('data');
+                    age.setAttribute('name', '年齢');
+                    age.innerText = getByName(source, 'age');
+                    height = document.createElement('data');
+                    height.setAttribute('name', '身長');
+                    height.innerText = getByName(source, 'pc_height');
+                    weight = document.createElement('data');
+                    weight.setAttribute('name', '体重');
+                    weight.innerText = getByName(source, 'pc_weight');
+                    hair_color = document.createElement('data');
+                    hair_color.setAttribute('name', '髪の色');
+                    hair_color.innerText = getByName(source, 'color_hair');
+                    eye_color = document.createElement('data');
+                    eye_color.setAttribute('name', '瞳の色');
+                    eye_color.innerText = getByName(source, 'color_eye');
+                    /* キャラ情報を順番に設定 */
+                    char_info.appendChild(char_level);
+                    char_info.appendChild(class_info);
+                    char_info.appendChild(race);
+                    if(getByName(source, 'sex') != '') {
+                        char_info.appendChild(gender);
+                    }
+                    if(getByName(source, 'age') != '') {
+                        char_info.appendChild(age);
+                    }
+                    if(getByName(source, 'pc_height' != '')) {
+                        char_info.appendChild(height);
+                    }
+                    if(getByName(source, 'pc_weight') != '') {
+                        char_info.appendChild(weight);
+                    }
+                    if(getByName(source, 'color_hair') != '') {
+                        char_info.appendChild(hair_color);
+                    }
+                    if(getByName(source, 'color_eye') != '') {
+                        char_info.appendChild(eye_color);
+                    }
+
+                    /* End: キャラ情報の取得 */
+
+                    /* Begin: メモ欄の取得 */
+                    char_note = document.createElement('data');
+                    char_note.setAttribute('name', 'その他メモ');
+                    char_note.setAttribute('type', 'note');
+                    txt = getByName(source, 'pc_making_memo');
+                    char_note.innerText = txt;
+                    /* End: メモ欄の取得 */
+
+                    /* Begin: 順番にキャラデータに取得した情報を設定 */
+                    detail.appendChild(resource);
+                    detail.appendChild(char_info);
+                    detail.appendChild(power);
+                    detail.appendChild(roll_param);
+                    detail.appendChild(equipment);
+                    detail.appendChild(skill_info);
+                    detail.appendChild(item_info);
+                    detail.appendChild(char_note);
+                    char.appendChild(detail);
+                    /* End: 順番にキャラデータに取得した情報を設定 */
+
+                    cpd = document.createElement('chat-palette');
+
+                    /* Begin: チャットパレットの生成 */
+                    cpd.setAttribute('dicebot', 'Arianrhod');
+                    txt = '';
+                    txt += '{右手} 右手命中\n';
+                    txt += `${getByName(source, 'dice_attack')}D6+${getByName(source, 'BSUM2R')} 右手武器DR\n`;
+                    txt += '{左手} 左手命中\n';
+                    txt += `${getByName(source, 'dice_attack')}D6+${getByName(source, 'BSUM2L')} 左手武器DR\n`;
+                    if(r_magick) {
+                        txt += '{魔術} 魔術判定\n';
+                    }
+                    if(r_alchemy) {
+                        txt += '{練金} 練金判定\n';
+                    }
+                    if(r_song) {
+                        txt += '{呪歌} 呪歌判定\n';
+                    }
+                    txt += '{回避} 回避判定\n';
+                    txt += '\n';
+                    txt += '{トラップ探知} トラップ探知判定\n';
+                    txt += '{トラップ解除} トラップ解除判定\n';
+                    txt += '{危険感知} 危険感知判定\n';
+                    txt += '{エネミー識別} エネミー識別判定\n';
+                    txt += '{アイテム鑑定} アイテム鑑定判定\n';
+                    cpd.innerText = txt;
+                    /* End: チャットパレットの生成 */
+
+                    /* チャットパレットを設定 */
+
+                    /* 雛形にキャラデータとチャットパレットを設定 */
+                    xml.appendChild(char);
+                    xml.appendChild(cpd);
+
+                    s = new XMLSerializer();
+
+                    out = s.serializeToString(xml);
+                    out = out.replace(/xmlns=.http:\/\/www\.w3\.org\/1999\/xhtml../, '');
+                    out = out.replace(/<br \/>/g, '\n');
+                    out = out.replace(/currentvalue/g, 'currentValue');
+
+                    zip = new JSZip();
+                    zip.file(`${char_name}.xml`, out);
+                    zip.generateAsync({type:'blob'})
+                    .then(function(blob) {
+                        saveAs(blob, `${char_name}.zip`);
+                    });
+
+
+            })();
+">蛇口からうどん</a>」をブックマークバーにドラックアンドドロップ</li>
+            <li>2.キャラシ倉庫で自分のキャラシを開く</li>
+            <li>3.ブックマークバーに登録した「蛇口からうどん」をクリック</li>
+            <li>4.ユドナリウム用のキャラデータ(zipファイル)がダウンロードされます</li>
+            <li>5.ユドナリウムにzipをドラックアンドドロップ</li>
+        </div>
+        <div>動作確認済みの対応バージョン
+            <li>ユドナリウム: v1.2.3</li>
+            <li>キャラクター保管所:2018/01/09</li>
+            <li>アリアンロッド2E改訂版</li>
+        </div>
+        <div>バージョンと機能とか
+            <li>version.1.0　とりあえずできた</li>
+        </div>
+        <div>アプデ方法、アンインストール方法
+            <li>ブックマークバーから削除して登録しなおすだけ</li>
+        </div>
+        <div>その他の説明
+            <li>キャラシサイトになるべく負荷がかからないようにブックマークレットにしています</li>
+            <li>キャラシサイトへ通信は行っていません</li>
+            <li>zip圧縮のため、JSZipというライブラリを利用しています</li>
+            <li>ファイル保存のため、FileSaverというライブラリを利用しています</li>
+            <li>ライブラリ読み込みのため、ネット接続を2回だけやっています</li>
+            <li>初回の読み込み時にエラーになるため、最初は2回クリックして下さい[既知の不具合]</li>
+            <li>著作権は放棄していません</li>
+            <li>キャラクター保管所およびユドナリウムとは非保証の、個人が作ったツールです</li>
+            <li>ご利用は自己責任でお願いします</li>
+            <li>ライセンスはGPLv3です</li>
+        </div>
+    </body>
+</html>
