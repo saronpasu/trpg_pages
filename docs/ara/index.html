@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>アリアン2Eキャラシサイトからユドナリウムのコマを作るやつ</title>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site:id" content="@eof_trpg" />
+        <meta name="twitter:creator:id" content="@eof_trpg" />
+        <meta name="twitter:title" content="蛇口からうどん" />
+        <meta name="twitter:description" content="アリアン2Eキャラシサイトからユドナリウムのコマを作るやつ" />
     </head>
     <body>
         <div><a href="https://charasheet.vampire-blood.net/ara2_pc_making.html">アリアン2Eキャラシサイト</a>からユドナリウムのコマをツクールくん</div>
@@ -422,6 +427,8 @@
                     item_info = document.createElement('data');
                     item_info.setAttribute('name', '所持品');
                     source_items = document.evaluate('//*[@id=\'Table_item\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    items_cpd = [];
+
                     for(var i=0; i < source_items.snapshotLength; i++) {
                         item = source_items.snapshotItem(i);
                         if(item.children[0].innerText == '名称') {
@@ -444,6 +451,7 @@
                         txt += (item.children[3].children[0].value != '' ? `効果:${item.children[3].children[0].value}` : '');
                         elem.innerText = txt;
                         item_info.appendChild(elem);
+                        items_cpd.push(item.children[0].children[0].value);
                     }
 
                     item_weight = document.createElement('data');
@@ -468,6 +476,7 @@
                     skill_info = document.createElement('data');
                     skill_info.setAttribute('name', 'スキル');
                     source_class_skills = document.evaluate('//*[@id=\'Table_skill\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    skills_cpd = [];
 
                     for(var i=0; i < source_class_skills.snapshotLength; i++) {
                         skill = source_class_skills.snapshotItem(i);
@@ -495,6 +504,7 @@
                             txt += '取得元[種族]';
                             elem.innerText = txt;
                             skill_info.appendChild(elem);
+                            skills_cpd.push(skill.children[1].children[1].value);
                             continue;
                         }
                         if(skill.children[1].children[0].value != '') {
@@ -512,6 +522,7 @@
                             txt += (skill.children[10].children[0].value != '' ? `取得元[${skill.children[10].children[0].value}]` : '');
                             elem.innerText = txt;
                             skill_info.appendChild(elem);
+                            skills_cpd.push(skill.children[1].children[0].value);
                             continue;
                         }
                         if(skill.children[1].children[0].value == '') {
@@ -547,6 +558,7 @@
                             txt += (skill.children[10].children[0].value != '' ? `取得元[${skill.children[10].children[0].value}]` : '');
                             elem.innerText = txt;
                             skill_info.appendChild(elem);
+                            skills_cpd.push(skill.children[1].children[0].value);
                             continue;
                         }
                         if(skill.children[1].children[0].value == '') {
@@ -665,6 +677,22 @@
                     txt += '{危険感知} 危険感知判定\n';
                     txt += '{エネミー識別} エネミー識別判定\n';
                     txt += '{アイテム鑑定} アイテム鑑定判定\n';
+                    txt += '\n';
+                    txt += '=========\n';
+                    txt += 'スキルデータ\n';
+                    if (skills_cpd.length != 0) {
+                        for(let skill of skills_cpd) {
+                            txt += `${skill}: `+'{'+skill+'}\n';
+                        }
+                    }
+                    txt += '\n';
+                    txt += '=========\n';
+                    txt += '道具データ\n';
+                    if (items_cpd.length != 0) {
+                        for(let item of items_cpd) {
+                            txt += `${item}: `+'{'+item+'}\n';
+                        }
+                    }
                     cpd.innerText = txt;
                     /* End: チャットパレットの生成 */
 
@@ -703,6 +731,7 @@
         </div>
         <div>バージョンと機能とか
             <li>version.1.0　とりあえずできた</li>
+            <li>version.1.1　チャパレを少し追加</li>
         </div>
         <div>アプデ方法、アンインストール方法
             <li>ブックマークバーから削除して登録しなおすだけ</li>
