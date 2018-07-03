@@ -1,0 +1,1822 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<div id="sub">
+<div id="subTitle">発言者別フィルター</div>
+<div id="filter">
+<label><input type="checkbox" id="char12" value="char12" onclick="ShowHide(this)" checked>10pyo</label><br>
+<label><input type="checkbox" id="char2" value="char2" onclick="ShowHide(this)" checked>GM</label><br>
+<label><input type="checkbox" id="char0" value="char0" onclick="ShowHide(this)" checked>どどんとふ</label><br>
+<label><input type="checkbox" id="char3" value="char3" onclick="ShowHide(this)" checked>なるむむ</label><br>
+<label><input type="checkbox" id="char11" value="char11" onclick="ShowHide(this)" checked>エマ</label><br>
+<label><input type="checkbox" id="char9" value="char9" onclick="ShowHide(this)" checked>ジョナサン</label><br>
+<label><input type="checkbox" id="char4" value="char4" onclick="ShowHide(this)" checked>ジョナサン・マーベリック</label><br>
+<label><input type="checkbox" id="char8" value="char8" onclick="ShowHide(this)" checked>ベロニカ</label><br>
+<label><input type="checkbox" id="char5" value="char5" onclick="ShowHide(this)" checked>ベロニカ・マーベリック</label><br>
+<label><input type="checkbox" id="char1" value="char1" onclick="ShowHide(this)" checked>ロクイチ</label><br>
+<label><input type="checkbox" id="char7" value="char7" onclick="ShowHide(this)" checked>御剣 丞治</label><br>
+<label><input type="checkbox" id="char6" value="char6" onclick="ShowHide(this)" checked>番長くん</label><br>
+<label><input type="checkbox" id="char10" value="char10" onclick="ShowHide(this)" checked>神父</label><br>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function ShowHide(chkElm){
+	chkStat = chkElm.checked;
+	target = document.getElementsByClassName(chkElm.value);
+	for( ii=0; ii<target.length; ii++ ){
+		classNames = target[ii].className.split(" ");
+		chkStat = chkElm.checked;
+		for( jj=0; jj<classNames.length; jj++ ){
+			elm = document.getElementById(classNames[jj]);
+			if( !elm  ){
+				continue;
+			}
+			chkStat &= elm.checked;
+		}
+		stat = chkStat ? "" : "none";
+		target[ii].style.display = stat;
+	}
+}
+-->
+</script>
+	<style>
+	body{ margin:0; padding:0 20px; background:#fff;}
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: none;
+		padding: 4px;
+	}
+	#main{ margin-left:210px; }
+	#sub{
+		background:#fff;
+		font-size:85%;
+		width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+	#subTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+	#colFilter{ background:#fff; position:fixed; width:100%;}
+	#filter{ padding:5px; }
+	</style>
+	</head>
+<body><table border=0 id="main">
+<tr id="colFilter">
+<td nowrap width="100"><label><input type="checkbox" id="tab0" value="tab0" onclick="ShowHide(this)" checked>[メイン]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab1" value="tab1" onclick="ShowHide(this)" checked>[脳内会議]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab2" value="tab2" onclick="ShowHide(this)" checked>[雑談]</label></td>
+<td nowrap><label><input type="checkbox" id="tab3" value="tab3" onclick="ShowHide(this)" checked>[その他]</label></td>
+</tr>
+<tr>
+<td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td><BR></td></tr>
+
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「”神祇探偵”妖束ちひろ」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「GM」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「”神祇探偵”妖束ちひろ」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おはようございます～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：時間まで待機しております～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はろー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：お時間までゆるゆる待機ですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はあい、今日は最初がジキハイ？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ジキハイのおしながきはメモにあります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：別にそこに書いてないやつでもできるので目安ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なにもないまっさらなところだと逆になにやっていいかわからなくなる問題があるのでな！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：これはまた起伏に富んでますねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うむ。なるべく違う物語をそろえてみたよ。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もっとこういうのがいいなーとかあればぜんぜん好きに言ってもらっていいのでね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：とりあえずそのメモをよみつつゆるゆるどうぞ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はあい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではちょっとわんこをもふもふしてきます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いってらっしゃーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「”ファインド・ザ” パス」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：おはようございます～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おはようございます～</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：今日もよろしくお願いします！あれこれ目を通しておきますー！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もどりですー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おかえりなさーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どうもです。本日もよろしくです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：【BGM プリプレイ】</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：おかえりなさいませ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：舞台設定がたくさんあります～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ここに書いてあるやつは見本で、もちろんどれを選んでもそのまま遊べます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこに書いてないやつでもべつにいいです　こんなのやりたーい　とかでも言ってもらえれば</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ジキハイは、ひとつの身体に</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：どれもシナリオフックとしてグッときます…迷っちゃいますねえ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：複数の自我、というか心、なんですよね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：迷うよねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ああ。それなんですけどね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：心理学的なものに限らなくてもいいです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ほお？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：外的要因で宿った人格でもありですよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なるむむくん…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：悪霊がとりついたとか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ニンジャソウルとか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：わたしは命を２つ持っている</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ひとつをきみにあげよう…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：謎の異星人に寄生されたとか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：妖刀に取り憑かれたとか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なるる</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうそう　なので精霊でもなんでもござれです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：”本来の主我”の内的要因に拠らないのですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ふつーに心理学的なものでもおっけです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：それ、ほんとになんでもありですね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：そんな展開で遊べるのも素敵…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：これは悩ましいなあ～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：アメリカドラマっぽく</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：１も素敵ですし</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：神々よりも軽量なので、短くも長くも遊べますよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：２もきゅんとしていいですなあ…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ、図書館とＡＩのなんともいえない感じ好き。。。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うんうん。　どれをやろうかという相談やら雑談をする時間もまたたのしい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あんまり焦らずゆっくり選びたいですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：さてさて。一応はもうお時間になりますので。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はじめていきますねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おはようございます、今日もよろしくお願いします！</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：昨日にひきつづき　雑談やら不規則発言とかはこっちですきにどうぞです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：楽しんでいきましょー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：よろしくお願いします～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではでは。２日目の第１ゲーム　多重人格TRPG　ジキルとハイドとグリトグラ　はじめていきます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：昨日に引き続き、GMはわたくしえおふが担当します。</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：グリトグラって</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：ぐりとぐら？</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：…ではなく…？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：２日目なので自己紹介は割愛しましょうか。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：PL参加のロクイチです、よろしくおねがいしまーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おお。えらい！　やはり挨拶は大事</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なるむむさんもどうぞ！</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：そうそう</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：グリトグラなんです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：同じくＰＬ参加のなるむむです！今日も皆さんと楽しくセッション出来るよう頑張ります～！</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：グリとグラではない</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：（アイサツは重要、古事記にもそう書いてある…）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：（NOアイサツ、NOニンジャ）</font></br></td></tr>
+
+<tr class="tab2 char3"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>なるむむ</b>：赤と青の帽子のネズミの話かと思っていた時期もありました…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：今も昔もロールプレイの基本はカラテよ！</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：わかる</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：（のうきん感）</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：たぶんデザイナーさんのユーモアです</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：どういう意味なんでしょうね？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そんなわけでですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ルールについてはテキストをご覧のとおりです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ナラティブ系のみんなで物語を作る感じは神々と共通していますが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ジキハイのキモは「脳内会議」ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：主要キャラが実質ひとり　というのがすごい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして。GMも半分PCのような立場でゲームに参加します</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：GMが主人格を担当して、参加プレイヤーは副人格を担当します</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして、みんなでひとつの身体をシェアハウスしているので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：メインシーンで表に出られるのはその誰かになるのです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：メインシーンとメインシーンの間には脳内会議シーンがはさまります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこで、次のシーンで誰が表にでるのかをきめるわけですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おっと・・・そうだった</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：タブ増やさなくちゃ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あ、確かに</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ふえたよー　脳内会議タブ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：脳内会議タブ！</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：脳内会議の決定である！</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：あなたの心に話しかけています…</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：セクシーコマンド秘技　マサル会議</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：脳の中ならなんでもできる！ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：とりあえずはキャラメイクするのにもなんにせよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：舞台と主人格、そして今回の物語のベースを決める必要がありますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これはルール定義ではなくてGMのアレンジなんですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おしながきを複数書いてます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：通常はGMが決め打ちで舞台やら主人格を決めるんですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：せっかく舞台はなんでも自由なので、みんなで楽しく決めるところから遊びたいなという意図です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おしながきはメモに書いてあるとおりですね　おしながきに書いてないやつでもぜんぜんいけます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ということで</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ、みんなであれこれ話しながら決める楽しさですー！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうですー　はなしをしませうー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：わっきゃわっきゃ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：雰囲気も舞台もぜんぜん違うもんな～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うむ　意図的にぜんぜん違うやつをそろえたよ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：質問なのですが、裏人格の目的は他ＰＬにはクローズらしいのですけれど、その他設定等もクローズになる感じでしょうか？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ちなみにロクさんとは１回だけ遊んだことがある</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：目的だけクローズです。設定はクローズにしなくていいです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：了解です～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：前回遊んだときは、みなさん副人格というまんまで遊んでいましたね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ただ、目的が紐付いてしまうような設定はまぁ、必然的にクローズになりますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なので、目的ダイスふってからそれに合わせてキャラメイクしてもいいと思います</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なるむむさまがどんな飛び道具を繰り出してくるか楽しみです～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うむ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：前回はたしか　ファンタジーの世界で</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：そうなのですねえ！色々考える余地もあって楽しいです…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：冒険者一行のうちひとり、竜騎士にジョブチェンジしようっていう少女が</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：幼い頃のトラウマで竜・・・というか爬虫類系がこわいから竜に乗れないというのを克服するというおはなしでした</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ピンポイントなお話！他じゃ遊べないシナリオですね…良い意味で…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ジキハイは物語、とくにキャラクターの心情や内面の変化にスポットをあてたゲームで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いいお話でした…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：欠点としては、ボードゲームやシミュレーションなどの戦略性、ゲーム性は低いということですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：そこは目的別のフォーカスってことですよねｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：その分、数字やらデータやらは少ないから短時間セッションとかにすごく向いてますよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あとキャラの心情やら対話RPとかがすきなひとにも</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：気軽に、しゃっと遊べるゲームが多いと嬉しいなあ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なるむむさんは　これいいなぁ　というのとかありました？　あるいはこの舞台でならやりたいキャラ（副人格）がある！とか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おしながきの内容を改編してもいいですし</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ライトで心情描写じっくりできるゲームすき…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：主人公は男性（女性）がいい　とか</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：３．のお江戸復讐劇で、彼の子孫が精神だけタイムスリップして～みたいなことは少し考えておりました！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：時間であんまり区切りたくはないですけど。目安として１３：３０ぐらいまでには舞台と主人格きめたいですねぇ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あ～、例えばこの仇討のお話なら、実は女子…とか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おお、発想のスケールがでかい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いいですなぁ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：でも、１も</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：仇討ちっていう題材、なかなかTRPGでは使えないからねぇ　あと幕末も</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：２も好き・・・４も素敵ですけれど、新鮮さを求めるなら他かなーという印象です～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そういう意味では主人公がシリアルキラーの死刑囚もなかなか使えないシチュエーション</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ロクイチさんはご希望はありますか…？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：たしかにー（新鮮さ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：そうですねえ…1か3が気になってまする</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：洋画的な１素敵ですよねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：どういう運びにするかは難しそうですけど</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：１のはまさに多重人格！っていう感じもあっていいですよね　ビリー・ミリガンみたい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：折角ですし、王道を往きたい気持ちもあるので１遊んでみたいです…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なるむむさまはどれが気になります？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ほうほうー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いっちゃいますか、1</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：アレンジ加えてもいいですのよ　暫定でなるむむさんは１ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：お　いきますかー１</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ちょっと囚人っぽい立ち絵探してきますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい。では１のおはなしをいきましょう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：性別やら年齢やら、あとはそれ以外の要素とかでアレンジとかあればいれましょういれましょう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：設定はそうねえ…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：このはなしのエモさポイントとしては、シリアルキラーの死刑囚が脱獄する理由が娘の誕生祝い　というギャップ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あと。そのあとふつーに死刑は受け入れるつもりでいるという壊れっぷりですね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ…奥さんがどうしているのか少し気になったりもします。。。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：GMもこのおはなしをベースに周囲の登場人物をこしらえますかな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それですなぁ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いるのかな、もう死んでたりして娘も孤児院にいるとか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：娘はとりあえず生存してて実在するというのはもうそれでいいです？（そこからかよ！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：まさかの警察関係者の奥さんとか、そもそも娘とは血のつながりはないとか・・・いろいろ考えられて素敵！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：娘が実在してない、という可能性もあるわけですねｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃあ、実在して生存してましょうー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ややこしくなりますからなぁ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：…”娘”と勝手に思い込んでいるだけの</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：子がいる…とかだと急に怖くなりますね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：娘さんがバッドエンドな状態は悲しいやつですねえ、元気に過ごしていただけると嬉しくもあります～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうそう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：従来のTRPGとはちがって、解決する事件も黒幕も謎の敵勢力も別に考える必要ないんですよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：脱獄して娘に愛にいくだけでも大変だし</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：会いにいく</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃあ、娘は幸せに暮らしている。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：そこから始めますう～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：娘の年頃はどのぐらいですかねぇ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ、大事なところです…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：年頃かあ…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：父親の罪が理解出来ない位の幼さがあっても素敵…？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：やっぱそうですよね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ほうほう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いいですなぁ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：4-5さいくらい？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：その年ころで１年に１回会うペースだと、父親と認識されてなさそうですね…でも、それはそれでエモい・・・</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いいですなぁ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：具体的な年齢はあれですけれど、その位の幼さがある年齢でいいかもですねえ＞娘の年齢</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：うんうん、具体年齢はぼかしつつｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ほい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あとはおかーちゃん（奥さん）がいるのか、家庭はどういう状況なのかですな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：収監されているのでしょうし、崩壊でしょうなあ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：離婚してるのか、死別しているのか、孤児院なのかとか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：でも、不幸にはなってほしくありませんね、再婚してたらそうはならないかな～と思うのですが…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：でもまぁ、父親がシリアルキラーと言うのはいろいろ大変そう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：死別で孤児院の方が幸せなのかも…？離婚した夫が殺人鬼で自分の娘とディナーしているのは奥さん的にも大変でしょうしねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：新しいパパがいると、このたびで殺されそうですし</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：孤児院としますかあ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：じゃあ、奥さんもジョナサンに殺されたことにしますか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あ。いけないことを思いついてしまった</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：娘だけは手にかけなかった父親の心情とは…エモイ……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どうしましょう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ん？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：殺した奥さんが副人格のひとりとして今も彼の中で生きていたら</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：といういけない考えが浮かんでしまったのです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：脳内に殺した奥さんを持ち、いまだに家族をやっているつもりのおとこ…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：脳内家族、始まります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ぶっ飛んできましたな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：（自分で言っておいてこれである</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：それ、まかり間違って娘もいたら、刑務所から一歩も出ずに終わっちゃうようｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：平和な世界です～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：娘は孤児院、これはゆずりませーんｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：たぶんあれですよ。彼の主観ではいろいろ事実が変わっているのかもです　刑務所は勤務先に置き換えられてたりとか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい＜孤児院</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：舞台設定はだいたい整った感じあるので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そろそろキャラメイク入りますか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ジョナサン・マーベリック</b>：試しに用意してみました</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですです！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ジョナサン・マーベリック</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すばらしい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：かっけえ！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ジョナサン・マーベリック</b>：じゃあ、わたしかなるむむさまのどちらかが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それっぽいですな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：脳内おくさんをやればよいとｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：私のたわごとだった脳内おくさま　本当にやるのかｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：先に副人格のシークレット目標ふってからそれに合わせてキャラメイクでもいいですよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ちょっとしたイメージもありましたので…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：恐ろしい話です…！自分を殺め、娘に会いに行く夫を脳内から見つめる妻。。。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃあ、まず目的をシークレットダイスでふりまーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：シークレットダイスどうぞー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：いえーす！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：シークレットダイス</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：シークレットダイス</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：本物の奥様ではないと思うよたぶん　ジョナサンが作り出した人格</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ -> GM</b>：1でーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いや、霊的なものならの本物かもしれないな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：…ｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ねえねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM -> ロクイチ</b>：はぁい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：バーチャル奥様と</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：霊魂の奥様が</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：同居してたら…？ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これはひどいｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM -> なるむむ</b>：なるむむさーん</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：脳内妻が多すぎるｗｗｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM -> なるむむ</b>：GMにはシークレット出目をおしえてね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM -> なるむむ</b>：秘話で</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふたりとも妻と認識してるんだけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：どっちがそうなのかは、わからないのｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ジョナサンすごい状況だ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：とふのプライベートチャットの方法をご教授いただけませんか…？不慣れでごめんなさあい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：チャットウィンドウのですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あ、ええとですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：黄色い鍵アイコンがあるとおもうのですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ええと。　ゲイシャガール・ウィズ・カタナ　の左となりです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ありました！なんとなく把握できそうですありがとうございます～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ -> GM</b>：こちらでよろしいでしょうか？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM -> なるむむ</b>：だいじょうぶです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ -> GM</b>：シークレット出目は３です～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM -> なるむむ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ご迷惑おかけしました！ありがとうございます～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おっけですー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なるむむさまはどういう人格をやるかイメージあります？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では、シークレット出目のことはエンディングまで秘密です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：このお話を映画として見ているお客さんが、何らかの不運でジョナサンの脳内に居ついてしまった…みたいな展開を少し考えておりました…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ほうほう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すごい発想だ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おもしろいｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ありです！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：わあい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃあ、各々やりますか、わたし脳内奥さんやります～ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：脳内奥さん！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あとはコマ、立ち絵、設定、それと特殊能力を選んだらできあがりです</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：ピコーン</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：主人格のジョナサンはGMの私が担当しますね</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：お願いしまーす</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：いえーす！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：なるむむさまー、引きずり込まれた観客のイメージって何かあります？</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：老若男女…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：日本人の男子高校生のイメージですねえ、女子高生でもいい気もします…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：たぶんエマちゃんはこの状況から見てマーベリック性のままだと思うのでこうした</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：いま用意してる感じのでよければ、何か用意いたしますぜ…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ああ。ロクさんいい感じの画像があるならエマちゃんも差し替えていいですよ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：番長系の男子高校生っぽいのをお願いしてもいいのでしょうか・・・　？</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：番町系ときましたか、ちょいお待ちください</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すみませぬ　GMちょいとだけ離席しますね　すぐもどります</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：（それにしてもこれが映画だとするならすごい斬新な映画だな　映画としてぎりぎりありそうなラインだけど</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：立ち絵のところに</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：番長くんを用意してみました、どうかな？</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：さすがにガクランはなかったですう。。。</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：すてき！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：ちょっと地味かなあ？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：オールバックの剃り込みの狂犬感があってしっくりきます…！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：よかったです～！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：「地元じゃ負け知らずでね…俺と目を合わせられるのは命知らずの馬鹿か道端の猫くらいさ」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：名前は適宜なおしてください～</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：そんな彼が、なぜ映画を観に来たんでしょうね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：「喧嘩を忘れて、一人映画を観たい時もあるのさ、俺はせんちめーとるだからな…」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：アメリカはポンド・ヤード法よ…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：手のかかる番長君です…！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：さて、キャラメイクは設定の他には、あとは特殊能力をひとつえらびますう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：ランダムではなく選ぶのですねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もどりましたりー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです　自由です</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：そうそう</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：おかえりなさーい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：お帰りなさいませ！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：とりあえず、わたしは人心掌握にしてみました</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：番長らしく超越技能を取るぜ・・・！へへ・・・！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はいな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そしてシナリオのデータも組みますか</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>番長くん</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：しかし、これを映画としてみているとなると</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：急に悲惨度が軽減されましたねｗ</font></br></td></tr>
+
+<tr class="tab2 char5"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：逆に番長くんの脳内が心配になってしまいますね…</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：それな</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：これは映画だと思い込んでいる精神異常者な別人格かもしれません。。。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すごいな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はい　シナリオデータくみました</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：サイコホラーに戻る…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：行動１と２と３です</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：ほい、このこまですな</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：確認しました！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：たぶんあれだ。ジョナサンは間違いなく狂っていると思う（いまさら</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：でも、狂っているなりに本人は至って真面目なんだよ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：そらまあ、シリアルキラーの時点で役満ですよｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねぇ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：狂ってるなりに真面目・・・うごご・・・・</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：このシナリオを選んだあたりでみなさんはもうすごいですよ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：几帳面というか</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：自分のルールを曲げることができない、タイプなんですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：ようし、こちらの準備はオッケーです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はぁい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：リアル休憩とかとりますか　半端ですけどまぁ４分ぐらい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：１４：２１　集合で</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ・マーベリック</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：了解です～！</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：間違えた</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：ちょい長いから名前だけにしてみました</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン・マーベリック</b>：私も立ち絵だ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：らじゃーです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン・マーベリック</b>：ああ。いいですな</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：ではこれで</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：アイスボックスおいしいですう</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：お時間でござるー</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：点呼いきますね</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：点呼開始！</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：準備完了！（1/2）</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：準備完了！（2/2）<br>
+全員準備完了しましたっ！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：戻りました！</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：ではでは本編はじめますか</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：おかえりなさーい</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：いい感じのBGMないなぁ　まあ気分かえるためにプリプレイじゃないやつで適当に</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：【BGM Brave Beat】</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：これじゃないな</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：【BGM Dog Days】</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：洋ドラマっぽいBGM今度捜しておきますねえ</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：では</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：多重人格TRPG　ジキルとハイドとグリトグラ</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　ジョナサン・マーベリック　最後の２日</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：はじめていきますー</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：よろしくおねがいしまーす！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：よろしくお願いします～！</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：ここは凶悪犯や死刑囚を収監している刑務所。</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：死刑囚は共用の房ではなく、独房が与えられている。</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：今回の物語の主人公はジョナサン・マーベリック</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：MITを主席で卒業し、大手証券会社でその手腕をふるい</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：意外にエリートですね</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：美しい妻と愛らしい娘を得て、しあわせな家庭を築いていた</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：かつては。</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：はーい、その美しい妻でーす</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：だが、彼は全米を震撼させた凶悪な猟奇殺人犯として捕らえられた</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：（故人）というのが悲しいところです～！</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：ですねえ、享年34さい</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：２３人の男女を殺害し、それを隠したまま平然とウォールストリートで働いていたのだ</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：彼とは卒業式のプロムで知り合ったのよ…</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：そんな彼も、２日後に死刑の執行を控えている</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：だが、その前に彼にはやるべきことがあった</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：（洋画吹き替え風口調で）</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：愛娘、エマの誕生日を祝うこと</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：彼は今までの人生のすべてを計画し、計画したとおりに生きてきた</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：それは今でも何一つ変わってはいない</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：へぇ…こんな別嬪さんとイチャコラするなんて隅にもおけねえなあ（ポップコーンを口にしながら）</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：彼の脳内に正確に記録されたスケジュールによると、数時間後には神父が彼を訪ねることになっている　死刑執行前の懺悔のために</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：さぁ、スケジュール通りにことを進めよう</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：そろそろミーティングの時間だ</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：…ということで、脳内会議かしら</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ですね</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：彼の脳内にはウォールストリートの彼のオフィスの会議室が再現されています　それはもう精密すぎるほどに</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：我が家でないところに少々イラっとしますけど</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：わかる</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：仕事人間だったんだろうねぇ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：うぉ…！？→（恒例の異世界転生リアクションを経る）→マジかよ…</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：コーヒーサーバーから勝手にコーヒーを淹れて飲んでますう</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：まあ、めずらしいお客さんね</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：じゃあ、僕は時間通りに会議室にやってくるよ</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：あれ以来、ここには誰も訪ねてはこなかったというのに…</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：来客の予定はなかったと思ったけどね。</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：俺をこんな所に閉じ込めやがって…にげぇ（舌打ちしながらブラックコーヒーに口を付ける）</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：じゃあ、人数分のコーヒーを用意しましょうか</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：まぁ、いい。そんなことで会議のスケジュールは変えるわけにはいかない</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：本気でここから出られると思っているの？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：もちろんだとも。いままでだってすべてやってきた。それはここにいても変わらない。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：このあと神父と会う予定になっている</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：それを利用するつもりだ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：日本の少年院とはワケが違うんだぜ、そう上手くいくのかよ？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：さあてね？　”計画”があるらしいけど…</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：状況はたしかに少し厳しいが、必要以上に悲観的になるのはよくない</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：計画ねえ…まあ、乗り掛かった舟だ。エリートさんのお手並み拝見といこうじゃねえか。映画代の分だけキッチリ楽しませてもらうぜ？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：神父を騙すか洗脳するか脅すかして、人質にとって脱出する　あるいは、力づく　そのどちらかだろうな　大きく分ければ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：おいおい。君はただの乗客のつもりか？　わるいが、ここには必要のないものにいてもらう席はない</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：力づくだとさらに面倒がふえる。できればスマートな方法をとりたいものだな</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：さて、メタてきな説明はこちらで</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：脳内会議でやることは大きく２つ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：チッ…わあったよ！俺だって、何もしないままお陀仏なんてごめんだからな！やってやらあ！</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：一つはエモいかけあい　もうひとつは　次のメインシーンに表にでる人を決める</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：これです</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：いえすいえす</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：いいこだ。若いが見どころはあるな。</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：スマートと言っても、神父さまを巻き込む以上</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：騒ぎになるのは避けられそうにないわよ？</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：はい</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：あと。Aマホと違って　でっちあげの範囲はかなりのフリーダムです</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：実は前々から脱獄の準備をしていた　とか出してもいいです　ただ、出すなら出す前にこっちとかで相談したほうがスムーズにいきます</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：ふむふむふむ</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：ほむほむ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ふふ・・・　いいね。やっぱり君はとてもクールでキュートだよ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：そういう考えはとても私の好みだ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：私が表にいない間に、何か準備でもしていたのかな？</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：ベロニカさんと番長、どちらが表舞台に出るか決める感じです？</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：あ。訂正しとこうジョナサンの一人称統一できてなかった</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：僕です</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ジョナサンでもいいです＜表</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：なので３人の誰か、ですね</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：冗談はよして、わたしには脱獄プランなんて…</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：なるほど…</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：で。表に出てない人は、メインシーンの判定に対してその判定にたいして　賛成・反対・傍観　が選べます</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：その分だけ修正値がはいるのです</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：人前でイチャコラしてんじゃねえよアァン！？…これだからメリケンはよぉ困るぜ。。。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ああ、すまなかったね。</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：行動は３つなので、メインに出てこれる回数は限られます</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：本題に戻ろうか　他に何かいいプランがあるかな？</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：わたしは脱出のところはパスかな～</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：当面の課題は　脱獄すること（行動１）　だ</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：判定方法もなかなか特殊ですねえ、第一行動に失敗してもシナリオ的には前進できるかんじなのでしょうか？</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：いえす　物語は成功しても失敗してもそれに応じて動きます</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：なので、失敗したからといって他の行動に進めないということはないです</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：了解です～！</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：なのでまぁ。表に出ることに関しては　どの行動番号で出たいのか　で談合するのもありですね</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：出たい、あるいは出させたい</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：わたしは行動２の方に興味あり、なので１はお任せするわ</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：出たいシーンがあるひとは先に言ったほうがいいかも</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：なるほど</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：僕はスケジュール通りに進むのなら君たちの意見を尊重するよ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：決まってンだろ！使えるモンはなんでも使う！要は脱出できればいいんだろ？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：素晴らしい！　そう、そのとおりだ</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：行動プランも含めて出たいです！と宣言すればいい感じでしょうか…？</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：プランについてはただのRPなので</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：あってもなくてもいいです　出るか出ないかは必ずほしいです</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：了解です！</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ノープランだけどいくぜ！このやろう！　とかでもおっけ</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：力強いｗ</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：あと。表に出ていても脳内でのちゃちゃ入れはできます</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：ここは任せな！俺だって腕力だけで番長やってるわけじゃねえんだッ…！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：登場します！</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：表に出ているときは当然ですけどジョナサンの身体として出るので　周りからはジョナサンが別の人格みたいになってる　にみえます</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：がんばってね～！！</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：わかった　君に任せよう</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：さあて</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：それでは会議の時間もそろそろ終わるな</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：僕達はここから応援するとしようか</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうしましょうか</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：へっ…俺の活躍を見てちびんじゃねえぞ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それではシーンを進めますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：彼の脳内に刻まれた正確なスケジュールによると、もうすぐ神父との面会だ</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：楽しみにしております～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：独房にいるジョナサンは拘束服（腕の自由がきかないやつ）を着ている</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：最後の懺悔なので、警備員は房の外。神父とはふたりきりでの対面になる</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：いったいどうやって脱出するんだろう…</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：「っと…そろそろ時間だな……面倒くせえ服着せやがって……」</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>神父</b>：警備員が鍵をあけ、神父が独房へと入ってきた</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>神父</b>：「こんにちは、ジョナサン。」そういいながら、彼は椅子に腰を下ろす</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：まぁ、なんかやりますといって判定して成功すればできてしまうのだ　ルール的には</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：失敗しても展開の都合上、脱獄はできてしまう</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：「よぉオッサン、調子はどうだい？」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：不敵な笑みを浮かべつつ</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：そういう細かいことを気にしないのはなかなか潔いですねえ</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>神父</b>：「・・・ええ、心穏やかに過ごしていますよ。」</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>神父</b>：ジョナサン（御剣）の様子に少しとまどったものの、平然を装っている</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：脳内会議室のホワイトボードにプロジェクターが投影されていて　さながら映画をみているように現実の光景を眺めているよ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：「そうか、俺も悪くねえ気分だ。…これから奇跡が俺の目の前で起こるんだからよ」</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：すごい自信ね…一体どうやって脱獄するつもりかしら…</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>神父</b>：「信心深いのはいいことです。あなたの罪はこれから罰せられますが、その魂は主のみもとへと導かれることでしょう。」（とかなんとか</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>神父</b>：まぁ割愛しますが。ジョナサン（御剣）は既に正気ではないことは事前に知らされているので彼は説法を続けます</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：「ああそうだな…だが一つ、残念なことは…アンタにその奇跡を見せてやれねえってことだ！オラァ！！」ヘッドバッドで神父を気絶させます…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おーけい　では判定といこうか</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：痛ったぁ～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：判定をふるまえに</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：脳内からの賛成や反対をまちます</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ひゅぅ　随分とシンプルな方法できたね</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：反対賛成は脳内で提案でしたっけ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：どうする？ベロニカ。君は彼に賛成かな？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：もちろん、やっちゃったからにはもうやりきってもらうしかないわ</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：■賛成</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：私は賛成だ。ここで脱出してもらわないとこの先のスケジュールに影響するからね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：脳内では賛成２がでたので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：＋２で判定できますよ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：神父を気絶させ、通信ヨガ（あるいはマジシャンの祖父によって叩き込まれた）によって体得した脱出術で拘束服を脱ぎ捨て、神父の服を奪い成り代わりにチャレンジしたいです！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：成り代わるのはクールだ！</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：意外とテクニカルだわ…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：判定の方法はすこし特殊なのですが　ルール読んでてわかりますかなぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：まず２Dふって　その出目の差分に５を足すんです　それが目標値になります</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：難易度を２ｄ６の差分＋５で算出して、２ｄ６の合計で上回る…そこに修正をあれこれする…みたいな感じでしょうか…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：で、その目標値を求めたらそれに対して再び２Dで判定します　このとき、先程の脳内の賛成・反対の分が修正されます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：了解です！では、難易度算出から</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：なので、ほんとは先に難易度を決定する感じかな</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：2b6<br>
+GeishaGirlwithKatana : (2B6) → 6,3</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ちなみに脳内のちゃちゃいれにも表人格からお返事とかできますけど</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：忙しくなるのでやってもやらなくてもいいです</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：まあ、そこはナレソレ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：目標値は3+5で8ですねえ</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ああ、ですね・・・　先に難易度求めてからそこに賛成反対が正確な処理でした</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：いえっす！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですね</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：意外とは余計だ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：８を目標に２D6+2です</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：2D6+2で8なら！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：いえっす！判定いきまーす！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：2d6+2<br>
+GeishaGirlwithKatana : (2D6+2) → 5[3,2]+2 → 7</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：まさかニンジャとは…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おおう　足りない</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：妖怪１足りなーい！？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ファンブルでもクリティカルもないので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：普通に失敗になりますね</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：残念…</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：「やってやるぜ…！男ジョージ、これは俺の花道だああああ！」（普通に失敗）</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：強引に脱獄しちゃった…スゴイわね…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では描写やらなんやらはさみます</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：誰も俺をジョナサンだと気づかなかっただろ…へへ…今の俺は神父だからな…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ヘッドバッドをしかけて神父を気絶させようとするのですが　それが空振りして倒れてしまう・・・</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：頭突きには驚いたけど、やるわねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：のだが　その直後、目の前がまっくらになります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：暗くなる直前に誰かがあわてて近づいてくる気配と　「・・・・・・ーット　リテイクだ」という声が聞こえますがそこで意識が途切れる</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：（オフィスの冷蔵庫から冷えたバドワイザーを取り出しすすめる）</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：舞台裏がほの見えてしまいましたねｗ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…同情はいらねェ！それに俺は未成年だ！</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：あら、ここ（脳内）に年齢なんて関係ないわよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そしてしばらく真っ暗な暗闇。何も感じない。そんな状態が続いたかと思うと</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：垣間見える世界の真実…エンディングのＮＧ衆……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：脳裏には脱獄を成功させて夜道を逃走している場面までのダイジェストが流れる</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：撮影中のスナップで肩を組んでスマイルの神父さんとジョナサンｗ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：・・・　そんなことより、これはどういうことなんだ？？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：これって？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：これはまるで・・・</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：映画の撮影のようじゃないか</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そう見えるわね</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…言ったろ、奇跡を起こすって（震え声）</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：君は一体、何者なんだ？　何を知っている？？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：ジョナサン…あなたすこし疲れているのよ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：・・・・・・そう、だな</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：細けえことはいいんだよ！今は脱出出来た、それを喜ぼうぜ！</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：すまない、ベロニカ。少し休ませてもらうとするよ</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうそう、かんぱーい！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：かんぱーい！…って、これも酒じゃねーか！？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：そのとき　ジョナサンの懐のスマホにアラーム音が</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：おっと。そろそろ次のスケジュールだ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：たしか、ベロニカ。君が表に出る番だったかな</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうよ、お次はエマのお誕生日を祝うシーンね</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：ここは、断然任せてほしいわ！</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：すまないけど、僕は気分が悪い　このまま休ませてもらうよ</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：いいわよ、それじゃ…いってきまぁーす</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ふふふ　こういう伏線の巡らせ方と回収の仕方をとらせてもらったぜ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：暗幕が晴れて</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：舞台は孤児院の前まで進んでいた</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：うっぷ…俺も今回ばかりはＮＧだ…あんたに任せるぜ…（殺気を感じる）…ベロニカ姐さん</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：さ、今度は私の出番ね。ぬいぐるみはもちろん用意して…</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：殺気だなんて、うふふふふ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：柵の向こうから、ジョナサンに気づくエマに小さく手を振って…ってところからかな</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：目が笑ってねェんだよ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：時間は夜　人目につかないように移動し、ぬいぐるみとディナーの準備をしていたらこんな時間になってしまった</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：｜＜〇＞）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：孤児院にの窓には灯りがみえる　そこにはエマの姿も</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：おっと、ならこっそりエマを連れ出さないとですね</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：おっと</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：その判定になるのかな？</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：ヒィッ…！？女は怒らせるもんじゃあねえな…ナンマンダブナンマンダブ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ここは連れ出した　でもいいですけど</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：判定をどこにもっていきたいか、かなぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ディナーの場面に判定を入れるのでもよし　連れ出すに判定を挟むのでもよし</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：あの子があんたらの娘ねえ…へえ、良い子じゃねーか（すっと目を細める）</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：まあ、実はなんでもいいのです。エマに楽しい誕生日さえ迎えさせられればね…</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：でしょう？　とってもいい子…</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：ってことで、難易度設定しますう</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：2D6<br>
+GeishaGirlwithKatana : (2D6) → 6[1,5] → 6</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：ge,</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：・・・・・・ぶつぶつ・・・　これは　現実なのか　いや、私は既に気が狂っている　では、どこまでが虚構・・・・・・ぶつぶつ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：どうすれば・・・・・・目が覚める・・・？</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：高いなあ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：差分4難易度9</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：たかいねー</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：それより、まずはエマのディナーでしょう！</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：しっかりしなさい！</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：賛成か反対かはっきりしてよ！</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：あ、ああ・・・すまない</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：もちろん賛成だ　僕たちの大事なエマのことだからね</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…その通りだぜ、娘さんをよろこばせるためにここまでやったんだろ？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうよ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：俺も賛成だ！</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：ありがとう、なら+2ね</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：ということで、賛成２票</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：+2でどうぞー</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：2D6+2<br>
+GeishaGirlwithKatana : (2D6+2) → 10[6,4]+2 → 12</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すばらしい</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：母の愛は強いのですー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では好きなように演出するのがいいです</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：ふっふーん</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：では、窓際からくまさんのぬいぐるみをひょこっと出して</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：これが母親ってやつか…（トオイメ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：『エマ～よいこのエマ～』</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：いつも君には助けられてばかりだったね　あのときも、そうだったよ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：『迎えに来たよ』</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：とか言いつつ、夜のダイナーで仲良く食事かな？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>エマ</b>：「わぁい　ジョナサンおじさんだ！」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：（おじさん…まあしゃあないよね）</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>エマ</b>：「えへへ　おじさん、ひさしぶりだね　今日はもうこないかと思ったのに」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：「やあ、エマ。今年も元気そうだね」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：「ママとの約束を守らないとね。毎年、必ずプレゼントとカードを届ける」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：といって、帰ってからお開けっていうカードとプレゼントを渡しますう</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>エマ</b>：「リッキーもジョーも元気にしていたよ。今日は新しいお友達をつれてきてくれたんでしょう？　どんなこなの？？」（ぬいぐるみのこと</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：「それはねえ…」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：って、ここで人心掌握の術を発動だー！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：娘さんが小さい時に死別したんだよな…ってことは、アンタもベロニカ姐さんもあの子には…</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：おじさんはもう来年は来れないのだ。そのことはカードにしたためているが</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：人身掌握！</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：きみが20さいになるまで、毎年分のバースデーカードとプレゼントを信頼できる人物に託した</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：段階的にイロイロかいてるつもりさ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：（ジョナサンはかなり憔悴しているようす　死を前にしても何一つ動じなかった彼が、いまでは見る影もない）</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：字が違っちまったぜ…世露死苦！</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：中身は、ご想像にお任せ…ってトコかな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すばらしい　母の愛だね・・・</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：父と、母、のね</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：オーバー！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：孤児院へ帰っていくエマを目を細めて見つめて、踵をかえす。闇に消える…</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：たっだいまー</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>エマ</b>：カードはまだ開けていない。それよりもさきにたぶんぬいぐるみに気を取られてしまうお年頃だからね</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：ああ、いまはそれでいいのよ</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>エマ</b>：嬉しそうにディナーを楽しみ。親子の最後のひとときをすごした</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…ニクイバースデープレゼントじゃねえか、ちくしょう…（涙混じりに鼻をかむ）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そんなところでシーンは区切られる</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：ふふふ、死んでしまったらもうなんにもできないからね？ｗ</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうよ、ジョナサン。来年はどうするつもりだったのかしら？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ああ。これで安心して最後のスケジュールも進められる。ありがとう、ベロニカ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：来年のスケジュールはないよ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：僕のスケジュールは明日で終わっているからね。</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：あきれた</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：これだからエリートの石頭は困るぜ…</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：だけれど、ようやく僕にも理解できたよ。</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうなのよねェ…</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：いままでありがとう、二人とも。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：最後のスケジュールは、死刑の執行、だ。</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうね</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：これは僕が表に出させてもらいたい。かまわないかな？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：いいわよ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…まだ終わっちゃいねえだろ、オッサン。アンタ、何するつもりだ？</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：たとえ、これが虚構だとしても。　・・・・・・いや、虚構なんだ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：そうだろう？</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…ああ、そうだよ。これは映画の中のストーリー、アンタ達はみんな虚構のキャラクターなんだ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：これが虚構でも、ジョナサン・マーベリックは僕だ。これは僕の人生なんだ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：僕は最後までジョナサン・マーベリックとして生きて、そして死ぬ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：それこそが僕だからね。</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：ええ、あなたらしくね</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：じっと、ジョナサンの瞳を見つめます。特に能力はないのですが、彼の瞳はやべー色をしていたりしますか？</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ううん。ついさっきまでは迷いや錯乱した感じがあったけど</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：今は穏やかな、何かを悟ったような眼差しだね。</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：了解です…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：舞台は最後のシーンへと切り替わる</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ダイジェストはもう必要ないだろう。　映画のようなめまぐるしいアクションや手に汗握る駆け引きがあった</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして、場面はガス処刑の装置に入れられたジョナサンがまぶたをあけるところからはじまる</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…わあったよ！テメーの人生だ、テメーの思うように生きな、最後の一瞬までよ！（ジョナサンの肩を叩きつつ）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：あっという間だったわね…</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：そうだな</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：君と、君たちとこうしてすごすのもこれが最後か</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：そうねえ…そうなるわね</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ありがとう、ベロニカ。</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：最後まで私の妻でいてくれて</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：いいのよ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…フン、せいせいするぜ！もうテメーの回りくどい話を聞かずに済むんだからな！</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ああ。君にも感謝しているよ</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：僕のことだから、自分で気が付かなければあのことを受け入れないのを見抜いて、黙っていてくれたんだろう？</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…さあ、どうだかな。俺のきまぐれだ、礼は要らねえよ、駄賃に貰っていくぜ、文句言うなよ！（冷蔵庫から酒を１本取り出す）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：立会人が罪状を述べ、州法の条文を読み上げている</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：さて。僕は最後の仕上げに向かうとするよ</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：いってらっしゃい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：執行人が、スイッチに指をかける</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：”カメラ”が彼の表情をズームする</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：おう！ジョナサン、テメーが主役なんだから、大事なところでセリフ噛むんじゃねーぞ！</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：「これですべて、スケジュール通りだ。」　ガラスごしにつぶやいた彼の最後のセリフ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして　暗転</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：判定にはいるか</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：2d<br>
+GeishaGirlwithKatana : (2D6) → 6[1,5] → 6</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：難易度は６</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：僕は死のうとしている</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：それに君たちは賛成かい？</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ベロニカ</b>：いいわよ、賛成する</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>御剣 丞治</b>：…テメーの意思だ、もちろん賛成する</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：それはここにいる君の死も意味しているんだ　それでも、だね</font></br></td></tr>
+
+<tr class="tab1 char9"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>ジョナサン</b>：ありがとう　二人とも</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：賛成２、＋２で判定します</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：2d6+2&gt;=6<br>
+GeishaGirlwithKatana : (2D6+2&gt;=6) → 6[1,5]+2 → 8 → 成功</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：成功</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：彼の最後のスケジュールは無事に、果たせられた</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして　まるで幽体離脱するかのように視点が遠のく</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：遠くからぼんやりと眺めている映画のセット、そこには主演俳優のクランクアップを祝う声</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そういったものがまるで他人事のようだ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なぜなら、ジョナサン・マーベリックはそこに確かに生きていた</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ベロニカ・マーベリックも</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして、御剣 丞治も</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：彼は元の世界へ戻るのかもしれない</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：だけど、それはもうこの世界のものではないだろう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：こうしてひとつの物語が幕を閉じた　虚構と現実の間、あるいは虚構の側にあった現実</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「"月夜之陰"月読蓮夜」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：多重人格TRPG　　ジキルとハイドとグリトグラ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：The End</font></br></td></tr>
+
+<tr class="tab2 char12"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#cc00ff'><b>10pyo</b>：こんにちは</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>： </font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：お疲れさまでした～！</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：おつかれさまでしたー</font></br></td></tr>
+
+<tr class="tab2 char7"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#0099ff'><b>御剣 丞治</b>：こんにちは～！</font></br></td></tr>
+
+<tr class="tab2 char8"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ベロニカ</b>：こんにちは～！</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：こんにちはー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：お疲れ様ですー！</font></br></td></tr>
+
+<tr class="tab2 char9"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>ジョナサン</b>：ちょうどおわったところでした</font></br></td></tr>
+
+<tr class="tab0 char12"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：お疲れ様です</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：【BGM アフタープレイ】</font></br></td></tr>
+
+<tr class="tab2 char12"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#cc00ff'><b>10pyo</b>：入ってすごいタイミングだなって思いました</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：いやー　かなり変則的な内容でしたが</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジョナサン</b>：いかがだったでしょうか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：名前もどしとこう</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ベロニカ</b>：お疲れさまです～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：わたしもロクイチにもどっておこう</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：好き勝手やった設定を拾っていただいて感謝です楽しかったです～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：今回はなるむむさんの入れた設定を拾ってそれを軸にしました</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ある憑依型俳優の脳内…という感じでしたね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねぇ。　劇中劇というか　入れ子構造なのでこういうのやるのは非常にリスキーかつ難しいんですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：行動１で失敗したときに、繋ぎをどうしようか考えててふと浮かんで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：その場でのアドリブでした</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あとは流れですね</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：いきなりで驚かれたかと思いますう</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：ですねえ！徐々に見え隠れする雰囲気素敵です…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：どっちのパターンでも大丈夫なようにイロイロ考えてはおきました～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いやぁ　ロクさんの演技はとてもすばらしかった　なるむむさんの発想がなければこの展開にはならなかった</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：うへへ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：みなさんすてきでした、ありがとうございますう</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：ちょ、ちょっとだけ失礼します…</font></br></td></tr>
+
+<tr class="tab2 char12"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#cc00ff'><b>10pyo</b>：行ってらっしゃい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：わあい！裏目標どーするか悩みながらでしたが、楽しかったです～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：こんな感じで　かなりフリーダムに遊べて、なおかつコンパクトで軽量っていうのが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ジキハイの魅力です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あ、そうだ裏目標</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もう公開しておっけです</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：いてらですー</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：かなりややこしいセッションだったのでログを読んだだけでわかるかどうか・・・</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：３番のハッピーエンドです！彼の瞳は美しかった…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：達成ですねぇ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おめでとう</font></br></td></tr>
+
+<tr class="tab2 char12"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#cc00ff'><b>10pyo</b>：（実は最初のほうが途切れていて……）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：１の目的達成ですう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いやぁ、これは本当にみなさんとのシナジー　化学反応がなければ絶対にできないセッションでした</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：達成ですね　おめでとうです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：この映画に影響を受けて、両親が離婚したきり会っていない、エマと同じ年頃の妹に会う勇気が持てた…みたいな感じを脳内で思い描いておりました。。。</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：あーっ</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：そっか、思い出しましたごめんなさい。</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：どどんとふは、保存行の設定をしておかないと</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：私ひとりじゃ絶対にこの展開は浮かばないし、ロクさんもなるむむさんもいなければ成り立たない内容でした</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：途切れちゃうんでしたねただいまです</font></br></td></tr>
+
+<tr class="tab2 char12"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#cc00ff'><b>10pyo</b>：おかえりなさい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なるほど。それでこの映画に文字通り「のめり込んで」しまったのですね</font></br></td></tr>
+
+<tr class="tab2 char1"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#00cc33'><b>ロクイチ</b>：以前のは長めにしていたのですが、いまはデフォ値だから結構短いかも</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：あらら</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ああー、それはいいですねえ</font></br></td></tr>
+
+<tr class="tab2 char2"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#000000'><b>GM</b>：ログはわたしのところには残っていますので要望あればおわたししましょう</font></br></td></tr>
+
+<tr class="tab2 char12"><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff9fc;"><font color='#cc00ff'><b>10pyo</b>：ではせっかくですしいただきたいです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：こうしてみると、視点とか言う割には</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：わたしはけっこーキャラ演じるますね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うむうむ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：このジキハイもまた他にはなかなかないおもしろいルールなので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：やってみると発見が多い</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あと。今回えらばなかったやつもね　おもしろそうだから</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：ですねえ、色々遊べる余地があって楽しいシステムです…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もっといろんなジキハイやりたいねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ですねい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：ですです！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：GMも参加者に近い感じで参加できるのがたのしい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ともあれ</font></br></td></tr>
+
+<tr class="tab0 char12"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：GMが参加者に近いのはいいですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：10pyoさまがこられましたので、今度はふたたびＡまほに？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：小休憩を挟んで次のゲームです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：一緒に考えたり提案したり、ってできるのがすてきです～</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：ですです！10pyoさんＡマホ楽しんできて下さいませ～！</font></br></td></tr>
+
+<tr class="tab0 char12"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ゲームが切り替わるのでログをとって一度、ログ削除で入り直しします</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なるむむさんとはここでおわかれですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ではこちらもそうします～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：また遊びましょうー</font></br></td></tr>
+
+<tr class="tab0 char12"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：了解です。一旦離れますね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：こちらは出かける準備をしてまいります…お土産は話期待しております！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あら、ではまた夜に～</font></br></td></tr>
+
+<tr class="tab0 char12"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：なるむむさんお疲れ様でした</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：お気をつけて</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>御剣 丞治</b>：お疲れ様ですー！またよろしくお願いします！</font></br></td></tr>
+
+
+
+</table>
+</body>
+</html>

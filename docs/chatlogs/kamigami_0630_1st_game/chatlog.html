@@ -1,0 +1,2270 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<div id="sub">
+<div id="subTitle">発言者別フィルター</div>
+<div id="filter">
+<label><input type="checkbox" id="char7" value="char7" onclick="ShowHide(this)" checked>10pyo</label><br>
+<label><input type="checkbox" id="char1" value="char1" onclick="ShowHide(this)" checked>SD</label><br>
+<label><input type="checkbox" id="char6" value="char6" onclick="ShowHide(this)" checked>”ファインド・ザ” パス</label><br>
+<label><input type="checkbox" id="char4" value="char4" onclick="ShowHide(this)" checked>”神祇探偵”妖束ちひろ</label><br>
+<label><input type="checkbox" id="char8" value="char8" onclick="ShowHide(this)" checked>おこめ</label><br>
+<label><input type="checkbox" id="char0" value="char0" onclick="ShowHide(this)" checked>どどんとふ</label><br>
+<label><input type="checkbox" id="char3" value="char3" onclick="ShowHide(this)" checked>なるむむ</label><br>
+<label><input type="checkbox" id="char5" value="char5" onclick="ShowHide(this)" checked>ファインド・ザ” パス</label><br>
+<label><input type="checkbox" id="char2" value="char2" onclick="ShowHide(this)" checked>ロクイチ</label><br>
+<label><input type="checkbox" id="char9" value="char9" onclick="ShowHide(this)" checked>戌亥孝四郎</label><br>
+<label><input type="checkbox" id="char11" value="char11" onclick="ShowHide(this)" checked>蛇神</label><br>
+<label><input type="checkbox" id="char10" value="char10" onclick="ShowHide(this)" checked>謎の人物</label><br>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function ShowHide(chkElm){
+	chkStat = chkElm.checked;
+	target = document.getElementsByClassName(chkElm.value);
+	for( ii=0; ii<target.length; ii++ ){
+		classNames = target[ii].className.split(" ");
+		chkStat = chkElm.checked;
+		for( jj=0; jj<classNames.length; jj++ ){
+			elm = document.getElementById(classNames[jj]);
+			if( !elm  ){
+				continue;
+			}
+			chkStat &= elm.checked;
+		}
+		stat = chkStat ? "" : "none";
+		target[ii].style.display = stat;
+	}
+}
+-->
+</script>
+	<style>
+	body{ margin:0; padding:0 20px; background:#fff;}
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: none;
+		padding: 4px;
+	}
+	#main{ margin-left:210px; }
+	#sub{
+		background:#fff;
+		font-size:85%;
+		width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+	#subTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+	#colFilter{ background:#fff; position:fixed; width:100%;}
+	#filter{ padding:5px; }
+	</style>
+	</head>
+<body><table border=0 id="main">
+<tr id="colFilter">
+<td nowrap width="100"><label><input type="checkbox" id="tab0" value="tab0" onclick="ShowHide(this)" checked>[メイン]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab1" value="tab1" onclick="ShowHide(this)" checked>[雑談]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab2" value="tab2" onclick="ShowHide(this)" checked>[見学]</label></td>
+<td nowrap><label><input type="checkbox" id="tab3" value="tab3" onclick="ShowHide(this)" checked>[その他]</label></td>
+</tr>
+<tr>
+<td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td><BR></td></tr>
+
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「SD」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はろー　メモがいっぱい貼ってあってびっくりだね！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：おはようございます～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：丁寧に書いてあって、非常に助かります～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：お時間までまだまだあるのでゆるゆると雑談とかしながら待機ですよー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：読み読みしつつ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：昨晩のうちにいろいろ仕込みましたです(*´ω｀*)</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：お疲れさまですう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：好きなゲームの支度はテンションあがりますよね～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aマホはほんと久々。テキセで回すのはたぶん２年ぶりぐらいですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：ありゃ～、それはお久しぶりですねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ボイセならたぶんもう少し手前にやってたはずですね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：おはよーございます！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はろー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今日はよろしくねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：おはようございますー！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：「M※から始まる」を久々に目にしてわくわくしております…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：よろしくお願いします～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まだお時間まであるので　メモ（たくさんある！）を眺めながら雑談しつつゆるゆるどうぞです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：なるむむさま経験者でしたね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aマホも古いですからねぇ　なつかしみ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：今日はいろいろ教えてください～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではではBGM流しますかな。音量は各自でご調整よろです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：【BGM プリプレイ】</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：簡易化したものをSDとして回すことがほとんどでしたので、プレイヤ—経験はそんなにないやつです～！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：BGM了解です！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：メモにもいろいろ書いてますが　説明の打ち込みやら時間短縮のためですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：BGMは各自で入れたい人はいれていい感じでいきます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：5分ほどお時間ください～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあいー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：いってらっしゃいませ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：事前にメモにだいたいの事は書いてるのでほとんど言うことはなす</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：ですねえ準備万端な雰囲気素敵です…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：久々にAマホのルルブを読んでいて。P.166の「基本的な礼儀」の項目に感動している</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：皆が楽しく遊べるアドバイスがそれとなく書かかれているシステムすき。。。</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：改めて文字として目にすると、あれこれ再認識出来ますものねえ…経験者にもグッとくるのがいいところです…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：えらいことです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おかえりなさいですかな？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：ただいまでうす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：もうぼちぼちお時間ですなー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：お飲み物やおやつなどなどの準備はいまのうちにどぞです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：（私ものみものとってこよ）</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：色々目を通しました準備大丈夫ですー！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：シートも開きましたー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDもお飲み物とってきて準備おっけ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それではお時間なりました　時間通りに集まってくれてありがとね！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はじめますよぉー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：とんでもない、準備ありがとうございます。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ロクイチ</b>：よろしくお願いしまーす</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：よろしくお願いします～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくおねがいしまーす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：本日はAマホのオンセにお集まりいただきましてありがとうございます。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDを勤めさせてもらいます、えおふです。みんなよろしくね。楽しんでいきましょう！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：わあい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：PL参加のロクイチです、あれこれ不慣れですが、がんばりまーす！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：鬼とふだとやっぱちょいでかい…しくしく</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それじゃ。お二人とも他の卓でご一緒している知り合いですが。あらためてさくっとかんたんに自己紹介いきましょうか。<br>
+１．自己紹介　２．今日の卓へのいきごみ（なにかひとこと）　最後に「以上です」とかでお願いします</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：じゃあ、ロクイチさんから</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：みなさんこんにちは、ロクイチと申します～。<br>
+ふだんはオンセでTNMやCoC、インセインなどを遊んでおります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：今回は、ナラティブ系TRPGのAマホ（未体験）とのことで、わっくわく～のどっきどき～です</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：不規則発言や雑談なんかはこっちでご自由にいきませうせう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：イメージや想像力を交わして遊ぶ…タイプのゲームなので、ゆかいなイメージを吐き出せたらいいな～と思っております（いきごみ）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ということで、よろしくお願いいたします。<br>
+以上です～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい　８８８８８</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくねー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：よろしくですー！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>なるむむ</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは、次はなるむむさんどうぞですー</font></br></td></tr>
+
+<tr class="tab3 char1"><td></td><td></td><td></td><td colspan="4" style="font-size:80%;background:#fff7ef;">[見学用] <font color='#000000'><b>SD</b>：見学枠いちおう付けてあるので、お知り合いを呼びたいな！という方はご自由にどぞです</font><br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：はい！PL参加のなるむむです～！身内卓の方のオフセではブレカナやらN◎VAやらを遊んでおります</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：最近はオンセに参加させていただく機会が沢山あって、色々な方とご一緒出来て嬉しいです～！</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ブレカナいいよね(*´ω｀*)　リンカネは未体験だけど</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：ブレカナいいですね～</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：Aマホは経験あるといえばあるのですけれど、記憶の彼方に飛んで行ってしまったので、記憶のカケラを集めてながら楽しんでいきたいですー！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>なるむむ</b>：以上です！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい　経験者たのもしす　よろしくおねがいしまーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：よろしくお願いしますう！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：卓についたら経験者も未経験もなっしん　みんなでたのしみませう！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：他に合流組もいますが。それはそれで別として</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最後にSDも自己紹介です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：どもー　えおふです。Aマホとかナラティブ系とかシナクラだいすき。準備少なくていいのもすきだけど、みんなでみんなだけの物語をつくるのが最高にTRPGしててすきなのです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aマホはその「みんなで物語を紡ぐ」の極地だとおもっているのです　みなさんとは楽しんでいきたいです！</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：文字色青いただいていきます…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくおねがいしまーす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：以上！</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：明るい色がそろってとても爽やか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：よろしくおねがいしまーす！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：よろしくおねがいします～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくですですー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ということで。ご挨拶もすみましたし</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：何気になるむむさまと</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：PLで同席するのは初めて…？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ここからは１ゲーム目、Aの魔法陣NG（ver4.0)with神々の宴をはじめますです。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ルールのインストをしつつキャラメイクとかですねー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：おおー　そうなのか！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まずはセッションシートと未所持用プレイングサマリーはみなさま開けていますか？？</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ！なんだか楽しみです…！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：やってるようで…やってないはず</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：ですねえ～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい、別タブで開いてます～</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：大丈夫です～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：プレイングサマリーの方は他２名のアクセスアイコンでてるけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：セッションシートの方はアクセスアイコン１つしかでてないですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：見えてるならいいんです！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：オンラインキャラシとかないんで。セッションシートを共有してみんなで書き込みしながらやっていきます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：セッションシートの２ページ目にロクイチさんのキャラシが、３ページ目にはなるむむさんのキャラシがそれぞれ用意してあります</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：セッションシートかと思っていたものが別物でした…今開きました！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なんか適当なところに書き込みしたり消したりしてみてください　書き込みできてもできなくても教えてください</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ちょい失礼して</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：共有して書き込みするのでときどきラグったりするので注意ですね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：書き込み削除大丈夫そうです～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はいな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい＜なるむむさん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いまPC設定のところに書き込んでみました</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ロクさんも大丈夫みたいですね　みえてます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：反映されているのがみえるでしょか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これ便利ですよー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：見えております～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：確かに</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：匿名〇〇っていうのが</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ、共有できるとあれこれはかどりそうです…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと。これはやってもやらなくても任意なんですが。　表示＞ドキュメントの概要を表示　で目次が出ます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：目次から好きなページにジャンプできるのでやっておくと便利です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：同時に閲覧している方のやつなんですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そうですそうです＜匿名さん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おお</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：これは便利ぃ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：TNMの簡易サマリーもこの形式で</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それでは確認できたので次にすすみますー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：作っとくと便利そうだなぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：はあい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aマホは汎用ルールで、基本ルールそのものには最低限のシンプルな処理しかついてないです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：基本にサプリを追加することで、サプリについてくる世界観や判定、データを使う感じのモジュール方式になっています</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回は、基本ルール付属のサプリ　神々の宴　というものを使います</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：神々の宴</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：神業管理とかリサーチ項目とか便利そうですよねえ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：神…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神々の宴　の世界は、現代の地球の日本のようなところが舞台となります。厳密にいうとちょっと違うんですがそれはあとで説明します。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：その日本っぽいところには、一般のひとたちが知らないんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：八百万の神々が実在しています　いまも！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふしぎの国なのですね！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、神々のもつ力はすごーくて。影響力ははかりしれないんですね。でも、神々の価値観って人間とは全然違うので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いろいろとトラブルにもなりやすいのです</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：確かに、事前に配置してたり、目次で飛べるのがよさそう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そんな神々にまつわるトラブルをどうにかするのがPCたちです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：PCたちは何らかの特殊能力を備えたひとです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：神様っていうのは世間に認知された一般的なものなのです？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：世間のひとたちは神様のことはしっているけど、プレイヤーと同じで　「神様は実在しないものとしている」みたいな認識です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：でも、裏の世界的なひとたちは八百万の神々が実在することをしっていますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむふむ…じゃあ、一般社会の裏側には神様ワールドが広がって…みたいな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そんなかんじです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：らじゃーです！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これもSDによっては異なるのですが。私のところではそういう扱いにしています</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：なるほど～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして。次にさきほどすこーし言っていた　現代の地球の日本のようなものだけど、厳密には違う　の部分です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神々の宴の舞台は、デザイナーである芝村さんが管理しているシェアード・ワールドである　無名世界観　という世界の一部なのです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ガンパレードマーチとか式神の城とか絢爛舞踏祭とか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最近のものだと刀剣乱舞とかも芝村世界ですねー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：ヤオロズハウンドだ！そこの河童！詫び証文により拘束する！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あっ、とうらぶもそうでしたっけ？！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。この無名世界観がなんなのかというと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ああ、非公式だったのかな　芝村さんはいつも細かいところははぐらかして秘密として匂わせるだけなんですよね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：＜とうらぶ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：無名世界観というのはいわゆるマルチバース　多元宇宙です</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：TNMクロス神々の宴…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：複数の世界があって、セブン・スパイラルとも呼ばれています</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：マルチバース、アメコミではおなじみの感覚ですう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神々の宴には直接はあんまり影響しないんですが、他の世界とのなんやかんやとかもやろうと思えばできる、ということですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神々の宴の舞台となる世界は　第１世界　であると推定されています</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まぁ、プレイヤー目線では　他にもなんか世界があるんだな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：というのと、　なんか現代の地球の日本っぽいぞ　ぐらいで十分です</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：刀剣男子がウォードレスを纏って戦場を駆ける…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：より詳しいことは　ルールブックを　買おう！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：Aマホならできますなぁ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：りょうかいです～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは、前説明ながくてすまないですが　そろそろキャラメイクとかに入りますよぉ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いえいえ、さくさくありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：お手元のセッションシートのキャラシ部分をご覧ください</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：刀剣CoCならぬ刀剣Ａマホがスタンダードな世界もあるのでしょうねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そこには　成功要素　という見慣れない言葉があると思います</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：楽しくなってまいりました…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：6つですかね、あります～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：この成功要素こそが　Aマホでは唯一むにむにのキャラクターデータになります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：むにむに</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：むにむに！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：むにむに</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：かっこいいですのう…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：成功要素は「成功要素名」と「パワー」の２項目で構成されています</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：要素名はそのまま　成功要素がどういうものなのかを示す名前です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：肉体や…ファッション、性格…ダメ要素…ｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：例えば　潜入のプロ　とかです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー　ダメ要素とかでも強さになるのです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむう！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：この成功要素というものは、単に強ければいいというものではないのです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：短所の裏返しは長所…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：物語を盛り上げる要素であればいいのです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aマホは　物語を紡ぐゲーム　です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なので、必ずしも強ければいいのではないのだー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：っと。脱線してしまいましまし</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：クールと思われたらホットにやり、ホットと思われたらクールにやる</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふりっぷ・ふろっぷですー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ましまし</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：例えば　特殊能力で　潜入のプロ：パワー１６　というものがあるとします</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これは潜入のプロ　すなわちソリッドスネークさんのようなすごい潜入プロだ！　というパワーですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そしてパワー１６の部分</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これはデータ的な強さ、すごさを表します</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：一般人の全力全開の数値がパワー１０です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：刀剣Aマホは実際に野良サプリとしてあったはずですね</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：あかうささんが作ってたと思った</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：Aマホは野良サプリが豊富です</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：かんたんにテクスチャ貼れるのは魅力ですねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まぁ、処理的には実際のゲームをやりながらわかるのが一番です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はーい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：だいたいの数値がどの程度のすごさなのか、というのが伝わればいいかな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではではすすめませう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：了解です～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：らじゃーです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：キャラメイクをやっていくぞー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：キャラメイクのやり方は</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ダイスを振ってチャートからそれぞれ６つの成功要素を求めます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、選んだ成功要素の組み合わせから　逆算してキャラクターのイメージを固める</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これが神々の宴でのキャラメイクですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、ダイスの振り方が若干特殊なのでご説明するよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ほほー、ダイスを振ってチャートを参照するのですねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ダイスは　６面を３つ振り　その出目からひとつを捨てて　任意の組み合わせで６６を求める　です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：実例出して説明します</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6<br>
+GeishaGirlwithKatana : (3B6) → 4,1,5</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：おねがいしまーす！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：このとき　4,1,5　の出目が出ているので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：先にどれかひとつの出目をすてます　捨てる出目は選択です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１をすてましょう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そうすると、　4,5　の出目がのこります</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ランダムですけれど、ある程度選べるのですねえ…素敵！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：4,5でつくれる組み合わせは　4-5,5-4　ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：111とか666はどうしようもないけど、出目次第である程度選べるんですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。処理的には先にどれかの出目をすてるか選べるんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：1-4,1-5,4-1,4-5,5-1,5-4 の組み合わせから選べます 実質的には</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：捨てる出目は任意で選べるのでね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：キャラメイク用のチャートは未所持用プレイングサマリーの最後のほうにのってます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いまそこを見てまーす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ダイスは 3b6　で振ると合計値ださずに出目だけだしてくれるのでそれが便利</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ちょっとめずらしい振り方だけど。大丈夫かな？？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと、チャートの項目でよくわからないやつとかもあると思うのでそれは都度質問くだされ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：だいたい理解したと思います。それじゃ～上から順番に振ってゆきますか！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい　各自ダイスどぞどぞ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：はあい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：その間にSDも今回のシナリオクラフトのお題をダイスふるよぉ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 肉体<br>
+GeishaGirlwithKatana : (3B6) → 1,1,2</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：3b6 肉体<br>
+GeishaGirlwithKatana : (3B6) → 3,4,5</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いきなり選択肢の少ない感じに…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ロクイチさんの出目から不吉なオーラを感じます…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ゾロ目は選択の余地が少ないですが、尖ったものが出るようになっていますです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よくもわるくも尖ったものが、ね！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：どうしようかな、左右の眼の色が違うか、ないすぷろぽーしょん、筋骨隆々の実質３択ｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あ。ちなみに一発振り、振り直しなしです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：言われてみれば、ゾロ目尖ってますねえ…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：らじゃらじゃ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 今回の舞台<br>
+GeishaGirlwithKatana : (3B6) → 6,1,2</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：2を捨てて、肉体は左右の眼の色が違うにしておきませう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：舞台は出目キープして保留</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：５を捨てて４３：ヤンチャそうを頂いていきます…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 神様表<br>
+GeishaGirlwithKatana : (3B6) → 6,2,6</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神様・・・　選択の余地がなくやばいやつしかいないｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 ではお次はファッショーン<br>
+GeishaGirlwithKatana : (3B6) → 2,4,4</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なんでこうぞろめばっかりでるのかな？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：3b6 ファッショーン！<br>
+GeishaGirlwithKatana : (3B6) → 2,1,4</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回の神様は大神（おおかみ）です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：大神…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：大神！つよそう！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うん。初プレイにしてはつよいよ・・・</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：せっかくなので、2を捨てて44パワードスーツにしまする</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3d6 M*の内容、神様が起こす事件ですね<br>
+GeishaGirlwithKatana : (3D6) → 13[5,6,2] → 13</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：パワードスーツｗｗｗｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：笑っちゃってタイプできないですｗｗｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：急にSFエンジンがうなりをあげてきましたｗｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よかった　M*の内容はおとなしめだ　出目キープで次へ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 ハプニング M*の内容とは関連あったりなかったりするサブクエストです<br>
+GeishaGirlwithKatana : (3B6) → 4,6,4</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：２１：正装いただいていきます…！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：伝統にならって、漢字二文字：号にせねばですなあ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いい感じだ！　おもしろそうなハプニングを引けそう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 性格～<br>
+GeishaGirlwithKatana : (3B6) → 6,1,5</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：やっぱり４２：ブランドものいただきます！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：3b6 性格！<br>
+GeishaGirlwithKatana : (3B6) → 5,5,2</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：哲学者、ツンデレ、淫乱、家族思い…うーん…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：55は…邪悪…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：邪悪…！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ヤンデレか強情か邪悪の魔の三択です～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ツンデレとヤンデレのコンビというのもたいそう愉快ですが</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：主人公が刺されるやつです～！？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：（味わい深い表情でなるむむさまのほうをチラ見する…）</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：や、ヤンデレやりましょう…！ヤンデレぢから、見せてやりますよ…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃあ、わたしはツンデレで！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：（おもしろくなってきやがったぜ）</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：3b6 行動原理！<br>
+GeishaGirlwithKatana : (3B6) → 6,4,5</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 行動動機そーれ<br>
+GeishaGirlwithKatana : (3B6) → 3,3,4</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDはシナリオクラフトでこねこねしておりますー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい、お願いします～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ゾロ目多いな…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：３３のレイジぢからにはびっくりです…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あれ、それは次のやつじゃない？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：観てる欄が違いました・・・</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あるあるう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：片思いの相手のため…わあいツンデレっぽーいｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ぴったりな雰囲気ですねえ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なるむむさまはどーされます？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ヤンデレ感を尖らせるなら結婚のため、イニシアチブを加速させるなら秘宝のため・・・</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ヤンデレっぽい…ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ということで片思いにしておきました</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ヤンデレ感高めていきますか…！結婚いただきます～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 ここで勝負だ！ ダメ要素ッ！<br>
+GeishaGirlwithKatana : (3B6) → 4,3,3</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おお…神よ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：やっぱりレイジじゃないですかー！？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：3b6 ダメ要素！<br>
+GeishaGirlwithKatana : (3B6) → 6,4,3</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：うーん、なるむむさまは何か未来と会話してたんですかね？ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ここは力強く33　怒り出すと手がつけられなくなるで</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：どうしようもないもののコレクターいただきます…ツンデレパワードスーツで怒り出すと手が付けられない相方が恐ろしいです～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：確かに…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：3b6 ラスト特殊能力！<br>
+GeishaGirlwithKatana : (3B6) → 2,2,4</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 特殊能力 こいこい！<br>
+GeishaGirlwithKatana : (3B6) → 1,3,5</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：シナリオできーたよー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：セッションシートに書いたし、一応メモにも貼った</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：わあい！ありがとうございます～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ありがとうございます～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：どれも面白そうだな～</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ちなみに、キャラクターは持ち越しで遊んでいく感じでしょうか…？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そこはお好みで</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：了解です！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：終わったときに２ゲーム目は作り直してもいいですし　成長させてもいいです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDは犬神とか大神の設定を打ち込むのぞい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：２２：驚異の身体能力いただいていきます～！</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ふはー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：シナクラたーのしー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：では、53　一秒だけ時を止められるをいただきますー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：物語をでっちあげるのほんとテンションあがる</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：こっちのが落ち着いたらみなさんのキャラも確認しますねぇ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はあい</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：この内容をお二人とどう広げていくのかわっくわくです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：はあい！名前設定つめていきます～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい　設定類は世界観に反しない限りはかなりフリーダムです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：データにはならないですが、設定は大事です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：名前や設定か～うーんうーん</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：日本人でも外国人でもエージェントとかのコードネームでも通り名でもなんでもいいですよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：人間じゃない表をとってたら妖怪とか妖精もありですし</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：肉体のところのどっかに妖精とかあるんですよほんと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：成功要素に絡んでなくても　人間に化けてる妖怪だよ　もありですよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：妖怪というのもたのしそーですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：成功要素ではないのでデータ的には使えないけどね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ぽわぽわした妖精で遊んでみたい気持ちもあります…！（しかし、手元の病みの成功要素に目を落とす）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ヤンデレ妖精とは新しいですね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：（急速に都市伝説化しそうな雰囲気から目を背けつつ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ずんどこ神々の設定うちこみました</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神に関する基本的な設定もいまからうちこむぞ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神そのものの設定項目、文章量がえげつないので打ち込みを断念！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ヤン“ディレイ”くん１６歳学生で独占欲の強い男の子をやろうとしたのですが、結婚願望を合わなくて断念しました…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ようするにまぁ、神だね。そういうことでいこう。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい。キャラシ確認はいまからするよぅ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：てきとうに盛った設定をつくりましたあ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おおー　ロクイチさんはエージェントか！　いいなぁ　いいなぁ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：くそー　すごくいいなぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おれの名は妖束ちひろ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：神様？妖怪？超常現象？　そういうことならウチに来な</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：って感じで、表向きは探偵をしつつ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいですなぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じつは宮内庁神祇課のエージェントで、八百万のカミを鎮めるものです</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：さすがロクイチさん、もうすでにこの神々ワールドを掌握している</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：そしてSDはさきほどでっちあげたシナクラに応じて、NPCやらなんやらの準備をしておるよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：（たぶん違う世界からおっこってきた）パワードスーツ、陽炎号（スピリット・オブ・ミラージュ）を持つ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ああうん。ガンパレ世界かどこかから流れてきたウォードレスっぽい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：スピリット・オブ・ミラージュ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいなぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：そしてこいつは俺の相棒、妖精のなるむむちゃん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃない</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：妖精のなるむむです！特技は電子機器をお釈迦にすることです！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：妖精になりたいなら、陽炎号かなんかにとりついてて</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なし崩しに相棒化するのはどーでしょ？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふたりだしバディっぽくいけると楽しくありませんかにゃ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：お。妖精でいきますか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：でもグレムリン以外でお願いしますｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですねえ…ナビ役の妖精も素敵かもしれません…！（脳内回路をぐるっと変える音）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ご令嬢でもいいですし　そこはお二人にまかせるぜー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あ、でも設定あるならそれでも</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なお。SDも参加者なのでより楽しくなる盛り上がるように一緒にたのしむよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：こちらも、年齢性別外見は相棒にあわせて変化するぜ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ちょっとだけ時間下さいませ。。。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ぜんぜんだいじぶでーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：勝手に宮内庁とか言い出してますけど</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：いいかしら…？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おこめさん合流前に１ゲーム目おえるのはちと時間的にむりっぽいので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おこめさんは１ゲーム目は見学のまま　１６：００まで１ゲーム目つかいましょうかね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいのです！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おもしろいものは採用するぞ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：こう…どれくらいまで寝言いっていいのか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：このあとでも説明するのですが　Aマホには　設定の提出というものがあってですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：プレイヤーも世界をでっちあげられるのです　ルールの範囲内で</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ほよー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：寝言の言える範囲についてもルールで定義されてて、SDによっていろいろわかれるところではあるんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：せっかくなのでそのへんも説明しときましょう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：（先に結果からいうとオッケー　なんですけどね）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：マップ画像にもざっくり書いてあるんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aマホはフェイズ制でして</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：M*の発表　→　解釈フェイズ　→　作戦フェイズ　→　前提変換処理フェイズ　→　RPフェイズ　→　ダイスロールフェイズ　→　結果フェイズ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：こんな感じになってます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そのなかで、　解釈フェイズ　までの間なら、設定の提出はできるんです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ほうほう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズ以降は、プレイヤーは追加の設定を提出したり、後出しすることはできません</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：今回は依頼されるということなので、依頼されやすいように探偵なんて言ってみましたけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これがルール的な縛りのひとつですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：素晴らしい！　エクセレント</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：それが、設定の提出ってことなんですな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。寝言の範囲についてなんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１．世界観に反しない　２．イメージが参加者全員で共有できる</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：３．他の設定と矛盾しない</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これが満たせるならなんでもありです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最終的な設定の採用、不採用はSDに権限が委ねられているので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そこはあるんですが。　おもしろければ採用というものになります</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：昔のAマホには７割採用の法則とかあったぐらいですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なので、物語をみんなで紡ぐというところで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：プレイヤーも世界を広げていいんです　そこがAマホの懐の広さ　すばらしい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そんなわけで宮内庁神祇課のエージェントも探偵のペルソナも採用ですよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：イェイ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：だって、素晴らしいしおもしろいし</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですです！皆で協力してシナリオを紡いでいく感じ好きです…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：なるむむさまには</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：設定変更のあおりをうけさせてごめんよー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：お待たせしました。。。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：わあい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：“ファインド・ザ”パス、妖精のパスちゃんです…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ロクさんから水向けていただいたので戌亥家からは探偵の妖束さんか神祇課に依頼したということにしましょうか</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：（本当に妖精で大丈夫なのでしょうか…？）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：探偵か神祇課かはロクさんの希望で</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：妖精だっておもしろいですよね？　みんながイメージ共有できてて、説明できてて、イメージが共有できてて、世界観に反してないし</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：他の設定にも矛盾してないし</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いけますいけます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はーい、じゃあ神祇課に依頼があり、事務所でなんやかやしているところにおもしろげな方法で指令が来る感じでｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：のんびりのほほんとした同胞に飽き飽きしており、アクティブな人間に憧れをもっていたところ、妖精女王の命で人間界に赴くことになりました！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：超常的な事柄は、わたしはパスちゃんに頼っている感じかな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいと思います。　他のAマホではしらないけど。この卓ではこの卓の物語と世界が描ければ良いのです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：その後、人間界の神祇課の斡旋…もとい、ブレーキ役としてちひろさんの事務所で住み込みで働かせてもらうことに</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：怒ると手のつけられないツンデレですからね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいですねー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：ですです！超常現象は私に任せて！と言いつつ、生まれて間もないので知らないことがほとんどです…困ったときには妖精離れした身体能力でどうにかします（物理）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はいな</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：基本的にはちひろさんとバディ登場しております、以上です！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：よろしくおねがいしまーす！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：確認なんですが、人に化けられます？それとも普通の人には見えない感じです？？＜バスちゃん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：しまった、年齢と性別どうしよう…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと、特に意味はないんですが雰囲気だしとしてコマなり立ち絵なりはご自由にどうぞ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ムリ言ったし、パスちゃんの好みに合わせます～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDもNPCやらなんやらの準備してますです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：それもまた無茶ぶりです～！？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あっ、それはごめんなさいｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：キャラシデータのチェックはおふたりともおっけです！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：かっこいいおじさま探偵とか見てみたいきもします…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：おじさまか…うーん…そうねえ…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>なるむむ</b>：人間形態あります！＞パス</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：お時間の都合で、成功要素とだいたいのキャラの方向性は今の時点で確定とさせてください。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい＜人間形態</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：BGM変え忘れてた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かえよっと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：【BGM Dog Days】</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：お互いにみんなで化学反応おこして世界つくってる感じ最高にたのしい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ちょっとだけ立ち絵フォルダを眺める時間をください…</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>なるむむ</b>：セッションに使わずに供養した翼ちゃんコマ絵で使います…！使う機会が出来て嬉しい…嬉しい…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：こちらもNPCなどの準備してます</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：いいねー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：そういうのすばら(*´ω｀*)</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：いいですのう＾＾＾＾</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：待たせたな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：パスちゃんよ、２パターン用意した外見のうち</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：好みの方で固定化しよう</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：これAパターン</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ちがう、こっちがBパターン</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：ちひろさんかこいい！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：こっちでいいか？</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：色気のあるおじさまいいよね…いい…・</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：サンキュー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：パスちゃんもたいそうかわいいな</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：妖精ですので～</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：オーケイ、年齢39　性別男性</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：片思いの相手…ってのも決めといた方がいいかな？</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：透過出来たかな…？</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：雑だけれどまあいいっか！（妖精感）</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：その開き直りは大事だぜ、淡い彩色は透過と相性わるいんだよねえ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：おじさまの恋愛事情も気になることです…！＞片思い</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そうだな、設定しとくか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：片思いの相手はイワナガヒメだ。ある事件で心臓を失った俺はイワナガヒメno</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：の加護により命を永らえた。</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：神話的…！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：時を静止する能力ってはその影響で使えるようになったらしいな（説明的背景</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：おまたせしまうまー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：爾来、焦がれてはいるんだが…人とカミは結ばれることはない…とも思っている</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：NPCとかの準備できできー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：おつかれさまでえーす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：イワナガヒメとのエピソードすばらオブすばら！！！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：くそぅ　ロクさんめ私をころすきか</font></br></td></tr>
+
+<tr class="tab1 char5"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：おつかれでーす！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ウケたら嬉しいぜ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：とと</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：位置調整</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そんなわけで神祇庁のエージェントをしている…ってことにしとくか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：男のツンデレなんで、ちいと厭世的でイヤミな物言いをするが</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：なんだかんだで面倒みちゃうようなヤツさ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：ダンディズム溢れるツンデレも素敵…！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：パスちゃんも、紆余曲折を経て面倒みちゃっている</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ヒナまつり的な感じで…ｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ふふふ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：イワナガヒメさんも準備したぜ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：なんだと</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：ちひろーいくらどこー（間延びした声）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これでよし</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：もうねえよ…どんだけ喰うんだこいつ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：さすがにこれ以上準備すると第２ゲームに差し障る</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：まあ、そんな勢いでパスちゃんも好き放題してくださいね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：オーケイ、あったまってきた。いつでも行けるぜ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>ファインド・ザ” パス</b>：いえすいえす！妖精魂見せつけますとも…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そろそろ第１ゲームの本編はじめますが　そのまえにSDの心の準備的な意味で５分ほどリアル休憩とりましょう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDの時計で１５：２０開始ということで</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：了解</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：位置が変わった！元の場所に戻ります！</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：いやしかし</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：最初ダイス振っているときはこういうキャラになると思いませんでした</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：もう開始前の時点ですでにすごいよこれ</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：無茶鰤してごめんねえ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：すでにもうおなかいっぱい　たのしすぎ</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：オタクだから設定考えるのしゅき…ｗ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ではちょいと離席です</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：わかり</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：もどりー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：おかえりなさーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そしてSDの時計で１５：２０です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：みなさまいますかー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：おかえりなさいませ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは押し気味ですがはじめていきましょう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：Aの魔法陣　神々の宴</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：了解です～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神祇探偵シリーズ　妖束怪奇帳<br>
+　枯れ柳に響く祭り囃しは夏の調べ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はじめていきまっしょー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：タイトル素敵…！</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：タイトルがついた…伝奇モノノ予感ですう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：よろしくお願いします～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まずはM*の発表フェイズから</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくでーす</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：「これより我は、M＊から始まるゲームの目的を記述する」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：M＊：お祭りをして大神の神通力を取り戻してほしい：難易度１００</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ハプニング：神様は変化して別のものになってしまった。本来は大神だが、犬神になってしまっている</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：内容は共有メモに貼ってある通りですが。ログのためにここにも貼ります。</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：共有メモ助かりますう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　古い大神から眷属として別れた犬神がいた。<br>
+古い戦や時代の流れのなか、犬神は主である大神とはぐれてしまっていた<br>
+そして時を経て、犬神の末裔である戌亥家の人々はついに主である大神の御神体を遺跡から発掘する<br>
+だが、発掘された大神は神通力の多くを無くし、犬神と成り果ててしまっていた。<br>
+　戌亥家の人々はこれを嘆き、主に再び大神としての力を取り戻すために祭りを開いて欲しいと<br>
+宮内庁神祇課のエージェントである妖束に依頼をすることとなった。<br>
+<br>
+大神　犬神の末裔、戌亥家が仕える主　行方不明だった<br>
+犬神　大神から別れた別の神様<br>
+戌亥家　犬神を祖先とする末裔、人間です<br>
+遺跡　どこかの遺跡だよ<br>
+御神体　大神さまの今の本体です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そんな感じです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そしてここからはルールのインストをしつつフェイズ進行で進めます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まずは解釈フェイズです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ここでは、SDに対して質疑応答を重ねながら舞台の設定を整えるフェイズです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDが設定していない部分はプレイヤーから質問や提案をして</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：設定を追加できます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、このフェイズが終わると、プレイヤーは設定を追加できなくなります</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：このフェイズのきもは</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：設定を出すことでゲームを優位にすすめることでもあります</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ただ、「目的そのものを直接達成してしまうような設定」は提出されても許可しません</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：具体例を出すと、「大神の神通力は弱っているが、時間が経てば勝手に元に戻る」とかいうものです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：それでは俺たちが介入するまでもない</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：上手な着地点を見つけていきたいわ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですね。</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：…これは、例えば提示されている祭りを行ってほしいって依頼に対して</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あとはキャラの持っている成功要素を出しやすいように、設定を出していくのもいいです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うん</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：例えば、”マツリとカミを分断する何か”がいるような、設定を提案していいのかな？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいですとも</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：敵対あるいは邪魔してくる存在を出すことで物語は盛り上がるし</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：のうきんなもんでな、倒すべき何かがいるとやりやすいと感じてしまう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そういうものがあると、パワードスーツ　とかの成功要素が使いやすくなりますね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：イェィｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神がなぜ行方不明だったのか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：怒り出すと手が付けられないけれど、こういうときは便利ねえ。。。</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：なるほどな、それを提案して舞台を作るわけか。これはotakuが夢中になるわけだぜ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神が神通力をなくしたままでいると得をする誰かがいるのか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：iine</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：イイね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：別の勢力は神なのか、あるいは神でもなんでもない人間の勢力なのか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDが出していない設定はプレイヤーが好き勝手に出せます</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そういうのもここで提案していくわけかな？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そうそう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、こんな感じの神様とかっている？とか聞いてくれれば探していい感じのを出しますよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：事件の予感がするわ…！妖精界は得られない、こういう展開を待っていたのよ！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふうむ、イロイロ考えられるよな。妖怪がカミに成るために力を奪っているとか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：カルトとかでもいいよな、崇めるカミのために…とか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ただ、無限に解釈フェイズを重ねると制限がなくなってしまうので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：・だいたいこんなもんかなー　という設定がでてきたらSDが〆ます　それか　・時間で区切る</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：らじゃー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：とりあえず１５：４２までで〆る方向で、いい感じにまとまったらより早く〆ます</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：並行して舞台に関しても質問したいのよね、狼の力が増すのは満月、舞台は満月の夜でも可能なの？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：オッケ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：可能です　新月にしてもいいし満月にしてもいい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：〆了解！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：満月まで何日とかにしてもいい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：いいな、月の影響で狼の力が増すとかオカルトっぽいぜ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うむ　セッションシートの方もみてね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そっちにだいたい書いてるので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと追加された設定とかもそっちに書くよ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：らじゃー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１５：３７（時間を知らせるいみでこういう打ち込みします</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：Aマホはけっこう珍しいリアルタイム制なのだ</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：なるる、それでボイセ向きね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：気軽にじゃんじゃか質問なり提出していいよー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：そういうこと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：&gt; ”マツリとカミを分断する何か”がいる　これは提出されたとしていいかな？</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：あとは…旅行客が来るような観光名所の有無ね！だって、お祭りよ？賑やかな方がいいじゃない！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：違いねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：できればわかりやすく　提出します　と付けてくれるとありがたい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ほんじゃ、大神の力を奪ったのはまつろわぬカミって方向で提出しまする～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用です &lt; 大神の力を奪ったのはまつろわぬカミ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そのまま祭りを行っても、まつろわぬカミに霊力か何かが行ってしまう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用されたものはセッションシートに書いてくからね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用 &lt; そのまま祭りを行っても、まつろわぬカミに霊力か何かが行ってしまう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まつろわぬカミはそいつそのものが動いているのかな？それとも眷属がうごいてる？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：それはどっちでもいいぜ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：解釈フェイズで不確定だったものは　その先のフェイズでSDが好きに設定を追加してしまうよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：オーケイ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：観光名所はどうするかな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：なにげに、風光明媚なところで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：未確定なのは月齢と観光地などの場所の話だね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：パスちゃんのガッコ（にいっているとして）が修学旅行に来るくれーのとこがいいんじゃない？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：舞台として遺跡っていうのが実は出ている</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神の御神体が発掘された遺跡</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そのことで長らく失われていた大神に戌亥家が巡り会えたのでね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：そうねえ、狼に関連した歴史ある神社が近くにあって、お祭り客を呼び込みやすくするというのもいいかもね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：それはいいな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：既存の設定との矛盾がでそうだけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神は神通力を失っているのに、狼にまつわる歴史ある神社がある</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：人里離れてるかんじなのか？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それは不確定＜人里</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はろー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：大神が犬神に変化したのもずいぶん昔のことだろうしな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：こんにちは～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：こんにちは！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：逆に、犬神神社が多いのならいいんじゃないのかな？</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>10pyo</b>：こんにちは</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なので狼にまつわる有名な神社　はそのままでは不採用だね　既存の設定との矛盾なので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：第１ゲームまだかかるのでしばし見学でおねがいしますねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：＜10pyoさん</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>10pyo</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくですー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：では、そこそこ交通のアクセスもよくて、狼に関連していないけれど歴史ある神社があってお客さんが呼び込みやすいという流れはどうかしら？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：犬神信仰は西日本が多いそうな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用 &lt; 交通のアクセスもよくて、狼に関連していないけれど歴史ある神社があってお客さんが呼び込みやすい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おっと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：時間すぎてた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１５４７</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ですなあ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：〆ます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まぁ、初回プレイだしこんなものですね</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：10pyoさんよろしくお願いします～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：慣れてきたら解釈でほぼ勝利確定までもっていくつわものもいる</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：舞台と倒すべき敵の存在が確認できたもの、大丈夫よ！（多分）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：あんまりおかまいできなくてごめんねー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そしておれたちは最後の戦いに向かうところでスタート、みたいな？ｗ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：よろしくおねがいします</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：10pyoさんよろしくお願いしますー！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：ログを読ませていただきますね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>10pyo</b>：こんにちは</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では次のフェイズにすすみますね　あんまり第１ゲームが長引くと合流組に悪いですし</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：こんにちは～</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：申し訳ねエ・・・</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では、次のフェイズに進むんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズからがデータ的な処理を伴う　いわばメインフェイズみたいなものです</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>おこめ</b>：すいません、遅くなりました！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。インストとして先の処理までちょっと説明もします</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：いらさいましー</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：こんにちは～、よろしくお願いします</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：こちらもちょっとおしててお待たせしてすみません～</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：まだちょっと第１ゲーム押してまして　もうしばし見学でお願いします</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：こんにちは、私もついさっき合流したばかりです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：お願いしまーす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まず、作戦フェイズでは「M＊」の内容を解決するための作戦を提出します</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ロクイチです～</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：こんにちは～！ＰＬのなるむむです、よろしくお願いしますー！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦を決めるにあたって、SDはコーラーというものを指名します。</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：10pyoといいます。よろしくおねがいします</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：コーラーについては、共有メモの用語集をご参照下さい（時間節約のため</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>おこめ</b>：よろしくおねがいします～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：さすがわたし。えらいぞ昨晩のわたし　書いてたメモに</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズでは相談したうえで、作戦を出してもらうわけなんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：その作戦にはキャラクターはそれぞれ成功要素をひとつずつ出します</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：その成功要素は作戦の内容に紐付いていなければなりません</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDは内容を吟味したうえで、成功要素の採用、不採用をキメます</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふむふむふむ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。採用だった場合は、成功要素のパワーの数値だけ「M*」の難易度の数値が削れます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いまの難易度は１００です</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふむふむふむ、いま100なので</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。もうひとつそれとは別の処理があります</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：よろしくですー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：第２ゲームからはお二人も参加していただきますよぉー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：色違いの眼：11が通れば、89になる？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そういうことですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：すばら</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：で。その処理とは別に。というかその手前でなんですが</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：何としても大きめの特徴を通そう…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：もうひとつ　前提変換処理フェイズという処理が入ります</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これは提出された作戦の内容そのものをSDが吟味して</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：・物語のもりあがり（おもしろさ）　・説得力　・M＊の解決につながるか　これらの要素で吟味します</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、作戦の素晴らしさに応じて、難易度の数値に対して減算をかけます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最大で、難易度の数値が−５０％（５割引）されます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：説明の流れは前後しましたが</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：けっこう派手に変化するんですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：半額！大変お安くなっております！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦を決める　→　前提変換　→　パワーの分だけさらに差し引く</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：この流れです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：基本的には、100をいかに0に近づけるか、というのがゲーム性で</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：フレーバーに応じて、その辺を結び付けてゆく、と</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>おこめ</b>：ログ読んで待ってます！！わくわく</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：このあとのRPフェイズが終了した時点で、難易度が１以上残っているとかなり厳しいです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：0にするのが、ベストなんですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いかにダイスを振らずにナラティブ（語り）で数値をゼロに近づけるか　ですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：りょーかいです</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：一通り読みました&gt;ログ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：M*の難易度はわかりやすくいうと　ラスボスの残りHP　物語の進み具合　という概念的な数値です</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：おつかれさまですー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：Ａマホですもの、出来ればダイスに頼りたくないところです…！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：基本的には神様や怪異が存在する現代伝奇モノみたいな感じでしょうか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そうなのですね！（ダイスを振らない）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、その先のRPフェイズではRPを交えて成功要素を出します</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：このとき、作戦フェイズで出した成功要素は使えません</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、RPフェイズではRPの素晴らしさに応じて、SDが成功要素のパワーを掛け算します</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：基本的に成功要素は、１回ずつ使えると思ってよいのですか？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：倍数はごらんのマップ画像にある通りです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はい。成功要素は１ゲームにつき２回ですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回は演出成功要素という選択ルールは使わないので　そういうことになります</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：これは、PCごとに2回？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：PCごとです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：了解です！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：では計4つ出して</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズで１要素、RPフェイズで１要素です</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：あとは倍数次第かあ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そういうことですね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：よおし</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なので、戦略的にはRPフェイズに大きな数字を出せると有利です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ここまでがインスト部分の説明ですね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：了解、です</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あとはフェイズを進めながらまた補足していきます</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ここから作戦フェイズに入るんですが</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：そういう世界観は大好きですね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そのまま入ってしまうと何が何だが状況がつかめないということもあるので</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：無名世界観作品は式神の城を少し触った程度ですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：時間おしていますけど　軽くRPを挟んでから作戦フェイズに入りましょうか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これはルールに記述されていませんが　私はこうしています</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：了解で～す！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：たぶん、慣れてると要素から逆算してサクサクやるんでしょうね</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：時間おしているので合流組のお二人にはもうしわけないです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では　場面きりまーす</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：大丈夫です</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：がんばってさくさくいきますー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：７月某日</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>おこめ</b>：大丈夫ですよー！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：H市の近郊のとある山奥の遺跡から、大神の御神体が発掘された</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：長らく行方しれずとなっていた主である大神と、眷属の戌亥家が巡り会えたのだが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神は神通力のほとんどを失い、みるにも無残なありさまであった</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：力をとりもどすべく、戌亥家当主　戌亥孝四郎は宮内庁神祇課へ依頼をする</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ここは妖束の探偵事務所</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：探偵・妖束ちひろは依頼人である戌亥孝四郎を迎えている</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：（軽くRP入って導入です）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：どうぞー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「・・・・・・ということで。あなたの力をお借りしたい。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はあい、歓楽街にほど近い事務所はクーラーの効きも弱く、7月の暑さをじんわり感じさせる感じで</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「…チヒロ！お客様用のコーヒー切れてるんだけど！ちゃんと補充しておいてって昨日言ったじゃない！」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「オイオイ、それを言ったのは俺で、買い物はお前の担当だろうが」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：などといつものやり取りをしております。。。</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「祭りの仕切りそのものは俺達、戌亥家だけでもできるんだが・・・　霊力のあるものは少なくてね。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「ええ…大神はオオカミ…月の領域と夜を支配する強力なカミですね」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「代を重ねると神族の血もかなり薄れてしまうんだ。人と混ざりすぎたっていうやつだな。」</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：（タイムテーブルを確認したのですが、19:10頃に夕飯に呼ばれる可能性が高そうです……）</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「委細は承知しています、この度はその祭りを成功させればよい、と」</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：適宜休憩はいれます　私もたぶんそのぐらいの時間にはご飯だと思う</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：了解です。ありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「…ふうん、チヒロにはぴったりの依頼みたいね、少なくとも、猫探しよりお似合いよ」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：（ヒトと混じる…ねェ）と内面的な部分にちょっと微妙な表情をしつつ、依頼は受けまする</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「話がはやくて助かります。　しかし、我が主がただ何の理由もなく力をなくしていたとは信じがたいのです。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「一言多いんだよ、おまえは…」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「背後になにかあるのではないかと。その辺りも含めてお力をお借りしたいのです。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「でしょうね、物事には理由がある。ええ、お任せください」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「そういうことなら私にお任せ！“ファインド・ザ”パスの名は伊達じゃないわ！」と上司に被るように前のめりに立ち上がります</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「人的なもの、情報、資金的なものについても戌亥家が全力でご協力します。なにかあれば言って下さい。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「この娘も同行します。お使いよりお前向きの仕事だからな…」（被られます</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「それはありがたい…では現地で…」（のかせつつ）</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>戌亥孝四郎</b>：「それではよろしくお願いします。」そういって彼は契約書にサインをして契約金が入ったアタッシュケースを渡します。</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ちりーん、と風鈴が鳴る感じのエフェクトを入れつつ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：導入はこんなところですなー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：巻き気味なので</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「こんな暑い日にお使いに行けだなんて妖精虐待よ～」（のかされつつ）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、祭りを開く予定の現地へと赴くみなさん</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：といったところで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズに入りましょうか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：さあて</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズもリアル時間で区切ります</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：どんな作戦で行くかな…これは成功要素と状況を絡めていくといいのかな？</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：ばっちこいです！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：コーラーは、なるむむさんを指名しますね</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：頼むぜ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：任されました！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では、時間はSDの時計で１６：２５〆とします</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：わりと間がないな、さて…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：コーラーであるなるむむさんは時間までに作戦を提出して下さい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：〆了解です！ちひろさんは何かアイデアはございますか？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そうだなあ、さしあたって大神の力を吸うヤツを引きずり出す必要があるだろうな</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：ですねえ、敵対存在を見つけ決着を付けつつ、神通力を高めるあれこれが必要な予感です…！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：そいつはカミの力を求めている…っつうことで</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：お祭りの成功にもつなげたいところです…！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：【片思いの相手のため：パワー14】 （行動動機）をチラつかせつつ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：神祇といえば、神楽よ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：チラつかせるねえ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ここは巫女がいる。イワナガヒメさまに頭を下げてお出まし願おうか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：個人的には、お祭りの出し物でパワードスーツのヒーローショーとかいいなあ…なんて思ってます…敵役は敵役で…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：イワナガヒメさまの助力も得たいところです～！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ほんわかしているなｗ　それでもいいんだがな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：お祭りといえば、露店だろ、【どうしようのないもののコレクター：パワー15】 （ダメ要素）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：狼装飾を施したパワードスーツで敵を倒せば狼信仰まったなしよ！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：で、めずらしいものを出店するなんてのもいいんじゃないの？</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：そうねえ、出しどころではあると思うわ・・・</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふだんは事務所を圧迫して困るので、ここらで放出してほしいという気持ちもあるな</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：物語的には怪奇譚っぽくいってるのでパワードスーツよりも片思い（イワナガヒメ）のほうがもりあがりそうだねぇ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ま、敵もカミの力が狙いだ。作戦としては悪くねえじゃねーかな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：これがCoCなら地道に調査するところだがな。</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：＠５分、方針をまとめましょう。敵を見つけ、敵を倒す。お祭りはイワナガヒメさんの助力を仰ぎつつめずらしいものを出す露店等で盛り上げる、そんなとこかしら？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：お祭りの盛り上げは、パスちゃんにお任せするぜ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：オーケイ。イワナガヒメの神楽だ、不足はねえだろ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：役割分担ね、ヒーローショーは残念だけれど、チヒロにはイワナガヒメさまのヒーローになってもらいましょう！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：悪い気はしねーな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：動員可能なら、宮内庁のエージェント（モブ）に状況の観測を依頼したいところだが</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：あれもこれもでは難儀だろうしな。そんなところでいこうぜ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：他に何か付け足すべき要素はあるかしら？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：うーん、実はどこまで盛っていいのかわからん</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：成功要素に絡まない設定なので宮内庁のあれはあんまり期待できないですねぇ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：私なんてヒーローショーの流れで敵を倒しつつ花火で止めを刺そうと考えていたんだから盛れるだけ盛りましょうよｗ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ん、であればここらでいいんじゃないか？　イワナガヒメには神楽と囮を頼もう</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：す、すげーなそれは…ｗ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：オッケー、ではＳＤ作戦申告いたします！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：頼むぜ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：もいちどあげますね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SD：これは提出された作戦の内容そのものをSDが吟味して<br>
+SD：・物語のもりあがり（おもしろさ）　・説得力　・M＊の解決につながるか　これらの要素で吟味します</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦どうぞー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：テキセだとやはり少しむずかしいなぁ</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：考える時間と、タイプする時間がありますものね</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：初プレイだしもうすこし時間とってもいいんだけどねぇ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ですです</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：相談の結果を、コーラーがまとめる、っていう作業もあるわけか</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：押しているのと２ゲーム目合流組もいるのでね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：お祭りの屋台に世界を問わず、多種多様な食べ物・シロモノを扱う露店を多数出展して盛り上げつつ、チヒロのコネでイワナガヒメにお祭りのフィナーレで神楽をお願いし、それを狙う大神の力を奪った何者かを撃退、大神の力を取り戻したいわ！</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：今回はね、さくさくめで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：提出を受けました　それではそれぞれ成功要素もどうぞ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：【片思いの相手のため：パワー14】 （行動動機）</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：ただ、参加者全員で物語を作っていくのは楽しそうですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：【どうしようのないもののコレクター：パワー15】 （ダメ要素）</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：そうそう　それがすごくたのしい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では、これより前提変換処理フェイズへ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：別のナラティブ系をやったことがあるのですが、そっちも楽しかったです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦はさすがAマホ経験者　そして大いに盛り上がること間違い無しの展開　もんくなしで素晴らしい作戦（５割）です</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：だからこっちも期待しています</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：わあいｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：難易度　１００　→　５０</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：続いて　成功要素を個別に</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：やったわ！（フラグ）</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ナラティブ系は最初すこし敷居高く感じてしまうのですけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：片思い１４　採用です　５０　→　３６</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：あれこれイメージを出して共有できるのは素敵です～</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：作戦フェイズは要するに、自分たちにできること、世界観的に無理のない範囲で面白い展開を考えればいいのでしょうか</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：よしよし</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>おこめ</b>：ダイス振らないの初めてなのですが…めちゃ難しそう…！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：どうしようもないものコレクター１５　少し悩みましたが採用で　３６　→　２１</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：残り２１～！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦フェイズでは採用・不採用しかないのでね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では、作戦の結果どのように物語が進展したのかを　あとづけなんですが軽くRPでやっていきますね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：ですよねえええ！もうちょっとスマートに使えればよかったです～次はやってみせますよ（フラグ回収顔）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これは結果の確定しているあとづけRPなので　そこは予め了解ください</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：手順がわかってさえしまえば、最初の方の解釈フェイズで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ぜったいつなげられる状況とか提案できるようなので</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：＜10pyoさん</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はあい</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：第２ゲームを楽しみにしています</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：妖束と相棒のバス、ふたりは犬神を祀る祭りのために</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：（こういう系は展開に悩んだ時にいざとなったらGMがPLと相談しやすい気がします）</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：いざとなったらと言うか普通にPLから展開の希望とか聞く感じですよね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：H市近郊の遺跡のみつかった地域まできた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、そこで君たちは犬神祭りをひらくことに</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ですねえ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：祭りの準備は着実に進められ、前夜祭がはじまろうとしていた</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：ですです！みんなでアイデアに肉付けしてシナリオに絡めていける感じ素敵です…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：妖束は知己の巫女、イワナガヒメを頼り。彼女はそれに応じて祭りにやってきた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、バスはさまざまな珍しい食べ物を集め。それを犬神の祭りへと奉じた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：巫女の神楽とカミへの供物</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：素晴らしい祭りが行われ、これで大神の力も戻るはず・・・</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そこに、何者かが現れる</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>謎の人物</b>：「・・・・・・さすがは戌亥家。それに噂に名高い”神祇探偵”。」</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>謎の人物</b>：「素晴らしい祭りじゃないか。　力が満ち溢れてくるのを感じるよ。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「てめえが黒幕か…？」</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>謎の人物</b>：「ああ、これだけの力を得たならもうこそこそと隠れている必要もないからね。」</font></br></td></tr>
+
+<tr class="tab0 char10"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>謎の人物</b>：「あの大神から奪った力だけでは物足りなかったが、これだけの神楽と供物を捧げられたならもう十分だ。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「なんだと」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：彼はそう語ると、何かの祝詞を唱えた。</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「…気を付けてチヒロ、コイツ、口だけじゃないわ。強い！」（妖精レーダービンビンに反応させながら）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：すると、彼がまとう気配が変質する。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それはまさしく　カミ　そう。</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「チィ…ケチな地霊や妖怪の類じゃねえってのか…」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：彼は人ではなく、カミが化身していた姿だった。</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「ああ。そうだとも、我は蛇神。　きみたち人間とは文字通り格が違うんだよ。」</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「あとはあの惨めな大神そのものを喰らい、すべてを取り込むまでだ。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「まつろわぬカミか…天孫のもとに降るなら、祀ってやるぜ…？」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：といったところで。いよいよここから最後のRPフェイズに入ります。</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「…カミを倒すのはいつだって人間の仕事よ！神祇探偵と私が、アンタの陰謀ぶっつぶすんだから！」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：おう！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：RPフェイズでは、これもリアル時間で区切りをいれて</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：各自がRPをします。そして、そのRPに関連した成功要素を最後に提出します。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：RPの内容に応じてSDがその成功要素の数値に掛け算して、難易度を削るよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：RPフェイズではSDもNPCのRPで掛け合いに応じます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは。　１６：５３まで　RPフェイズで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はじめます！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：では、先に動こうかしら…</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：いいぜ</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「さぁ、そこをどけ人間共。　抵抗してもかまわないが、楽に死ねるとはおもうなよ？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「アンタをぶっ潰したいところだけど、あいにく、私は妖精なのよね！蛇神を倒す役目はちひろに譲ってあげるわ！」と言いつつ、彼が招来した眷属を倒して、進路を拓きたいです！</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：蛇神は大神の御神体、そして大神自身がいる社へと向かおうとしている</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：おお、ありがとうー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はい。蛇神が呼び出した眷属の大蛇は切り払われて道がつくられます</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「大人しく神社に収まるというなら…カミとして祀ってやるが…」</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「ふん・・・だが、眷属を祓った程度。　力を得た今の私ならいくらでも呼び出せ・・・」</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「ほほう？　この私を祓うというのか？たかだか人間ごときが。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：特に問題無ければ【驚異の身体能力：パワー16】 （特殊能力）<br>
+１００ｍ上空まで跳躍して、そのまま地面に踵を振り下ろし大量の石片を発生させ、それを亜音速で蹴り出し無数の石つぶてを眷属に直撃させます…！</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「おもしろい、やってみるがいい。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：すげー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：おれよりつえー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いけます！　そしてカッコいい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：＜能力の使用</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：これが妖精郷で一番と言われた私の力よ！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：（物理）</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：さすがなるむむさん　すごいな</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ロクさんもキメるのよー</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：強い</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「いいや…ヒトに仇なし…カミを喰らう貴様は…もはや穢そのもの」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：無数の石つぶてはさながらショットガンにように、大蛇の身体を貫き。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大蛇は大きく咆哮をあげてその身を横たえる</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「天孫の名において、俺が貴様を滅ぼす…来い、陽炎号！」</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：かっこいい～！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：落雷とともに周囲を陽炎が覆って、異界のウォードレスが幻出しますう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おおー</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：すごいの来た</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ウォードレスが登場します</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：例のシステムメッセージみたいなものがピピピと流れてカットインしつつ</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「なん・・・だ、と　！？　これは、この世界の力では・・・　貴様、一体何者だ！」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：蛇神に斬撃を与えます～</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「…神祇探偵、妖束ちひろ…ケガレハライ奉るぜ！」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：陽炎号の精霊の加護を纏ったブレードは、蛇神の纏う神気をも布のように切り裂いた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、蛇神自身の存在そのものを切り裂く</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：「ば、か・・・な　　人間ごと、きが　おのれ　おのれおのれおのれ・・・・！！！！」</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：怨嗟の声を残して、蛇神の身体は粒子となって霧散する</font></br></td></tr>
+
+<tr class="tab0 char11"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>蛇神</b>：彼の姿が消えた、その足元には小さな蛇の亡骸が残されていた</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ということで</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「悪く思うなよ…いまはヒトの世。てめえみてえなもんをのさばらせておけるゆとりはねえ」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：やや処理としては変則的なんですが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：（本来はRP結果をSDがごにょごにょして、結果を描写します）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まず成功要素の評価です</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：「…蛇神によって奪われた神力が還っていく、うん、きっと大丈夫ね！」Ｖサインでカメラ目線</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：（多分）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：バスさんの要素　特殊能力のパワー１６は素晴らしくカッコいいので２倍採用　３２</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：難易度は　３６　→　４</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：妖精郷の脅威とは私のことよ！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：【パワードスーツ：パワー12】 （ファッション）</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして妖束さんの成功要素は</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：パワードスーツの１２ですね　これも２倍です</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：やっぱ人じゃないもの敵に回しちゃいかんなー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：２４減って　マイナス以下です</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ふー、よかった</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ということで</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：結果を先に描写してしまいましたが　本来はこのあとで描写します</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おめでとうプレイヤー！きみたちの勝利だ！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：なるほど、でもわかりやすくてよいと思います～</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：おめでとー</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：ありがとうございます～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：「我はこれにて、M＊よりはじまるゲームの目的が達成されたことを証明する」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：つい楽しくて前のめりにあれこれしてしまいました。。。</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab1 char8"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>おこめ</b>：おおー！おめでとうございます！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あとはエンディングですねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まぁ、巻きすぎだしざっくりと事実のみ流して〆ます</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0099ff'><b>”ファインド・ザ” パス</b>：いえっさ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：蛇神は大神から力を奪って、彼に向けられる力の流れが全部自分に向くように儀式や術を施していました</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、その術の内容は大神本人からは他のものに伝えることはできませんでした</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神は力が蛇神へ流れることを避けるために身を隠していたのです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：でもまぁ、みなさんが倒しました</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：大神は力をとりもどし、ハッピーエンド！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：じゃあ掘り出してしまった時点で、けっこう危うかったのですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：「これでこの地の宿業や穢もちっとは晴れるだろうぜ」</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：おつかれさまでしたー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：うわぁ　１時間おしすまぬ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>10pyo</b>：お疲れ様でした！</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”神祇探偵”妖束ちひろ</b>：おつかれさまでしたー！</font></br></td></tr>
+
+
+
+</table>
+</body>
+</html>

@@ -1,0 +1,2041 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<div id="sub">
+<div id="subTitle">発言者別フィルター</div>
+<div id="filter">
+<label><input type="checkbox" id="char3" value="char3" onclick="ShowHide(this)" checked>10pyo</label><br>
+<label><input type="checkbox" id="char2" value="char2" onclick="ShowHide(this)" checked>SD</label><br>
+<label><input type="checkbox" id="char6" value="char6" onclick="ShowHide(this)" checked>”蘇りしアマゾネス”海野かのん</label><br>
+<label><input type="checkbox" id="char7" value="char7" onclick="ShowHide(this)" checked>”閃止公”姫川いちる</label><br>
+<label><input type="checkbox" id="char8" value="char8" onclick="ShowHide(this)" checked>おしゃもじ様</label><br>
+<label><input type="checkbox" id="char0" value="char0" onclick="ShowHide(this)" checked>どどんとふ</label><br>
+<label><input type="checkbox" id="char1" value="char1" onclick="ShowHide(this)" checked>ロクイチ</label><br>
+<label><input type="checkbox" id="char4" value="char4" onclick="ShowHide(this)" checked>姫川いちる</label><br>
+<label><input type="checkbox" id="char5" value="char5" onclick="ShowHide(this)" checked>海野かのん</label><br>
+<label><input type="checkbox" id="char9" value="char9" onclick="ShowHide(this)" checked>男たち</label><br>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function ShowHide(chkElm){
+	chkStat = chkElm.checked;
+	target = document.getElementsByClassName(chkElm.value);
+	for( ii=0; ii<target.length; ii++ ){
+		classNames = target[ii].className.split(" ");
+		chkStat = chkElm.checked;
+		for( jj=0; jj<classNames.length; jj++ ){
+			elm = document.getElementById(classNames[jj]);
+			if( !elm  ){
+				continue;
+			}
+			chkStat &= elm.checked;
+		}
+		stat = chkStat ? "" : "none";
+		target[ii].style.display = stat;
+	}
+}
+-->
+</script>
+	<style>
+	body{ margin:0; padding:0 20px; background:#fff;}
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: none;
+		padding: 4px;
+	}
+	#main{ margin-left:210px; }
+	#sub{
+		background:#fff;
+		font-size:85%;
+		width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+	#subTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+	#colFilter{ background:#fff; position:fixed; width:100%;}
+	#filter{ padding:5px; }
+	</style>
+	</head>
+<body><table border=0 id="main">
+<tr id="colFilter">
+<td nowrap width="100"><label><input type="checkbox" id="tab0" value="tab0" onclick="ShowHide(this)" checked>[メイン]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab1" value="tab1" onclick="ShowHide(this)" checked>[雑談]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab2" value="tab2" onclick="ShowHide(this)" checked>[見学]</label></td>
+<td nowrap><label><input type="checkbox" id="tab3" value="tab3" onclick="ShowHide(this)" checked>[その他]</label></td>
+</tr>
+<tr>
+<td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td><BR></td></tr>
+
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：では、一度ログアウトしまーす</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「ロクイチ」がログアウトしました。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「GM」がログアウトしました。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「GM」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ちょっとお手洗いへ（ログの最初の発言がこれになってしまいました</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「ロクイチ」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：戻りましたー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：おかえりなさい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：私ももどったよー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「10pyo」がログインしました。</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：戻りました（復帰タイミングが分からなかった）</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ごめんね</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：大丈夫です</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：ふたたびＡマホ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：さてさて、第２ゲームは神々の宴ですね</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：よろしくお願いしますう</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：よろしくおねがいします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：【BGM プリプレイ】</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：テーブルのお掃除やらなんやらしてます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これでよし</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：すっきり</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：さてさて、神々の宴をはじめていきますよぉ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDをつとめるは私、えおふです　よろしくね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：よろしくおねがいします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１，２行でいいのでアイサツいきましょう　ロクさんから</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：PL参加のロクイチです、昨日に引き続きましてよろしくお願いします～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はぁい　よろしくですー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：続いて10pyoさん</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：PLの10pyoです。本日もよろしくおねがいします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくですー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：シンプルでもアイサツってきもちいいね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではではー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：２ゲーム目は神々の宴でござーる</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：切り替えになりますからね&gt;挨拶</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ですよねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：既に遊んでいるのでルールインストはかなり省ける　すばらしい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：前回はかなり好き放題してしまったので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：実は夜には別卓控えているので　今日は後ろには伸ばせないのだ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：今回は、10pyoさまと雰囲気を合わせて伝奇っぽくいきたいですう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：おっと、ではこちらも積極的に提案しないとですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なので　今回はもうしわけないが時間に厳し目にすすませてもらうよ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：了解です！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うんうん　でもそれはそれ。焦らずしっかり存分に楽しもうー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：楽しみましょう！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：楽しくいきまーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは、さっそくキャラメイクやシナリオクラフトいきましょうか</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：雑談やら不規則発言はこちらへどうぞねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：はい、同時進行でいっていてよいです？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですよーいいですー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：では、さっそく</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：振ります</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：3d6 パワー11<br>
+GeishaGirlwithKatana : (3D6) → 6[1,2,3] → 6</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 パワー11<br>
+GeishaGirlwithKatana : (3B6) → 3,6,5</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 今回の舞台<br>
+GeishaGirlwithKatana : (3B6) → 1,3,3</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：では23の感の鋭いで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：夏らしく舞台は海（このあとの神様とかで変わるかもしれないが</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：36かわいいいただきます～</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：3d6 パワー12<br>
+GeishaGirlwithKatana : (3D6) → 8[1,3,4] → 8</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 かみさまー<br>
+GeishaGirlwithKatana : (3B6) → 2,5,6</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 パワー12<br>
+GeishaGirlwithKatana : (3B6) → 5,2,6</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：折角なので31の水着でｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：あっ、いいな～ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：3d6 パワー13<br>
+GeishaGirlwithKatana : (3D6) → 11[4,3,4] → 11</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：じゃあ、65でミニスカート</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 P13<br>
+GeishaGirlwithKatana : (3B6) → 5,1,5</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：43の夢想家で</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：3d6 パワー14<br>
+GeishaGirlwithKatana : (3D6) → 11[4,2,5] → 11</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かみさまは出目キープで検討</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 M＊のないよう<br>
+GeishaGirlwithKatana : (3B6) → 4,2,4</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：45の恋愛のため</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：にします</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：潔癖症　ツンデレ　邪悪…ううん</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：3d6 パワー15<br>
+GeishaGirlwithKatana : (3D6) → 14[5,6,3] → 14</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 P14<br>
+GeishaGirlwithKatana : (3B6) → 3,2,6</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ちょいとご相談</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：63の突撃癖です</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：昨日のM＊１もM＊２も割と王道な伝奇もの、バトル展開とかでしたけど</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：違うやつやりたいです？それともその路線がいいです？</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：私は今回軟派キャラで行く可能性が濃厚です（違うヤツのほうが相性良さそうです）</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：今回はそこ、10pyoさまのご意見を尊重したいなー</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：と思います</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 P15<br>
+GeishaGirlwithKatana : (3B6) → 5,1,6</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：王道な伝奇モノは大好きですがｗ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：まぁ、神々の宴なので嫌が応にも伝奇要素ははいります</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：家庭的すぎる</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：3b6 P16<br>
+GeishaGirlwithKatana : (3B6) → 4,3,1</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#cc00ff'><b>10pyo</b>：私としてはどちらでも楽しめると思っています</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：3d6 パワー16<br>
+GeishaGirlwithKatana : (3D6) → 14[4,4,6] → 14</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：46のすごい料理の腕にします</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：高貴な血筋にします～</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：さて、どんな感じにしようかなあ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：私もシナリオどうしようかなーという感じ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：3b6 ハプニング<br>
+GeishaGirlwithKatana : (3B6) → 3,1,3</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ぼんやりと構想をねりねりしつつちょっとキャラみて合わせよう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#cc00ff'><b>10pyo</b>：できました！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：キャラに合わせて色変えます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：お、女の子…！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ほうほう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：逆ナン系お嬢様です</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：とりあえず水着、夢想家で軟派キャラにするのは決まってたので、その後のダイスから色々調整しました</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：（あと、ジュエルセイバーで男キャラの水着がなかったので……）</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：ハッピはありましたがｗ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：ちょ、ちょっとだけ画像さがすお時間をいただいてもいいでしょうか…？！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：私は大丈夫ですが……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はいはい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDもシナリオちょっと手間かかっておりますゆえ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：プレイヤー次第ではあるんですが　今回はバトらない展開で想定します</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：了解でーす</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：まだシナリオこねこねちゅう</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>10pyo</b>：了解です</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>10pyo</b>：私も突撃癖くらいしか戦闘向け要素ないｗ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：こちらもです…ｗ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>ロクイチ</b>：いま、Aマホが届きました…ｗ</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>10pyo</b>：おお！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：おおー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：すばら</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：神様のデータを打ち込む手間が　はぶける！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：（そこかよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あ。びっくりした</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まさかのPC=PLかと思ったら違った</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まれにある</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よいしょっと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>ロクイチ</b>：なおしておきまっしゅ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：シナリオざっくりこしらえました　まだちょっと細部は調整してますが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：メモにはったよ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：なるほど</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：コメディ回ですね！！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うむ。今回は10pyoさんのキャラを軸にするのぜ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：いや割とシリアスですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それはまぁプレイヤー次第</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：＜コメディかシリアス</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様の画像さがしてるとこです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：ほわ～い！了解でーす</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>10pyo</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：透過は大変だからしなくていいかな</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ふふふ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ロクさん、おどろいたことでしょう</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：本当にほとんど漫画なんだぜ　Aマホ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ルール部分うっす！</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>10pyo</b>：ですよね……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：ちょっと読み進めていくと</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：不安になるあたりまで漫画でおののきますね…ｗ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：テスト</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：いや、漫画でもルール説明しているのです、けど！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：相変わらず大きい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うむ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：私はいつも300x300px以内にしてる</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：こちらもあわせて少し大きくしようかな</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：わたしは高さだけ300</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：なければかこうの精神…！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：再度</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：あれ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：こっちかな</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：高さ減らしたのに変わらない……？</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：（同じ画像のどちらが新しい方かわからなくなるあるあるですう）</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：なるほど</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：立ち絵設定変えてませんでした！！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：たまに混乱しますよねｗ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：立ち絵設定しない卓をよくやるので忘れてました……</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：わたしは最近はユドナリウムがメインなので、画像のサイズ設定を良く忘れます～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よし　これでいきますか</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：ユドナリウムは画像のサイズ設定不要ですからね</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：お疲れ様です！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：そうなんですよねえ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：お疲れさまでーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：シナクラは楽しいけどこの手間がちょっとねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：キャラ紹介からいきませう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ロクさんからどうぞ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：おっと、油断してました</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：姫川いちる、14さい男子</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：●成功要素<br>
+【かわいい：パワー11】 （肉体）<br>
+【ミニスカート：パワー12】 （ファッション）<br>
+【邪悪：パワー13】 （性格）<br>
+【とくに何も考えていない：パワー14】 （行動動機）<br>
+【家庭的すぎる：パワー15】 （ダメ要素）<br>
+【高貴な血筋：パワー16】 （特殊能力）</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：ミニスカート装備なので、男の娘という体でお願いします～</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：高貴な血筋からなる高い霊力と、人類屈指の邪悪さを持つやつですが</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：とくに何もかんがえておらず、家庭的なのでそれが荒ぶることはあんまりありません～</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：邪悪さっていうのは、こう狡猾さとか計算高さなどととらえていただけるとうれしいです～</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：そんな感じでしょうか</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：よろしくおねがいします！</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくですー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：続いて10pyoさんどぞー</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：「私は海野かのん、17歳のJKですわ」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：「将来は素敵な殿方と結婚することを夢見て日々花嫁修業」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：「そしてそれを実現するために街へ繰り出て逆ナ……マンハン……げふんげふん」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：（にこにこ）</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：「とにかく、素敵な方は誰でも募集中ですわ！」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：以上です。よろしくおねがいします</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：よろしくおねがいしますー</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab1 char5"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>海野かのん</b>：マンハント系お嬢様</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：階段を滑り降りつつ一緒に射撃します？ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それでははじめていきませうせう</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：はあい</font></br></td></tr>
+
+<tr class="tab1 char5"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>海野かのん</b>：マンハントと言うか、マン（男）ハント（狩り）</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>海野かのん</b>：よろしくおねがいします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：【BGM ひとやすみ】</font></br></td></tr>
+
+<tr class="tab1 char5"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>海野かのん</b>：決して人間狩りとかじゃないですｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まぁ平和っぽいのでこのBGMでいいか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：「我はこれよりM＊よりはじまるゲームの目的を記述する」</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：男の好きなお姉さまですねえ…（にこにこ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：M＊：神様は海野かのんに恋をしている。しかもかなり拗らせた恋心だ。<br>
+このままではケガレて悪神へと変じてしまうだろう　なんとかしよう！：難易度１２０<br>
+ハプニング：神様が壊れてしまった！</font></br></td></tr>
+
+<tr class="tab1 char5"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>海野かのん</b>：どちらかと言うとアマゾネスかもしれないｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして</font></br></td></tr>
+
+<tr class="tab1 char4"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>姫川いちる</b>：よりひどいｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ログようにM＊の詳細も全部はります　どばっといくので注意</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：難易度：カスタム（独自調整）<br>
+舞台表：舞台は海である。<br>
+神様表：しゃもじ神／パワー１２０<br>
+Ｍ＊：神様は海野かのんに恋をしている。しかもかなり拗らせた恋心だ。<br>
+このままではケガレて悪神へと変じてしまうだろう　なんとかしよう！：難易度１２０<br>
+ハプニング：神様が壊れてしまった！<br>
+<br>
+●確定状況 （メモったりペーストしたりしていくと、PLもSDも把握しやすいぞ）<br>
+　海野かのんが愛用しているまないたには、実はしゃもじ神が宿っていた。<br>
+彼女のすごい料理の腕はカミを宿すに十分な領域にまで達していたのだ。<br>
+そのカミであるおしゃもじ様は、ずっとその身を隠し続けている。<br>
+それは、生みの親であるかのんへの恋心を隠すためだ。<br>
+　そうして、存在を隠し続けた結果としてついにおしゃもじ様は壊れてしまった。<br>
+いろいろとこじらせてしまった、というのがより正しいのかもしれない。<br>
+おしゃもじ様はかのんさんの恋の成就を願っているものの、<br>
+歪んだ神通力は次第に淀み、ケガレへと転じようとしていた。<br>
+このまま放っておけばおしゃもじ様は何らかの悪神へと変じてしまうだろう。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：とまぁ、こんなところでござい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回はそんなバトらない想定で組みましたが　実はM＊１もバトらない想定だったので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：昨日のM＊１ね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なので、プレイヤー次第ではいくらでもバトれます</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：フフフ…僕は邪悪なのです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いちるくんが邪悪として敵厄にまわってもいいです</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：かのんちゃんの男狩りにお供して</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：敵役ね</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：折角なので今回も二つ名を</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なんとAマホでは敵対しててもM＊は削れるのですよすごい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：寄り来る男たちをたぶらかしまくったりしますう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：すごい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：非推奨ではあるけどねー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：RP難しいでしょうからね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：邪悪は、あくまでも狡猾だったり、計算高いととらえていただけるとさいわいでーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かるーく導入部分のRPやってから　解釈という流れでいきますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>姫川いちる</b>：ズッ友だよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ズッ友ですわ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　ここはH市の海岸近く</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：季節は夏</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：海の見える素敵な別荘に住まうお嬢様のかのんさんは今年こそはと燃えていた</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、かのんさんはまだ知らないが。そこにはもうひとり燃えているカミがいた</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「今年こそ、今年こそ……！」</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ぼくもつけてみました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様である。彼もまた、かのんさんの恋の成就を願っているのだが</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「捕まえられるといいですねぇ～（にこにこ」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「海に来る素敵な殿方をGETですわ！！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：しかし、それは複雑な感情でもあった</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：恋は実って欲しいはずなのに・・・</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：気がつくといつも、彼女の逆ナンを邪魔してしまう自分がいるのだ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そう！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かのんさんがモテないのは、カミの仕業だったのだー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：な、なんだってー！！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最初はちょっとしたいたずら程度で住んでいたのですが</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（ぜったいそれだけじゃない…と思うけど黙ってよ…）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：歪んだ神通力はケガレとなって</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：次第に、やばいことになりつつあります</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（ううん…みるみるかのんさんの周りによくない気が…）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：具体的にいうと　逆ナンされたひとが神隠しとなって連続行方不明事件としてニュースを騒がしている</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：でも、それすらより大きな災いの前兆にすぎない</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：それは…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ああっ、あのときの素敵な殿方の名前が！！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様が悪神に変じてしまうと取り返しのつかないことになってしまうのです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「これは……これはおかしいですわ！！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ねえねえ、かのんちゃん。これ客観的に見ると…</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：犯人は…ユー…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ノー！！！！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：わかっちゃいるけど、止められない…この想い…ひと夏の青春の光と影…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ま、まさか私の実家である財閥のお父様が……黒幕……？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：今度こそ結ばれてほし・・・　いや、あの男は経済力がたりないかのんさんにはふさわしくない　消えてもらおう</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：今度こそ・・・ああ、あの人は浮気性だ　だめ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：うん、お父様絶対無実だと思うけど</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：この人は・・・　ああ　ダメ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：どうやって真相に気づこうｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そんな感じです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：お父様的にこじらせたヤツが犯人ですねえ…ｗ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：あ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：では勘の鋭さを利用してまな板に目を向けます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあいまだ導入よぉ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「なんか、最近妙なオーラが……」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おっと失礼しました</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ふふｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：導入で気づいてもいいけど難易度けずれないですよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：気づかないとスタート地点にすら立てないのかなとｗ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ぼくは霊力を磨くためにここに来ているのですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いえいえそんなことないです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：たまに水着でナンパに同行してジャマしたりしてますｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：気づくというので削ってもいいし　きずくのはすぐに気づいて、他の部分で物語を進めてもいいです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：なにせ、ぼくはかわいいので！（主語は大きく）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：なるほど</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：って、先の話ですけど</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ぼくが攫われたらいいのでは？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：すばら</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はっ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：たしかにそれなら……</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：どうせ、有象無象でもかのんちゃんに近寄る奴は</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様はいままでずっといちるくんのことを女友達だと勘違いしていたのですが</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：見境なくさらうのでしょう？</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：気づかないにせよ動く動機にはなりますね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そそ、ぼくはぼくで不審な霊力を感じているので</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ちなみに</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：積極的に協力しますんｗ</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：かのんは勘が鋭いのでいちるが男ということには当然気づいています</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：かわいいのですが、お友達なので仕方ありませんねｗ</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ただし、いちるがナンパの邪魔をしていることには気づいていません</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと　神隠しされてからの動きを想定してあるならそれでもいいんですが</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そこーっ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：隠されてしまうとキャラが動きにくくなるのでは</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そういうとこー！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ｗｗ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ふふ、凡俗の徒とぼくを</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いっしょにしないでいただきたいですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なんか既に解釈フェイズに入りかけている感じあるので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：導入はもう区切って解釈はいります？？</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：すみません</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：こちらとしては他の描写もみたいです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では導入もどるよー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：時間的に区切ったほうがいいなら解釈に</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：じゃ、もう少し導入描写を楽しみましょう～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：お願いします</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：いやぁ　すぐに解釈すすみたいのかと思っただけでした</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ついつい作戦まで考えちゃいましたねｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そしてある日、ついにおしゃもじ様のこじらせた想いはピークに達しようとしていた</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：つい話しを見ながらどう進めればいいか考えてしまい……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それもまた、こじらせた形で</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：あるあるですｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かのんさんといちるさんは別に同居しているわけではないと思うので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いちるさんがお帰りになるタイミングで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ひとりになったいちるさんのもとに、おしゃもじ様が人に化身して現れて　神隠しをかけようとするのです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：あ～れ～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そこをかのんさんが目撃して　事態は進展するみたいな流れです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：導入はそこまでやるので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：やりますよぉ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：帰り道のみちすがらないちるさん</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：てっこてっこ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：そこに現れる何者か</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「だれです～かぁ～？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ききき、君は」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「はぁい？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「君はかのんさんのなんなんだよ！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「えぇ～…？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「もしかしてあれか、百合っぷるというやつなのですか？！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：頬を赤らめつつ「…そんなことぉ…とてもぼくの口からは言えませんねえ～？（にこにこ」</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：煽っているｗ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ななな・・・　そ、そんな！！」（妄想して勝手に頬を染めている</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ダメだだめだだめだ！！　かのんさんをそんな汚すようなやつは・・・！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「あらぁ～…汚すなんて…そんな…ぼくかなしいっ！！」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：消そうとするのででてきて阻止してもいいですよ＜かのんさん</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ええい。おまえも消えてしまえ〜〜〜！！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「宇宙一、尊い関係と言い換えていただきたい…ですぅ！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（おっと、来ましたねえ）</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おっと</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：彼が手をかざして何かの力をかけようとする</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「いちる君！　危ないです！！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（ここは素直に受けてみるのです…ってええー！！）</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「・・・・・・えっ？　かのんさん・・・？」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（…勇者のように登場されちゃいました…ｗ）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「貴方……は？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：とっさにとめようとするが</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：間に合わずに神隠しのちからが全員に降り注ぐ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（すすす…）と寄り添おうとしてみますう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：さぁ、彼女たちはどうなってしまうのか　つ　づ　く　</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：では勘が鋭いのでいちるの腕を握ります</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：握り返します～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：一体どこへ……</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：うぐぐー　いちゃついてこのー　くやしい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：というところで導入が〆です　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いやぁ　ラブコメ風味</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：（しっとの炎が燃えています～）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：一旦お疲れ様でした！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いったんおつかれさまです～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：すみませんなんか少し雑だったかもですが</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：いえいえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では　ここから解釈へ移りましょうか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：今回は依頼型じゃなありませんし、これくらいでいい感じです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDがこれまでに描写も含めて出したものは確定ですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それ以外の未確定のものは好きに質問したり設定の提出ができます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：どうぞどうぞー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そうですねえ…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：しゃもじ神は拗らせているが、かのんへの態度は善意、これはどうでしょうか</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：それは感じますよねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ですね　採用で</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：最後はかのんちゃんの説得とか</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そういう方向に行ってほしいですよね～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：では続いて</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はいどぞどぞ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：かのんが愛用しているまな板にはしゃくじ神との縁が結ばれている</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：どうでしょうか</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ああ。しゃもじ神ですが、まないたがしゃもじ神そのものです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おっと、勘違いしてました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：記述わかりにくくてすみません</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：いえ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：本来結ばれるべきものが</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：あるといいね、ってことですよね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ああ、いいですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：しゃもじ神は拗らせているんですよね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ええ。見事にこじらせています</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それは確定しています</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：カミと人との恋やら結婚やらは別になんの問題もないんですが</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：いちるさんの意見も必要ですが、提案だけよろしいでしょうか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：かのんと本当に結ばれるべきはしゃもじ神だが、しゃもじ神はその事実に気づいていない</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：恋をこじらせているというのが問題ですね　それがケガレを招いてしまっている</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：これについてお二人の意見も聞こうかなと</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うん。それは採用できるししなくてもいいですし</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：この場合は、かのんちゃんがしゃもじ神を</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そこはプレイヤーが選べるように意図的に空白にしていたのです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：男性とみてないことが…って感じですか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：問題は、RP的にかのんはしゃもじ神を受け入れていない可能性が高いということ……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そもそもおしゃもじ様はずっとかのんさんから隠れていましたので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そうそう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：少なくとも友人に危害を加えようとしていたのを目撃しているから……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと、おしゃもじ様は恋心そのものにすら気づいていなさそうですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：自覚がなさそう</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ふうん、両方のケアが必要なのですね…うーん</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：どーしたものかな</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：自分で提案してなんですが、「かのんと本当に結ばれるべきはしゃもじ神」については不採用でよろしいでしょうか？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：生みの親としての尊敬だとかがあって　自分がまさか恋心を抱いているとはおもっていないのでしょうね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：面白そうだと思ったのですがRP的に……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：取り下げですね　いいですよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：その路線がなくなったなら、しゃもじ神には</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：拗らせた部分をなおしていただいて、正しい神になってほしいですねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そうですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：恋が成就するか　こじらせたのを正すのがまっとうな解決方法です</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：じゃあ、こういうのはどうです？</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：個人的にはかのんの恋はしばらく実らないでほしいので、拗らせたのを正したいです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回は解釈すこし厚めでいきますね　ほかはすこし薄めになります</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：さらった男子たちの、果たされる青春への愛憎が</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こじらせを増幅している…みたいな感じでどうでしょ？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ほうほう　おもしろいですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：なるほど</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：これで、作戦で囚われた男子たちを解放して、RPで説得か何か…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：文章は少し調整しますが　採用です</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：面白そうですね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：無意識のうちに、しゃもじ神は</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：拗らせブースターをため込んでいたのですう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神隠しによってさらわれた男たちの青春への欲情がおしゃもじ様へ影響をもたらしている</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これで</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ふむ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：そういえばまだ神隠し先は決まってませんよね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ええ　そこですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：導入の最後で全員まきこんだので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これからそこに飛ばされます</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：なんとなく異界っぽいところかと思っていたんですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：未確定のままならSDがなんかでっちあげます</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：では、神隠し先は海、というのはいかがでしょうか</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：具体的な形があるとよさそうですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：青春といえば海</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：海辺の異界　ということですか？（確認</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：あるいは海の彼方、海上他界でも</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神隠しによって送り込まれたのは海辺の異界</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：としました</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：永遠に満たされない青春の海…に閉じ込められた男子たちは</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：神隠し先についてもうちょっと詰められそうな気が</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そりゃー…よくない気のひとつも出しそうですね…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あとほら</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：せっかくルールがお手元にあるなら</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様のところもよむといいです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ミシャクジ様、でしたっけ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：201ですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：非常に友好的で交渉方法も明確化している</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：そして舞台は海</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あとこのおしゃもじ様はカミになってまだ日が浅いです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：海といえば海の家、つまり台所</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まだまだ未成熟なんでしょうなぁ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おしゃもじ様との交渉方法は料理バトル、的な感じのものはどうでしょうか？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かのんさんちで生まれたカミだから　異界にもカノンさんとこの別荘そっくりの家があってもいいぐらいでしょうきっと</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ふむふむ　いいですよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：せっかくなので、さらわれた男子たちも参加させたいですねｗ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：後、もちろん異界には海の家（台所付き）がある、もお願いします</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね。食事係みたいな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あとルールをお持ちなら　他のカミを頼ったりするというても出来なくはないです　これは高等テクなのであんまり多様しないほうがいいけどね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：採用</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：今回は、われわれふたりで奮闘しましょう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：あ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：田神もしゃもじと関わりがありますね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：どうやって関わらせるかが問題ですが</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：お米持ってきてほしいなとは思いましたｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まぁ、そこは無理しないほうがいいですね　SDとしては</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：方向性がブレるので</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いい案があるなら使ってもいい、ぐらいです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：まあ食材は自力でもいいでしょう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：手段と目的がいれかわるといけない</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ぼくとしては、しゃもじ神ととらわれた男子たちの</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：怨嗟と怨念が晴れたらいいな、くらいの気持ちでおります～！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ああ、それなら</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：食材を揃えるところで成功要素を出したいなら　ないことにしてもいいし　揃っていたほうがいいなら　食材はある　でもいいでしょうね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではあと２項目ぐらいとしましょう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：解釈ね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：異界で料理を食べると、食べた人の悪感情が薄れる、というのはどうでしょうか？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：異界つくられた食べ物にはケガレを清め祓う力が宿る　としますか　文章調整です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：異界で、ですね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あと１項目で〆</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：あとはそうですねえ…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：そちらには食材を集める案はありますか？&gt;いちるさん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ロクさんもなんかだしていいですよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：こちらは残念ながらないです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：別に食べ物路線以外でもいいです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：皆で考えましょう！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：海の家あるところ、たぶん食材は普通に揃ってるんじゃないかな～なんて</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：のんきに考えてました…ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：舞台装置としては…そうですねえ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それはまぁ項目と数えずボーナスとして採用しましょう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：今夜、浜辺で花火大会がある、というのはどうでしょう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おお</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：うまく浄化できたら、ラストは花火大会でお祭りがわり、ってことで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：海の家には食材は不思議な力によって無制限に沸いて出てくる　いれました</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：それはいいアイディアでは？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：なるほど</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：文章調整</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：男子たちは男しかいない悲しみの海で延々と夏を強いられているのですね…かわいそう…ｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：連続行方不明事件によって花火大会は中止になろうとしている　これで</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ああ、なるほど</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：解釈〆</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回はちょっと解釈厚めにしたので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：項目多いです　セッションシートを確認してね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：オッケーですー！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：大丈夫です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では　ちょっとSDの都合により休憩はさませていただきます　ごめんね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：相談しててもいいし　休憩しててもいいので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１８：１０　再開で</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それでは離席しますー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ではちょっとすぐ戻りますが一旦離席します</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いってらっしゃい～</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こちらも時間までちょい休憩してます</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：戻りました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：もどりですー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おかえりなさい</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：とりあえず時間まで作戦を一人で呟きます</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：神隠しによってさらわれた男たちの青春への欲情がおしゃもじ様へ影響をもたらしている、そして神隠し先は海辺の異界</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：異界でつくられた食べ物にはケガレを清め祓う力が宿るが、偶然にも異界には台所付きの海の家があった</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：みんな戻ったら作戦前に描写のシーン挟むよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いわゆる起承転結でいう転です</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：海には大量の被害者である男性たち（欲情まみれ）、食材は十分、神隠しの犯人は食事と縁の深いおしゃもじ様</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：承転　ぐらいかなたぶん</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：つまり、料理バトルでおしゃくじ様を鎮めつつ、食事係として男性たちに異界の食事を食べさせる</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：これで男性たちの欲情は薄まり、おしゃくじ様への影響も減っていく</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ふふふ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：戻りましたー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：カミさまには供物といってなにかを捧げるのも効果的ですぞぉ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：例えばかのんさんの手作り料理とかなら　誰かさんは喜ぶかもですな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おかえりなさいー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では揃いましたのではじめますか</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：巫女の舞ですとかねｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最初はSDの描写のみのマスターシーンてきなもので入りますが</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：要するに、私は【すごい料理の腕：パワー16】で料理バトルの先陣を切っていちるさんは【かわいい：パワー11】で男性たちを海の家に集めるか【家庭的すぎる：パワー15】 でかのんの補佐をする</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：こんな感じの作戦を思いつきました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：途中からはPCたちも少しぐらい掛け合いに入れます　ただし、あくまで描写なので難易度は削れないし物語も動きません</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では。はじめますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：了解です</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：いちるさんは何かやりたいことはありますか？</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いい作戦だと思います～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様の神隠しによって異界に飛ばされたきみたち</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ん～作戦フェイズでは、とにもかくにも異界からでなければ～と思いますので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ついさっきまでは雲ひとつ無い夏の青空と一面に広がる水平線、そして砂浜が見えていたのですが</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：男性集客に終始してみますか</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ではそういう方向性でお願いします</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：りょうかいでーす！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：気がつくと君たちは海岸にいた　さっきと同じ場所かと勘違いするほどそっくりだが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：明らかに異なる点がいくつもあった</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ここ……は……？」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：空は曇天につつまれ、海は紫色の毒々しい色に染まっている</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「うへえ…」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして辺りには瘴気が立ち込めている</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「こりゃあ…聞きしにまさるひどさですねえ…」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：砂浜には海の家があるようだ　そこには誰かいるかもしれないと訪ねてみると</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：（ちなみにおしゃもじの姿はすでにないです）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ごめんくださーい」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：（はい）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ぐったりと倒れている男たちがいる</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「うへえ…」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：「・・・うう・・・うぅ・・・」　明らかに顔色が悪い、それに全身にぶつぶつやら腫れ物やら</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：何かの悪い疫病のようにみえる</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：あわわ…元気がないとかそんなレベルではありませんね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ちょっと、大丈夫ですか！？」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：「・・・ああ・・また、だれか・・・きたのか」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：「ここはもうだめだ・・・　なにかの、伝染病・・・うう」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そう　しゃもじ神は病気快癒を司るカミ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それが悪神へと反転すると、疫病をもたらすものとなるのだ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：すでにおしゃもじ様のケガレは相当すすんでいるようだ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「ああ～…しっかりしてください。大丈夫…ぼくたちはあなたたちを助けに来たんですよ～」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：だが、まだ間に合うかもしれない</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「これ……は……」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：「・・・かわいい女のこがみえる・・・　俺もついに幻覚が・・・　ああ、幻でもいい・・・死ぬ前に彼女ほしかった・・」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：意識がもうろうとしているようです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「しっかりしてください！」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「もう、一刻の猶予もありません～　かのんさん…この人たちを…助けないと」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：このまましゃもじ神が反転して悪神になってしまえば、この疫病は異界から解き放たれて現世にそうとうヤバい病気が蔓延してしまうでしょう</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ヤバーイ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：というところで　描写おわりです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：　</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：それに、かみさまが罪を犯してしまうなどと</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：うんうん</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：深刻さを出すという流れで物語を盛り上げましたぞ</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：予想以上に深刻でした！！</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ますます放っておけなくなりましたねえ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ちなみに10pyoさんは今日も1900ぐらいがご夕食？</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね。少し後ろにずれると思いますが</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：それでは作戦はいりますか</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：了解です～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ほぼ雑談で話していた通りなのですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：今回のコーラ−はロクさんにお願いしましょう　Aマホの経験数がほんのちょっと多いので</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：作戦のお時間は　１８３５　で</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：スタートです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：私の使う成功要素ですが、この時点ではまだ料理の腕ではなく突撃癖にしたいのですがどうでしょうか</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：方向性としては、まずはお料理！で彼らを回復させようと試み、つられてやってきたおしゃもじさまに料理バトルを挑み…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：料理の腕はRPフェイズに取っておいて、今の段階ではまだしゃくじ神に料理バトルを挑んでないですので</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：うーん、それなら</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：私は【突撃癖：パワー15】を使ってしゃくじ神に料理バトルを挑みたいです</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：こっちのほうが自然な気がしましたので</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：単純に、この男性たちを回復させつつ、しゃくじ神に料理バトルを挑むところまでとしますか。</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：【家庭的すぎる：パワー15】 （ダメ要素）</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：じゃあ、ぼくはこれで</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：それが男性たちを回復させるための料理ですね</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：まずは男子たちを回復させてあげませんとね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ちなみに作戦がすでにまとまっているなら時間いっぱい使わずはやく提出していいのですよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：１８２８</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：おっと…ここは海の家ですからね、それらを”水着エプロン”で行いますう！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：では提出</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：どうぞー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：（そういえばかのんはしゃくじ神がしゃもじの神って知ってていいのでしょうか）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：しゃもじ神！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：テキセだとこの作戦まとめて提出の打ち込みがたいへん</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ああ、気づきたいタイミングで気づいていいですよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：むしろ彼は知られてしまったことでびびって姿を消しているので</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いまにも倒れそうな男性たちを回復させるため、水着エプロンで料理を作ります。かのんは突撃でしゃもじ神に料理バトルを挑みにゆく…ということで、この場のケガレを祓いたいと思います</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はい　提出をうけました</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：たぶん遭遇した時点でいちるはわかっているので、教えますよ～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：成功要素をいちおうそれぞれどうぞ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：私は【突撃癖：パワー15】です</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：【家庭的すぎる：パワー15】 （ダメ要素）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では前提変換へ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これは解釈の勝利ですね　素晴らしい（５割）とします</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：やった！！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：わーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：料理でケガレを祓えるとか　こじれブーストは男たちの陰気によるものとか　そのへんの積み重ねが大きいです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：難易度　１２０　→　６０</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして成功要素</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：彼らが元気になれば、陰の気もはれるはずです～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：水着エプロンすばら　男たちの陰気が増えそうですがそれも含めて浄化しました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：６０　→　４５</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：病は気から、美味しい料理で元気になろう！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして突撃癖　これはうん　この性格もひっくるめておしゃもじ様はかのんさんに惚れているので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：惚れた弱みとして通ります</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：やった！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：４５　→　３０</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では物語の進展を描写します</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：まずは場面を切り替えて</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：海の家のちょっと離れた場所</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いわばとかでしょうね　波打ち際の</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「うわぁぁぁぁぁ・・・　どうしようどうしようどうしよう」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「かのんさんにひどいことをしてしまった　いや、僕のことをしられてしまった　ああ、どうしようどうしよう」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「もうだめだ　嫌われた　ああ、しにたい・・・」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：男たちの陰気でブーストされたこじらせがさらにこじらせを加速している</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：そんなとき　料理の気配を感じる</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：ピキイーン！（NT音）</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「この気配は・・・」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：つられて海の家へ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そしてそこでは異界料理を振る舞う水着エプロンの男の娘が</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いまや、男子たちはおいしい料理で元気を取り戻しつつありますう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：男たちは大盛り上がり</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：多分かのんも料理はしているはず。ただ、大量の料理を作るのはいちるさんの方が得意だとい思うので今は補佐ですね</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：そして、おしゃもじ様の陰気も少しずつ薄らいでいく</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「・・・・・・ああ、調理するかのんさんは本当に素敵だ・・・」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：ふらふらと引き寄せられるように調理場へ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：思い出せ…自分のあるべき姿を…</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：はっと　我に返ると　調理するかのんのすぐ傍まできていた</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「見つけましたわ！！」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「・・・！？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ぼ、ぼぼぼ　僕は」　わたわたしている</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「貴方は……一体何者ですの？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「え。あ　えっとその」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「か、カミです　しゃもじの。」（すごく小さい声で</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ふむ、しゃもじの神様ですか」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「どうやらこの空間に他に神らしい存在はいない、とするとこの度の事件の犯人は貴方ですわね？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「その件について今はまだ問い詰めません」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「神様ですもの、事情はあるのでしょう」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「だから、ここは交渉と行きませんか？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「交渉・・・　うん。　あ、いや。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「えっと。ごほん・・・　いいでしょう。人の子よ。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：（棒読み演技で</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「しゃもじ神との交渉の作法は存じているな？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ええ、伝え聞いておりますわ」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ちょうど今いる場所は海の台所たる海の家」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「すなわち、私は貴方に料理バトルを申し込みます！」ズバーン！！</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「（うわ・・・うっわ・・・・・・　ぼ、僕いま　かかか　かのんさんと神事　神事しようとしてるるる）」　平然とした顔だけどドッキドキ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：男子たちも盛り上げよ！（うおおおおおお！！！</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「あいわかった。　ならばその神事、見事果たさば契約を果たそう。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ええ、私が勝利した暁にはこの地に囚われた者たちの開放を約束してください」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「で。ででも　ちょっとまってもらっていいかな？　少しだけあっちいってくる。すぐ戻るから。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「どうぞ。私はいつまでも待ちましょう」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：ではそそくさと調理場すぐの勝手口から外へ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：そして小さくしゃがむと</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「かのんさんかわいいかのんさんかわいいかのんさんかわいいよぉぉぉ　かのんさんと神事できるなんてすごいすごいすごいすごい」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：一通り気持ちのたけを吐き出して</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：何食わない顔でもどってくるよ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：アッハイ</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「またせたね。　それじゃあ、はじめようか。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「ええ、はじめましょう」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ただし、神事とあらば僕も一切の手抜きはしないよ。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「当然です。手抜きなどされてはこちらのプライドが傷つきますので」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「（うわぁ　嬉しい　そしてこうして間近にみると凛とした表情がとても So Cute）」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：というところで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いよいよクライマックスは料理バトルのRPへ・・・・・・！！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：というところなのですが、</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：RP入るとたぶんお夕飯タイムとぶつかるので</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ええ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：少し早いですが休憩はさみますか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：多分20分位したら夕飯になります</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：了解です。ありがとうございます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：1930？40?　再開どちらにしますか</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：30でお願いします</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では１９３０再開で</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こちらはどちらでも大丈夫です～</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：30了解です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：休憩です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：私もご飯とかで離席しますねー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：早めに始めないとお風呂に入らないといけなくなるので</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こちらも、RPフェイズで何をするか考えておきますね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい。一旦お疲れ様でした！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：お疲れさまです～！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：あ。ご飯までもうすこしあったのでちょっと雑談</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：気弱なこじらせ男子　なかなかかわいくできたのではないかと自負しております</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：いい感じに拗らせていましたね！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：そしてかのんさんの強気とあいまっていい感じのラブコメってるのではないかと</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：私はジャンプやサンデーの料理漫画の気分でしたｗ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：今回はこの二人にすぽっとがあたっているので</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ロクさんにはすこーし割をくわせているかなぁという気持ちがほんのりある</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：これだと、しゃもじくんがどういうオチになるのか</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：それは私も……</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ちょっと心配になりますね…ｗ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：いや、わたしは大丈夫ですよ～</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：悪いオチにはならないと思いますが……</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：うんうん　しゃもじくんどうなることか</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そこらへんはお任せしますう！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：難易度の数値的にはいけそうなので</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：悪神にならないといいですな</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ではあらためてSD離席しますので　雑談とかご飯とかご自由にどぞです</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こちらも30までちいと休憩しております～また後程に～</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：では私も離席します</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：さて。私はもどりましたけど</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：10pyoさんは少し遅れるそうです</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：了解です～</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：事前にもお伝えしていますが　次の卓の都合で終了時刻はのばせませんです</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：RPパートで何するかをまとめておきますー</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab1 char6"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：すみません、戻りました！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：はぁい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：お食事の都合はね　仕方ないので大丈夫ですよ</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：おかえりなさーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：点呼開始！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：準備完了！（1/2）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：準備完了！（2/2）<br>
+全員準備完了しましたっ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではでは</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：クライマックスのRPフェイズはいります</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：SDもNPCとしてかけあいに入るので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：流れでいきますね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：最後か途中に成功要素を宣言してくだされ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：了解でーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：こうしてしゃもじ神との神事。料理バトルがはじまるのであった</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「カミとしてここは負けるわけにはいかない・・・」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「さあ負けていられませんわ。まずは下ごしらえからはじめましょう」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「（勝ってかのんさんに立派なカミであることを示したい）」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：おしゃもじ様も丁寧に下ごしらえを進める</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ここは男子たちを盛り上げつつ応援ですよ～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：トントントンと包丁で食材を切り、料理を作っていきます</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：さすがはカミといったところで、彼が包丁をいれるだけで、食材が神気を帯びてみるみる鮮度を増していく</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ほお…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：食材、それは海の家に置いてあった魚</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：そして、季節にあった夏の野菜たちであった</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：決して手際がよいというわけではないが、彼がカミであるということがすでに神憑り的なのである。</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「（・・・でも。これで僕が勝ってしまったら・・・　かのんさんはどうなってしまうんだろう・・・）」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ここで両者の素材が出そろった—</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：環境や季節にあった食材は他のものと比べて体にいいという</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：だが、彼には迷いがあった。　気の迷いは即ち、気脈の乱れでもある。</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：食材選びこそがプロに比肩するかのんの料理の真髄であった</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：こんな感じで【すごい料理の腕：パワー16】を提出します</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：だが、調理を進めるにつれてその迷いも晴れていく</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：ただただ、まっすぐ。純粋に　彼がまだカミとなるより前・・・　彼はもともとは調理器具だった　あの頃の気持ちに帰ろうとしていた</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：両者の料理が完成してその場に並べられます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：時間の都合でこのままパワーの処理もします</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：料理の真髄　それは真心　食べる相手を思う心</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：心のこもったかのんさんの料理を介して、彼女の気持ちはおしゃもじ様へ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、同様におしゃもじ様の料理からもかのんさんへと想いが伝わるのです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これこそがしゃもじの神事の真意であった</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：倍率は２倍</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：３２です！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：難易度　３０　→　−２</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おお！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：かのんはここで知ることとなる　言葉や文字といった表現ですらない　純粋な感情として</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おしゃもじ様がかのんへ向けていた想いを</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：（そういうことだったのですわね……）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：子として親をおもうきもち　そしてほの甘い恋慕のきもち</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「しゃもじ神様、貴方の気持ちはわかりました」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「・・・・・・はい。かのんさん。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：おどおどしたこじれはもう晴れている</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「しかし、貴方のソレはファーストインプレッション。いわばひな鳥がはじめてみたものを親として認識するものに近いのかもしれません」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「それがダメだとはいいません」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：でも　自分がしてしまったことを悔いて、そして親に叱られるような思いで　うつむきながらその言葉に耳を傾ける</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「しかし、本当に自分にとって大切な人が誰かを確かめるにはもう少し時間があっても、そして気持ちに余裕があってもいいのではないでしょうか」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「そう、貴方は少し心に余裕がなさすぎる」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「結論をつけるのは気持ちの整理を付けてからでも十分でしょう」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「・・・・・・はい。ありがとうございます。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「まずは、お友達からでよろしいでしょうか」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「僕の迷いとケガレを祓っていただいたこと、そのことにまず感謝を。」と深く頭を下げます</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「はい。よろこんで！　僕の、友達・・・　うん。・・・うん。」ぽろぽろと涙がこぼれる</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「いちる君、貴方も彼と友人になりなさいな」</font></br></td></tr>
+
+<tr class="tab0 char9"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>男たち</b>：儀式（料理バトル）を観戦していた男たちから拍手があがる</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ありがとう・・・　ありがとうございます。」それぞれに頭を下げる</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「まずは、ここから帰りましょう」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「異界に長く居過ぎるものではありませんしね～」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「あの。そのまえに僕からひとつお願いがあります。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「なんでしょうか？」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「僕はいままでずっと自らを神隠しにしていました。　そのことでこのケガレが生じてしまい、そして。未熟な僕はまたケガレを招いてしまうでしょう。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「迷いを祓い、カミとして振る舞うために。名を授けてはいただけませんか？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「そうですね……」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「お二人に、ぜひお願いしたいのです。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：名前うかばないと思うから無茶振りなので　名付けた　でいいですよぉ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：う～ん、カミの名ですか…</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「授食神尊、はどうでしょうか」読みは知らないですが、食べ物を授ける感じで保食神の親戚みたいな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いいですね　ではそれで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：（尺の都合もあるのに無茶振りすまぬです）</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：大丈夫です</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「ありがとうございます。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「・・・うん。　これできっと、もう大丈夫。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：「では戻りましょう。」</font></br></td></tr>
+
+<tr class="tab0 char8"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>おしゃもじ様</b>：おしゃもじ様は自信に満ちた顔で力を振るうと異界から元の世界へと戻ります</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ロクさんの成功要素出す前に解決しきってしまってすまないねぇ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：花火の場面はやるますのでな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして　現世へと戻ると　夜はすでに暮れていた</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：これで、とらわれていた人たちも帰れるかな</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：男たちは帰還をよろこび　家族や友人に連絡をとって散り散りに帰っていった</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「きっと、皆さん元の場所へと帰っていったでしょう」</font></br></td></tr>
+
+<tr class="tab1 char7"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：さきに0になりましたしね…ｗ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>SD</b>：ですね　それ以上やっても蛇足になりそうだし　あれは綺麗な解決だったので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ギリギリまで花火大会の中止をするかしないかで競り合いをしていた事務局に</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：行方不明者たちがみつかったとの一報がはいると</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：花火大会は予定通りに実施されることとなった　それが今なのだ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：つまり、空を見上げると</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ひゅるるるるるる・・・・・・・・・・・・　ドーーーーン</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「そういえば、今日でしたわね」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：「これからは、この花火がカミを祀る祭事の代わりになりそうですね」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：「そうですわね」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：そして、いずれ本当のお祭りになっていくのでしょう…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：名を授かり、カミとしての自覚を新たにしたおしゃもじ様はもう　一柱のカミとして自立し、巣立っていくことでしょう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：彼はかのんの元から姿を消しますが　この土地を祀るカミとして　今も　そしてこれからも　末永く人々に恵みを授けることでしょう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：といったところで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：「我はこれによりM＊よりはじまるゲームの目的が達成されたことを証明する」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おめでとうプレイヤー　きみたちの勝利だ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：神々の宴　第２ゲーム終了です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おつかれさまでした</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：お疲れさまでした～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：お疲れ様でした！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：おめでとう、ありがとう！！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うむす　バトらない展開でこんな感じでおさまりました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：解釈伸ばした分、ほかがちょっと味気なかったかもですが</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：料理バトりました</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：私は楽しかったです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：さじ加減がむずかしいねぇ　タイムキープ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：楽しんでもらえたならなによりです</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：最初に方針まで決めようとｓてましたからね</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：後、いちるさんにRP回せなかったのが個人的な心残り</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：うむ　私もそこがこころのこり</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いちるさんもっと物語にからめたかったなぁ</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：まあ、今回はもう少し自分のやれることを舞台に乗せておけばよかったですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：私ががっつり解釈載せちゃったから……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あんまり反省会みたいになるとあれなので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：次回はまた楽しくやりましょう！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：では</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：【BGM アフタープレイ】</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：次はもう少しうまくやりましょう</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：はい、次同卓した際はよろしくおねがいします！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おつかれさまでしたーーーー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：よろしくお願いします！</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：お疲れ様でした！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：そして、またどこかの卓でよろしくですーーーー</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：今回は楽しかったけど次回はもっと楽しく、の心づもりで！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ですねえ、そのときはまたよろしくお願いします</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：よろしくおねがいします</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これにて　Aマホ＋何かやろうという　ナラティブ系ゲームの２連日オンセは全日程を終了となります</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：2日間ありがとうございました！！</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こちらこそです～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：急なおさそいなのに、あと日程けっこうきつきつなのにきてくれて　一緒に遊んでくれてありがとうー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：ありがとうございました</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：一緒にあそべてたのしい　とても充実した２日間でした</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：お誘いしていただき嬉しかったです！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：卓やってるときも。はじまる前も。終わってからも　とてもたのしかったです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：いろいろと感想もかたらいたいし　雑談もしたいし　名残惜しいのですが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：次の卓の都合もありますゆえ</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：と、風呂呼ばれたのでお早いですがお先に失礼します</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：これにて自由解散とします</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ログなどはまたDMで希望者には配布します</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：ではではー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：こちらも、ちょい支度と休憩しておきます～</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#0000ff'><b>”蘇りしアマゾネス”海野かのん</b>：感想はTwitterに上げさせていただきます</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：お疲れさまでした！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>SD</b>：おつかれさまでしたー</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc33'><b>”閃止公”姫川いちる</b>：では、またの機会もよろしくお願いします～</font></br></td></tr>
+
+
+
+</table>
+</body>
+</html>
