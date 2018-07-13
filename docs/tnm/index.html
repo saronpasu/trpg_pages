@@ -1,0 +1,1172 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site:id" content="@eof_trpg" />
+        <meta name="twitter:creator:id" content="@eof_trpg" />
+        <meta name="twitter:title" content="うどんナイトメア" />
+        <meta name="twitter:description" content="TNMのキャラシサイトからユドナリウムのコマを作るやつ" />
+        <title>トーキョー・ナイトメアのキャラシサイトからユドナリウムのコマを作るやつ</title>
+    </head>
+    <body>
+        <div><a href="https://character-sheets.appspot.com/tnm/">TNMのキャラシサイト</a>からユドナリウムのコマをツクールくん</div>
+        <div>使い方
+            <li>1.「<a href="javascript:(function(){
+
+                    var scr1 = document.createElement('script');
+                    scr1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js';
+                    document.body.appendChild(scr1);
+                    var scr2 = document.createElement('script');
+                    scr2.src = 'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js';
+                    document.body.appendChild(scr2);
+
+                    var source = window.document;
+                    var sourceURL = window.document.location;
+                    var validPattern = /^http(s)?:\/\/character-sheets\.appspot\.com\/tnm\/edit\.html/;
+                    if(validPattern.test(sourceURL) == false) {
+                        return;
+                    }
+
+                    /* ここからメイン処理 */
+                    /* 汎用関数 */
+                    function getByName(obj, name) {
+                        var elem = obj.getElementsByName(name)[0];
+                        if(elem != null) {
+                            return  elem.value;
+                        } else {
+                            return '';
+                        }
+                    }
+
+                    function getByNameSelected(obj, name) {
+                        var select = obj.getElementsByName(name)[0];
+                        var result = null;
+                        if(select == null) {
+                            return '';
+                        }
+                        result = select.options[ select.selectedIndex ].value;
+                        if(result == null) {
+                            return '';
+                        } else {
+                            return result;
+                        }
+                    };
+
+                    function getByIdSelected(obj, id) {
+                        var select = obj.getElementById(id);
+                        var result = null;
+                        if(select == null) {
+                            return '';
+                        }
+                        result = select.options[ select.selectedIndex ].value;
+                        if(result == null) {
+                            return '';
+                        } else {
+                            return result;
+                        }
+                    };
+
+                    function getSelected(obj) {
+                        var result = null;
+                        result = obj.options[ obj.selectedIndex ].value;
+                        if(result == null) {
+                            return '';
+                        } else {
+                            return result;
+                        }
+                    };
+
+                    function getById(obj, id) {
+                        var elem = obj.getElementById(id);
+                        if(elem != null) {
+                            if(elem.innerText != '') {
+                                return elem.innerText;
+                            } else if(elem.value != '') {
+                                return elem.value;
+                            }
+                        } else {
+                            return '';
+                        }
+                    };
+
+                    function nonZeroAndEmpty(obj, name) {
+                        var value = getByName(obj, name);
+                        return (value != '' && value != '0');
+                    };
+
+                    function convertEn2JaStlye(src) {
+                        var jaStyles = [
+                            'カブキ','バサラ','タタラ',
+                            'ミストレス','カブト','カリスマ',
+                            'マネキン','カゼ','フェイト',
+                            'クロマク','エグゼク','カタナ',
+                            'クグツ','カゲ','チャクラ',
+                            'レッガー','カブトワリ','ハイランダー',
+                            'マヤカシ','トーキー','イヌ',
+                            'ニューロ','コモン','ヒルコ',
+                            'クロガネ','イブキ','シキガミ',
+                            'アラシ','カゲムシャ','エトランゼ',
+                            'アヤカシ'
+                        ];
+                        var enStyles = [
+                            'Kabuki','Vasara','Tatara',
+                            'Mistress','Kabuto','Charisma',
+                            'Mannequin','Kaze','Fate',
+                            'Kuromaku','Exec','Katana',
+                            'Kugutsu','Kage','Chakra',
+                            'Legger','Kabuto-Wari','Highlander',
+                            'Mayakashi','Talkie','Inu',
+                            'Neuro','Common','Hiruko',
+                            'Kurogane','Ibuki','Shikigami',
+                            'Arashi','Kagemusha','Etranger',
+                            'Ayakashi'
+                        ];
+                        var keymap = ['', '◎', '●'];
+                        var result = '';
+                        var w_list = [];
+                        var p_or_k = [];
+                        var srcList = src.split(',');
+
+                        for(var i=0; i < enStyles.length; i++) {
+                            var findPattern = new RegExp(enStyles[i]);
+                            var replacePattern = new RegExp(enStyles[i], 'g');
+                            var replaceWord = jaStyles[i];
+                            if (findPattern.test(src)) {
+                                for(var j=0; j < srcList.length; j++) {
+                                    if(findPattern.test(srcList[j])) {
+                                        w_list.push(i);
+                                    }
+                                }
+                            }
+                        }
+                        for(var i=0; i < srcList.length; i++) {
+                            var reg_k = /●/;
+                            var reg_p = /◎/;
+                            if(reg_k.test(srcList[i])) {
+                                p_or_k.push(2);
+                            }else if(reg_p.test(srcList[i])){
+                                p_or_k.push(1);
+                            }else {
+                                p_or_k.push(0);
+                            }
+                        }
+
+                        result = jaStyles[w_list[0]] +
+                            keymap[p_or_k[0]] + ',' +
+                            jaStyles[w_list[1]] +
+                            keymap[p_or_k[1]] + ',' +
+                            jaStyles[w_list[2]] +
+                            keymap[p_or_k[2]];
+
+                        return result;
+                    };
+
+                    /* データを取得したりとかする部分 */
+
+                    /* キャラ名を先に取得 */
+                    char_name = getById(source, 'base.name');
+
+                    /* Begin: 共通の雛形を生成 */
+                    xml = document.createElement('character');
+                    xml.setAttribute('location.x', '0');
+                    xml.setAttribute('location.y', '0');
+                    xml.setAttribute('posZ', '0');
+
+                    char = document.createElement('data');
+                    char.setAttribute('name', 'character');
+
+                    img = document.createElement('data');
+                    img.setAttribute('name', 'image');
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'image');
+                    elem.setAttribute('name', 'imageIdentifier');
+                    elem.innerText = 'null';
+                    img.appendChild(elem);
+                    char.appendChild(img);
+
+                    common = document.createElement('data');
+                    common.setAttribute('name', 'common');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'name');
+                    elem.innerText = getById(source, 'base.name');
+                    common.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'size');
+                    elem.innerText = '2';
+                    common.appendChild(elem);
+                    char.appendChild(common);
+
+                    detail = document.createElement('data');
+                    detail.setAttribute('name', 'detail');
+                    /* End: 共通の雛形を生成 */
+
+                    /* Begin: 共通のリソースを取得 */
+                    base_resources = document.createElement('data');
+                    base_resources.setAttribute('name', '基本情報');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '年齢');
+                    elem.innerText = getById(source, 'base.age');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '性別');
+                    elem.innerText = getById(source, 'base.sex');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '誕生日');
+                    elem.innerText = getById(source, 'base.birthday');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '身長');
+                    elem.innerText = getById(source, 'base.height');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '体重');
+                    elem.innerText = getById(source, 'base.weight');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '瞳の色');
+                    elem.innerText = getById(source, 'base.eyes');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '髪の色');
+                    elem.innerText = getById(source, 'base.hair');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '肌の色');
+                    elem.innerText = getById(source, 'base.skin');
+                    base_resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '所属');
+                    elem.innerText = getById(source, 'base.post');
+                    base_resources.appendChild(elem);
+                    /* End: 共通のリソースを取得 */
+
+                    /* Begin: スタイルと神業の取得 */
+                    style_data = document.createElement('data');
+                    style_data.setAttribute('name', '固有リソース');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'スタイル');
+                    enStyle = getById(source, 'base.enStyles');
+                    jaStyle = convertEn2JaStlye(enStyle);
+                    elem.innerText = jaStyle;
+                    style_data.appendChild(elem);
+                    kamiwaza = document.createElement('data');
+                    kamiwaza.setAttribute('name', '神業');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', getById(source, 'styles.divinework1'));
+                    elem.setAttribute('type', 'data');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', 1);
+                    elem.innerText = 1;
+                    kamiwaza.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', getById(source, 'styles.divinework2'));
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('currentValue', 1);
+                    elem.innerText = 1;
+                    kamiwaza.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('name', getById(source, 'styles.divinework3'));
+                    elem.setAttribute('currentValue', 1);
+                    elem.innerText = 1;
+                    kamiwaza.appendChild(elem);
+                    style_data.appendChild(kamiwaza);
+
+                    /* Begin: 切り札の取得 */
+                    kirihuda = document.createElement('data');
+                    kirihuda.setAttribute('name', '切り札');
+                    kirihuda.setAttribute('type', 'numberResource');
+                    kirihuda.setAttribute('currentValue', 1);
+                    kirihuda.innerText = 1;
+                    style_data.appendChild(kirihuda);
+                    /* End: 切り札の取得 */
+
+                    /* Begin: 報酬点の取得 */
+                    money = document.createElement('data');
+                    money.setAttribute('name', '報酬点');
+                    money.setAttribute('type', 'numberResource');
+                    if(getById(source, 'base.reward')) {
+                        money.setAttribute('currentValue', getById(source, 'base.reward'));
+                        money.innerText = getById(source, 'base.reward');
+                    }else {
+                        money.setAttribute('currentValue', 0);
+                        money.innerText = 0;
+                    }
+                    style_data.appendChild(money);
+                    /* End: 報酬点の取得 */
+
+                    /* End: スタイルと神業の取得 */
+
+                    /* Begin: 能力値の取得 */
+                    power = document.createElement('data');
+                    power.setAttribute('name', '能力値');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '理性');
+                    elem.innerText = getById(source, 'ability.reason.abl') + '/' +
+                        getById(source, 'ability.reason.ctl');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '感情');
+                    elem.innerText = getById(source, 'ability.passion.abl') + '/' +
+                        getById(source, 'ability.passion.ctl');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '生命');
+                    elem.innerText = getById(source, 'ability.life.abl') + '/' +
+                        getById(source, 'ability.life.ctl');
+                    power.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '外界');
+                    elem.innerText = getById(source, 'ability.mundane.abl') + '/' +
+                        getById(source, 'ability.mundane.ctl');
+                    power.appendChild(elem);
+                    /* End: 能力値の取得 */
+
+                    /* Begin: 一般技能の取得 */
+                    basic_skills = document.createElement('data');
+                    basic_skills.setAttribute('name', '一般技能');
+                    source_skills_1 = document.evaluate('//*[@id=\'skills1\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    source_skills_2 = document.evaluate('//*[@id=\'skills2\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+
+                    for(var i=0; i < source_skills_1.snapshotLength; i++) {
+                        skill = source_skills_1.snapshotItem(i);
+                        if(skill.children[0].children[0].value == '') {
+
+                            continue;
+                        }
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', skill.children[0].children[0].value);
+                        txt = '';
+                        if(skill.children[2].children[4].value == '1') {
+                            txt += '理性'
+                        }
+                        if(skill.children[2].children[5].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '感情'
+                        }
+                        if(skill.children[2].children[6].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '生命'
+                        }
+                        if(skill.children[2].children[7].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '外界'
+                        }
+                        elem.innerText = txt;
+                        basic_skills.appendChild(elem);
+                    }
+
+                    for(var i=0; i < source_skills_2.snapshotLength; i++) {
+                        skill = source_skills_2.snapshotItem(i);
+                        if(skill.children[0].children[0].value == '') {
+
+                            continue;
+                        }
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', skill.children[0].children[0].value);
+                        txt = '';
+                        if(skill.children[2].children[4].value == '1') {
+                            txt += '理性'
+                        }
+                        if(skill.children[2].children[5].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '感情'
+                        }
+                        if(skill.children[2].children[6].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '生命'
+                        }
+                        if(skill.children[2].children[7].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '外界'
+                        }
+                        elem.innerText = txt;
+                        basic_skills.appendChild(elem);
+                    }
+
+                    /* End: 一般技能の取得 */
+
+                    /* Begin: コネクションの取得 */
+                    connections = document.createElement('data');
+                    connections.setAttribute('name', 'コネクション');
+                    source_skills_3 = document.evaluate('//*[@id=\'skills3\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    source_skills_4 = document.evaluate('//*[@id=\'skills4\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+
+                    for(var i=0; i < source_skills_3.snapshotLength; i++) {
+                        skill = source_skills_3.snapshotItem(i);
+                        if(/コネ./.test(skill.children[0].children[0].value) == false) {
+
+                            continue;
+                        }
+                        if(skill.children[0].children[0].value == '') {
+
+                            continue;
+                        }
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', skill.children[0].children[0].value.replace(/コネ./, ''));
+                        txt = '';
+                        if(skill.children[2].children[4].value == '1') {
+                            txt += '理性'
+                        }
+                        if(skill.children[2].children[5].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '感情'
+                        }
+                        if(skill.children[2].children[6].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '生命'
+                        }
+                        if(skill.children[2].children[7].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '外界'
+                        }
+                        elem.innerText = txt;
+                        connections.appendChild(elem);
+                    }
+
+                    for(var i=0; i < source_skills_4.snapshotLength; i++) {
+                        skill = source_skills_4.snapshotItem(i);
+                        if(/コネ./.test(skill.children[0].children[0].value) == false) {
+
+                            continue;
+                        }
+                        if(skill.children[0].children[0].value == '') {
+
+                            continue;
+                        }
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', skill.children[0].children[0].value.replace(/コネ./, ''));
+                        txt = '';
+                        if(skill.children[2].children[4].value == '1') {
+                            txt += '理性'
+                        }
+                        if(skill.children[2].children[5].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '感情'
+                        }
+                        if(skill.children[2].children[6].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '生命'
+                        }
+                        if(skill.children[2].children[7].value == '1') {
+                            if(txt != '') {
+                                txt += ','
+                            }
+                            txt += '外界'
+                        }
+                        elem.innerText = txt;
+                        connections.appendChild(elem);
+                    }
+
+                    /* End: コネクションの取得 */
+
+                    /* Begin: スタイル特技,秘技の取得 */
+                    skill_info = document.createElement('data');
+                    skill_info.setAttribute('name', 'スタイル特技/秘技');
+                    source_skills = document.evaluate('//*[@id=\'superhumanskills\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    skills_cpd = [];
+
+                    for(var i=0; i < source_skills.snapshotLength; i++) {
+                        skill = source_skills.snapshotItem(i);
+
+                        if(skill == null) {
+                            break;
+                        }
+
+                        if(skill.children[0].children[0].value == '') {
+                            continue;
+                        }
+
+                        if(skill.children[0].children[0].value != '') {
+                            elem = document.createElement('data');
+                            elem.setAttribute('name', skill.children[0].children[0].value);
+                            txt = '';
+
+                            txt += skill.children[0].children[0].value;
+                            txt += '|';
+                            if(getSelected(skill.children[1].children[0]) == '10') {
+                                txt += '特技';
+                            }else if(getSelected(skill.children[1].children[0]) == '20') {
+                                txt += '秘技';
+                            }
+                            txt += '|';
+
+                            if(skill.children[2].children[0].value != '') {
+                                txt += 'Lv' + skill.children[2].children[0].value + '|';
+                            }
+
+                            txt += 'スート:[';
+                            if(skill.children[3].children[4].value != '') {
+                                txt += '理性,';
+                            }else {
+                                txt += '−,';
+                            }
+                            if(skill.children[3].children[5].value != '') {
+                                txt += '感情,';
+                            }else {
+                                txt += '−,';
+                            }
+                            if(skill.children[3].children[6].value != '') {
+                                txt += '生命,';
+                            }else {
+                                txt += '−,';
+                            }
+                            if(skill.children[3].children[7].value != '') {
+                                txt += '外界]|';
+                            }else {
+                                txt += '−]|';
+                            }
+
+                            txt += '技能:[';
+                            if(skill.children[4].children[0].value != '') {
+                                txt += skill.children[4].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += '上限:[';
+                            if(skill.children[5].children[0].value != '') {
+                                txt += skill.children[5].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += 'タイミング:[';
+                            if(skill.children[6].children[0].value != '') {
+                                txt += skill.children[6].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += '対象:[';
+                            if(skill.children[7].children[0].value != '') {
+                                txt += skill.children[7].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += '射程:[';
+                            if(skill.children[8].children[0].value != '') {
+                                txt += skill.children[8].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += '目標値:[';
+                            if(skill.children[9].children[0].value != '') {
+                                txt += skill.children[9].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += '対決:[';
+                            if(skill.children[10].children[0].value != '') {
+                                txt += skill.children[10].children[0].value + ']|';
+                            }else {
+                                txt += ']|';
+                            }
+
+                            txt += '解説:[';
+                            if(skill.children[11].children[0].value != '') {
+                                txt += skill.children[11].children[0].value + ']';
+                            }else {
+                                txt += ']';
+                            }
+
+                            elem.innerText = txt;
+                            skill_info.appendChild(elem);
+                            skills_cpd.push(skill.children[0].children[0].value);
+                            continue;
+                        }
+
+                    }
+
+                    /* End: スタイル特技,秘技の取得 */
+
+                    /* Begin: アウトフィットの取得 */
+                    outfits = document.createElement('data');
+                    outfits.setAttribute('name', 'アウトフィット');
+                    source_weapons = document.evaluate('//*[@id=\'weapons\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    source_armours = document.evaluate('//*[@id=\'armours\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    source_outfits = document.evaluate('//*[@id=\'outfits\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    source_vehicles = document.evaluate('//*[@id=\'vehicles\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    source_residences = document.evaluate('//*[@id=\'residences\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    outfits_cpd = [];
+
+                    /* 武器 */
+                    weapons = document.createElement('data');
+                    weapons.setAttribute('name', '武器');
+
+                    for(var i=0; i < source_weapons.snapshotLength; i++) {
+                        weapon = source_weapons.snapshotItem(i);
+
+                        if(weapon == null) {
+                            break;
+                        }
+
+                        if(weapon.children[0].children[0].value == '') {
+                            continue;
+                        }
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', weapon.children[0].children[0].value);
+
+                        txt = '';
+                        if(weapon.children[0].children[0].value != '') {
+                            txt += weapon.children[0].children[0].value + '|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '購入値:[';
+                        if(weapon.children[1].children[0].value != '') {
+                            txt += weapon.children[1].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(weapon.children[2].children[0].value != '') {
+                            txt += weapon.children[2].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '携帯:[';
+                        if(weapon.children[3].children[0].value != '') {
+                            txt += weapon.children[3].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(weapon.children[4].children[0].value != '') {
+                            txt += weapon.children[4].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '攻撃力:[';
+                        if(weapon.children[5].children[0].value != '') {
+                            txt += weapon.children[5].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '受け値:[';
+                        if(weapon.children[6].children[0].value != '') {
+                            txt += weapon.children[6].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '射程:[';
+                        if(weapon.children[7].children[0].value != '') {
+                            txt += weapon.children[7].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '電制:[';
+                        if(weapon.children[8].children[0].value != '') {
+                            txt += weapon.children[8].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '部位:[';
+                        if(weapon.children[9].children[0].value != '') {
+                            txt += weapon.children[9].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '解説:[';
+                        if(weapon.children[10].children[0].value != '') {
+                            txt += weapon.children[10].children[0].value + ']';
+                        }else {
+                            txt += ']';
+                        }
+
+                        elem.innerText = txt;
+                        outfits_cpd.push(weapon.children[0].children[0].value);
+                        weapons.appendChild(elem);
+
+                    }
+                    outfits.appendChild(weapons);
+
+                    /* 防具 */
+                    armours = document.createElement('data');
+                    armours.setAttribute('name', '防具');
+
+                    for(var i=0; i < source_armours.snapshotLength; i++) {
+                        armour = source_armours.snapshotItem(i);
+
+                        if(armour == null) {
+                            break;
+                        }
+
+                        if(armour.children[0].children[0].value == '') {
+                            continue;
+                        }
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', armour.children[0].children[0].value);
+
+                        txt = '';
+                        if(armour.children[0].children[0].value != '') {
+                            txt += armour.children[0].children[0].value + '|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '購入値:[';
+                        if(armour.children[1].children[0].value != '') {
+                            txt += armour.children[1].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(armour.children[2].children[0].value != '') {
+                            txt += armour.children[2].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '携帯:[';
+                        if(armour.children[3].children[0].value != '') {
+                            txt += armour.children[3].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(armour.children[4].children[0].value != '') {
+                            txt += armour.children[4].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '防御力(S/P/I):[';
+                        if(armour.children[5].children[0].value != '') {
+                            txt += armour.children[5].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(armour.children[6].children[0].value != '') {
+                            txt += armour.children[6].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(armour.children[7].children[0].value != '') {
+                            txt += armour.children[7].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '電制:[';
+                        if(armour.children[8].children[0].value != '') {
+                            txt += armour.children[8].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '部位:[';
+                        if(armour.children[9].children[0].value != '') {
+                            txt += armour.children[9].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '解説:[';
+                        if(armour.children[10].children[0].value != '') {
+                            txt += armour.children[10].children[0].value + ']';
+                        }else {
+                            txt += ']';
+                        }
+
+                        elem.innerText = txt;
+                        outfits_cpd.push(armour.children[0].children[0].value);
+                        armours.appendChild(elem);
+
+                    }
+                    outfits.appendChild(armours);
+
+                    /* 装備品 */
+                    other_outfits = document.createElement('data');
+                    other_outfits.setAttribute('name', '装備(サイバーウェア,タップ,その他)');
+
+                    for(var i=0; i < source_outfits.snapshotLength; i++) {
+                        outfit = source_outfits.snapshotItem(i);
+
+                        if(outfit == null) {
+                            break;
+                        }
+
+                        if(outfit.children[0].children[0].value == '') {
+                            continue;
+                        }
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', outfit.children[0].children[0].value);
+
+                        txt = '';
+                        if(outfit.children[0].children[0].value != '') {
+                            txt += outfit.children[0].children[0].value + '|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '購入値:[';
+                        if(outfit.children[1].children[0].value != '') {
+                            txt += outfit.children[1].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(outfit.children[2].children[0].value != '') {
+                            txt += outfit.children[2].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '携帯:[';
+                        if(outfit.children[3].children[0].value != '') {
+                            txt += outfit.children[3].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(outfit.children[4].children[0].value != '') {
+                            txt += outfit.children[4].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '電制:[';
+                        if(outfit.children[5].children[0].value != '') {
+                            txt += outfit.children[5].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '部位:[';
+                        if(outfit.children[6].children[0].value != '') {
+                            txt += outfit.children[6].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '解説:[';
+                        if(outfit.children[7].children[0].value != '') {
+                            txt += outfit.children[7].children[0].value + ']';
+                        }else {
+                            txt += ']';
+                        }
+
+                        elem.innerText = txt;
+                        outfits_cpd.push(outfit.children[0].children[0].value);
+                        other_outfits.appendChild(elem);
+
+                    }
+                    outfits.appendChild(other_outfits);
+
+                    /* ヴィークル */
+                    vehicles = document.createElement('data');
+                    vehicles.setAttribute('name', 'ヴィークル');
+
+                    for(var i=0; i < source_vehicles.snapshotLength; i++) {
+                        vehicle = source_vehicles.snapshotItem(i);
+
+                        if(vehicle == null) {
+                            break;
+                        }
+
+                        if(vehicle.children[0].children[0].value == '') {
+                            continue;
+                        }
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', vehicle.children[0].children[0].value);
+
+                        txt = '';
+                        if(vehicle.children[0].children[0].value != '') {
+                            txt += vehicle.children[0].children[0].value + '|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '購入値:[';
+                        if(vehicle.children[1].children[0].value != '') {
+                            txt += vehicle.children[1].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(vehicle.children[2].children[0].value != '') {
+                            txt += vehicle.children[2].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '携帯:[';
+                        if(vehicle.children[3].children[0].value != '') {
+                            txt += vehicle.children[3].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(vehicle.children[4].children[0].value != '') {
+                            txt += vehicle.children[4].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '攻撃力:[';
+                        if(vehicle.children[5].children[0].value != '') {
+                            txt += vehicle.children[5].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += 'SF:[';
+                        if(vehicle.children[6].children[0].value != '') {
+                            txt += vehicle.children[6].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '制御修正値:[';
+                        if(vehicle.children[7].children[0].value != '') {
+                            txt += vehicle.children[7].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '乗員:[';
+                        if(vehicle.children[8].children[0].value != '') {
+                            txt += vehicle.children[8].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += 'スロット:[';
+                        if(vehicle.children[9].children[0].value != '') {
+                            txt += vehicle.children[9].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '電制:[';
+                        if(vehicle.children[10].children[0].value != '') {
+                            txt += vehicle.children[10].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '部位:[';
+                        if(vehicle.children[11].children[0].value != '') {
+                            txt += vehicle.children[11].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '解説:[';
+                        if(vehicle.children[12].children[0].value != '') {
+                            txt += vehicle.children[12].children[0].value + ']';
+                        }else {
+                            txt += ']';
+                        }
+
+                        elem.innerText = txt;
+                        outfits_cpd.push(vehicle.children[0].children[0].value);
+                        vehicles.appendChild(elem);
+
+                    }
+                    outfits.appendChild(vehicles);
+
+                    /* 住居 */
+                    residences = document.createElement('data');
+                    residences.setAttribute('name', '住居');
+
+                    for(var i=0; i < source_residences.snapshotLength; i++) {
+                        residence = source_residences.snapshotItem(i);
+
+                        if(residence == null) {
+                            break;
+                        }
+
+                        if(residence.children[0].children[0].value == '') {
+                            continue;
+                        }
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', residence.children[0].children[0].value);
+
+                        txt = '';
+                        if(residence.children[0].children[0].value != '') {
+                            txt += residence.children[0].children[0].value + '|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '購入値:[';
+                        if(residence.children[1].children[0].value != '') {
+                            txt += residence.children[1].children[0].value + '/';
+                        }else {
+                            txt += '/';
+                        }
+                        if(residence.children[2].children[0].value != '') {
+                            txt += residence.children[2].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '登場値:[';
+                        if(residence.children[3].children[0].value != '') {
+                            txt += residence.children[3].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '部位:[';
+                        if(residence.children[4].children[0].value != '') {
+                            txt += residence.children[4].children[0].value + ']|';
+                        }else {
+                            txt += ']|';
+                        }
+
+                        txt += '解説:[';
+                        if(residence.children[5].children[0].value != '') {
+                            txt += residence.children[5].children[0].value + ']';
+                        }else {
+                            txt += ']';
+                        }
+                        elem.innerText = txt;
+                        outfits_cpd.push(residence.children[0].children[0].innerText);
+                        residences.appendChild(elem);
+
+                    }
+                    outfits.appendChild(residences);
+
+                    /* End: アウトフィットの取得 */
+
+                    /* Begin: メモ欄の取得 */
+                    char_note = document.createElement('data');
+                    char_note.setAttribute('name', 'その他メモ');
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'note');
+                    elem.innerText = getById(source, 'base.lifepath.memo');
+                    char_note.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'note');
+                    elem.innerText = getById(source, 'base.memoir');
+                    char_note.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'note');
+                    elem.innerText = getById(source, 'base.memo');
+                    char_note.appendChild(elem);
+
+                    /* End: メモ欄の取得 */
+
+                    /* Begin: 順番にキャラデータに取得した情報を設定 */
+                    detail.appendChild(base_resources);
+                    detail.appendChild(style_data);
+                    detail.appendChild(power);
+                    detail.appendChild(basic_skills);
+                    detail.appendChild(connections);
+                    detail.appendChild(outfits);
+                    detail.appendChild(skill_info);
+                    detail.appendChild(char_note);
+                    char.appendChild(detail);
+                    /* End: 順番にキャラデータに取得した情報を設定 */
+
+                    cpd = document.createElement('chat-palette');
+
+                    /* Begin: チャットパレットの生成 */
+                    cpd.setAttribute('dicebot', 'TokyoNova');
+                    txt = '';
+                    txt += '\n';
+                    txt += '=========\n';
+                    txt += 'スタイル技能/秘技\n';
+                    if (skills_cpd.length != 0) {
+                        for(let skill of skills_cpd) {
+                            txt += `${skill}: `+'{'+skill+'}\n';
+                        }
+                    }
+                    txt += '\n';
+                    txt += '=========\n';
+                    txt += 'アウトフィット\n';
+                    if (outfits_cpd.length != 0) {
+                        for(let outfit of outfits_cpd) {
+                            txt += `${outfit}: `+'{'+outfit+'}\n';
+                        }
+                    }
+                    cpd.innerText = txt;
+                    /* End: チャットパレットの生成 */
+
+                    /* チャットパレットを設定 */
+
+                    /* 雛形にキャラデータとチャットパレットを設定 */
+                    xml.appendChild(char);
+                    xml.appendChild(cpd);
+
+                    s = new XMLSerializer();
+
+                    out = s.serializeToString(xml);
+                    out = out.replace(/xmlns=.http:\/\/www\.w3\.org\/1999\/xhtml../, '');
+                    out = out.replace(/<br \/>/g, '\n');
+                    out = out.replace(/currentvalue/g, 'currentValue');
+
+                    zip = new JSZip();
+                    zip.file(`${char_name}.xml`, out);
+                    zip.generateAsync({type:'blob'})
+                    .then(function(blob) {
+                        saveAs(blob, `${char_name}.zip`);
+                    });
+
+
+            })();
+">うどんナイトメア</a>」をブックマークバーにドラックアンドドロップ</li>
+            <li>2.キャラシ倉庫で自分のキャラシを開く</li>
+            <li>3.ブックマークバーに登録した「うどんナイトメア」をクリック</li>
+            <li>4.ユドナリウム用のキャラデータ(zipファイル)がダウンロードされます</li>
+            <li>5.ユドナリウムにzipをドラックアンドドロップ</li>
+        </div>
+        <div>動作確認済みの対応バージョン
+            <li>ユドナリウム: v1.5.0</li>
+            <li>キャラクター保管所:2018/06/xx</li>
+            <li>トーキョー・ナイトメア(初版)</li>
+        </div>
+        <div>バージョンと機能とか
+            <li>version.1.0　とりあえずできた</li>
+        </div>
+        <div>アプデ方法、アンインストール方法
+            <li>ブックマークバーから削除して登録しなおすだけ</li>
+        </div>
+        <div>その他の説明
+            <li>キャラシサイトになるべく負荷がかからないようにブックマークレットにしています</li>
+            <li>キャラシサイトへ通信は行っていません</li>
+            <li>zip圧縮のため、JSZipというライブラリを利用しています</li>
+            <li>ファイル保存のため、FileSaverというライブラリを利用しています</li>
+            <li>ライブラリ読み込みのため、ネット接続を2回だけやっています</li>
+            <li>初回の読み込み時にエラーになるため、最初は2回クリックして下さい[既知の不具合]</li>
+            <li>著作権は放棄していません</li>
+            <li>キャラクター保管所およびユドナリウムとは非保証の、個人が作ったツールです</li>
+            <li>ご利用は自己責任でお願いします</li>
+            <li>ライセンスはGPLv3です</li>
+        </div>
+    </body>
+</html>
