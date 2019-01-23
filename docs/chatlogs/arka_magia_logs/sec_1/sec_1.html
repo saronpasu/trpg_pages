@@ -1,0 +1,1780 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' lang='ja'>
+  <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>第１章 海の第３層「邂逅 ルサ・リオール」</title>
+
+<!-- Begin: edited -->
+<div id="navi">
+<div id="naviTitle">シーンジャンプ</div>
+<div id="junpLink">
+サイクル1. シーン2
+<br />
+<a id="link001" class="deactive" onclick="JumpTo(jump001)">場面3</a> | <a id="link002" class="deactive" onclick="JumpTo(jump002)">場面4</a> | <a id="link003" class="deactive" onclick="JumpTo(jump003)">場面5</a> | <a id="link004" class="deactive" onclick="JumpTo(jump004)">場面6</a><br />
+<a id="link005" class="deactive" onclick="JumpTo(jump005)">幕間3</a>
+</div>
+</div>
+<!-- End: edited -->
+
+<div id="sub">
+<div id="subTitle">発言者別フィルター</div>
+<div id="filter">
+<label><input type="checkbox" id="char0" value="char0" onclick="ShowHide(this)" checked>GM</label><br>
+<label><input type="checkbox" id="char7" value="char7" onclick="ShowHide(this)" checked>どどんとふ</label><br>
+<label><input type="checkbox" id="char6" value="char6" onclick="ShowHide(this)" checked>クロウ</label><br>
+<label><input type="checkbox" id="char5" value="char5" onclick="ShowHide(this)" checked>グレッグ</label><br>
+<label><input type="checkbox" id="char4" value="char4" onclick="ShowHide(this)" checked>ジェシカ</label><br>
+<label><input type="checkbox" id="char1" value="char1" onclick="ShowHide(this)" checked>プシケ</label><br>
+<label><input type="checkbox" id="char3" value="char3" onclick="ShowHide(this)" checked>リレ</label><br>
+<label><input type="checkbox" id="char2" value="char2" onclick="ShowHide(this)" checked>ルビア</label><br>
+</div>
+</div>
+
+<script type="text/javascript">
+<!--
+function ShowHide(chkElm){
+	chkStat = chkElm.checked;
+	target = document.getElementsByClassName(chkElm.value);
+	for( ii=0; ii<target.length; ii++ ){
+		classNames = target[ii].className.split(" ");
+		chkStat = chkElm.checked;
+		for( jj=0; jj<classNames.length; jj++ ){
+			elm = document.getElementById(classNames[jj]);
+			if( !elm  ){
+				continue;
+			}
+			chkStat &= elm.checked;
+		}
+		stat = chkStat ? "" : "none";
+		target[ii].style.display = stat;
+	}
+}
+
+// Added Function
+function JumpTo(id) {
+    id.scrollIntoView({
+        behavior:'smooth',
+        block:'start',
+        inline:'start'
+    })
+}
+
+window.onscroll = ScrollEvent;
+
+function ScrollEvent() {
+    var scene_marks = [
+        document.getElementById('jump001').offsetTop,
+        document.getElementById('jump002').offsetTop,
+        document.getElementById('jump003').offsetTop,
+        document.getElementById('jump004').offsetTop,
+        document.getElementById('jump005').offsetTop
+    ];
+    var link = [
+        'link001',
+        'link002',
+        'link003',
+        'link004',
+        'link005'
+    ]
+    var marker = 0;
+
+    for(let j=0;j<link.length;j++) {
+        document.getElementById(link[j]).className = 'deactive';
+    }
+
+    for(let i=0;i<scene_marks.length;i++) {
+        if(window.scrollY >= scene_marks[i]) {
+            marker = i;
+        }
+    }
+
+    document.getElementById(link[marker]).className = 'active';
+
+}
+-->
+</script>
+	<style>
+	body{ margin:0; padding:0 20px; background:#fff;}
+	table {
+		border-collapse: collapse;
+	}
+	td {
+		border: none;
+		padding: 4px;
+	}
+	#main{ margin-left:210px; }
+
+    #navi{
+        background:#fff;
+		font-size:85%;
+        width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+    #naviTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+    #junpLink{ padding:5px; }
+
+    .active{
+        background-color: #c1e4e9;
+    }
+    .deactive{
+        background-color: #fff;
+    }
+
+	#sub{
+        margin-top:75px;
+		background:#fff;
+		font-size:85%;
+		width:200px; position:fixed; top:0; left:10px;
+		border-radius:0 0 8px 8px; border:1px solid #999; }
+	#subTitle{
+		background:#999; font-weight:bold; color:#fff; text-align:center;
+	}
+	#colFilter{ background:#fff; position:fixed; width:100%;}
+	#filter{ padding:5px; }
+	</style>
+	</head>
+<body><table border=0 id="main">
+<tr id="colFilter">
+<td nowrap width="100"><label><input type="checkbox" id="tab0" value="tab0" onclick="ShowHide(this)" checked>[メイン]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab1" value="tab1" onclick="ShowHide(this)" checked>[雑談]</label></td>
+<td nowrap width="100"><label><input type="checkbox" id="tab2" value="tab2" onclick="ShowHide(this)" checked>[メモ]</label></td>
+<td nowrap><label><input type="checkbox" id="tab3" value="tab3" onclick="ShowHide(this)" checked>[その他]</label></td>
+</tr>
+<tr>
+<td width="100"><BR></td><td width="100"><BR></td><td width="100"><BR></td><td><BR></td></tr>
+
+<tr id="jump001" />
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：間の場面はあらすじでいくぞ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ルサ・リオールへ到着してからルビアたちはアニメや漫画でいうと４話分ぐらいの旅を経て</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：プシケの故郷の街に到着します</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：4話分くらいの旅をしてしまった</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：いやぁ、巨大なサメの上にキャンプしたときにはどうなるかと思ったよ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：唐突な…鮫！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あのときは老漁師の助けがあったね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：食べられちゃうかと思いましたけどいいサメさんでしたね！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：無理やりな水着回の予感がプンプンしますわ…！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：片足と息子を無くした漁師の執念の銛を託されて</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうそう　水着回もあったねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：水着回か…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：がんばってくれよな…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そういったなんやかんやを経て、到着したのがプシケの故郷</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：最近は男性キャラの水着も需要あるので……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：是非もないね…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ルビアと老漁師の水着姿のアイキャッチ…是非も無いネ！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：聖地リオール　この階層の名にもついてるね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：海の国か…こんなに広い海を見たのは初めてだ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：旧き神が亡くなった土地であり、その遺体が大地となったといわれている場所だ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「とうちゃくしました！ここがあたしの生まれた街、リオールです！」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「良い場所ですわね…お魚がたくさんとれそうですし」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「いいところだね…」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：また判定のときには案内するけどしばらくシーンすすめるよ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：リオールの信仰は昔は盛んだったけど、今ではそれほどではない</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：魔術の大きな技術革新があってからは、神の力よりも魔術のほうが勢いがある感じで　それにおされているというのが現状</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ふうむ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：逆に、いまでもリオールに暮らす人たちはそのなかで信心深いひとが集まっているので</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ここではめっちゃ盛んです</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「街の人はみんないい人たちなので、お二人もすぐにお友達になれますよ！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「そうみたいだねえ…空気が、なんていうか緩やかだ」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：プシケの実家でもある大神殿（総本山とも呼ばれている）へ向かうと</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「そうですわねえ、このぽやぽやとした空気は確かにプシケの故郷…納得です」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「・・・・・・プシケ　プシケ！！　無事だったのね・・・」　プシケの姿をみるなり駆け寄る</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：母です（</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はは…！！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おかあさん！！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ママ！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「ママ！ただいま！勇者さまをお連れしました！」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：しまった、素で驚いてしまった…</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：すまんな</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：GMの趣味で立ち絵がいかついやつしかとっさにでてこなかったんだ</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ストックがめっちゃ偏っててな</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：いやぁ、こっちはいいんだよ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：そう言ってママに抱きつくプシケ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：成長するとこうなる</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：プシケを抱きとめてよしよししてから</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：感動のシーンですわね…（思わずハンカチで涙をぬぐう）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「勇者さま…か」申し訳ないな…フードを目深に被る…</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：そうだったのか…</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「あなたが救世の勇者さまですね。　プシケを守り、ここまで導いていただいてありがとうございます。」</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：衝撃の真実</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…初めに言っておきたいんですが…おれはそんな…大層なものではありません」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「むしろ、プシケには助けられました」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「・・・神聖なる聖域で騒がしいぞ。召されたいのかきさｍ・・・　プシケ！　プシケじゃないか！！」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：パパです</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：まさかとは思ったが、パパまで</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：パパあ！</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：いかつい立ち絵しかなくてすまない（</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おとうさんか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「パパ！」駆けていって抱きつく</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：親子の再会ですなあ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「おお、元気だったか。プシケ。　また愛らしくなったんじゃないか。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「うん！元気でした！パパも元気でよかったです！」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「パパたちの心配をしてくれるなんて。プシケはいいこだな。　一瞬、天使が舞い降りたのかと錯覚したよ。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「えへへー」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「みなさん、積もる話はあるでしょうけれど。　まずは奥へどうぞ。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：団欒を邪魔しちゃいかんような気もするけど、案内されよう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ええ、失礼します…素敵な家族ですわね</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「（ちっ　もう少しはぐしていたかったのに）　そうだな。勇者機構の手配はこのリオールにも回っている。詳しいことは奥で話そうか。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「そうですね、ルビアさん、リレさん、どうぞ奥へ…！」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では、一家の案内を受けて神殿の奥の間へと案内を受けます。</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：（この父親…親馬鹿…ッ！？）</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「（抜け駆けはルール違反だぜ？旦那）」鋭い眼光</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（どうみても…ｗ）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：神殿の奥の間。人払いもされて、ここにはプシケ一家とルビア、リレのみだ。</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：（母親も…だと…ッ！プシケの未来の旦那様にエールを送りますわ…）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（ははは…）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：香り豊かなリオール茶と茶請けを出してもらって</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：君たちはこれまでのいきさつを語り始めるわけですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：うまいお茶だな…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「あっ、パパ、ママ！これ、お土産のポータルまんじゅうです！」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「・・・・・・なるほど。」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：美味しい…！ポータルまんじゅうとの相性もばっちりですわ・・・！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「これが噂のポータルまんじゅう、か。　餡には地元のエルス牛の肉が使われている絶品だとか。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：訥々と説明せねばなるまい…</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「（プシケが買ってきたおみやげなら美味いに決まっているけどな）」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：みんなまんじゅうに夢中かい…？</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：謎の魔術師のこと、それと勇者機構に起きている異変</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そして、これまでの旅の話をしました</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「このリオールにも、勇者機構からの手配は回っている。それに、この神殿も何度が捜索を受けているんだ。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「そうなんですか……ここなら安心だと思っていたのに……」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「心配はいらないさ。私も、そしてリオールの信徒たちも。君たちを引き渡すようなことはない。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…しかし、いつまでもご厚意に甘えているわけにもいかない」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「でも、表立って勇者機構の調査を受けないわけにもいかなくてね・・・」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「でしょうね、迷惑はかけられないな」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「ことは君たちだけの問題でもないんだよ。　プシケからも聞いていることとは思うが。」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「ええ、これ以上、プシケのお父様やお母様を巻き込むわけにはいきませんもの…」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「そのつもりです。何者の仕業なんです？」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「神託では救世の勇者が世界の危機を救う、と告げられている。」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「その勇者を導くためにプシケも、私達も望んで立ち向かっている。だから、”巻き込まれている”というわけじゃないんだ。」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「むしろ、私達が巻き込んでしまった・・・・・・といえるのかもしれないな。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「いや…」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「……」黙って神妙そうな顔をしている</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「そんなことはない…プシケが来てくれなければ、おれは今頃どうなっていたか…」プシケの頭をなでつつ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「それは…？」首をかしげつつ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「神託といっても、未来のすべてを見通せるような万能なものではない。　だから、君たちには苦労をかけてしまったね。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「です、すみません……」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「巻き込まれているというつもりもありません、おれの戦いでもあるのですから」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：なあ？ という感じでリレの方を見ますかな</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「…ですわね、キッカケはどうあれ、前に進むと決めたのはわたくし達自身ですもの」ふふっと笑いながらルビアに視線を返す</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「ふふ・・・　いい仲間ね。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「昔を思い出すわね。」とグレッグに視線をおくる</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「ああ、そうだな。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「”原因を探ることは大事だが、事象を見誤るな。怒りや憎しみ、恐れは判断を誤らせるだろう”　我が神リオールの教えのひとつよ。」</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：わたくし達、４話分の冒険を共に過ごした仲間ですものね！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「神は打ち克てない試練は与えない。　だから、必ずこの神託にも意味がある。」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：4話分ｗ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「きっと、今は大きな障害を目の前にして気が遠くなるほどの思いだろう。」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「そういうときは、ひとつずつ問題を整理して、解決法をみつけるのがいい。　そうしたひとつひとつの積み重ねが、大事を成すことにつながる。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「・・・・・・いけないわね。ついつい説法をはじめてしまう、聖職者の職業病ね。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「みなさん、長旅でおつかれのことでしょう。　今夜はゆっくりと休んでください。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：うん…まあ、仕方ない。4話分の疲れもあるだろうし</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「これからどうするのかは英気を養ってから考えるといいわ。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：休ませてもらうとしようかな…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「じゃあ、あたしがお部屋に案内します！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ありがたく案内されようね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「う～ん…確かに、お言葉に甘えましょう。久々の安心して眠れるベッドですわ～！」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：すみませぬね　ちょっと着地点のふんわりした展開でしたねこれは</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：反省</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（…あれから1か月か…早いもんだな）</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ちゃんとシーン意図と着地点は伝えて動かさんとなぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：いえいえ、ぼくらどうしましょうね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：わからなかったらこっちで聞いてくれていいですからね　そういうときは</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：キー判定はどのあたりでやる感じでしょう…？ｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではでは　君たちは温かい食事とお風呂とふかふかのベッドでぐっすりと休み</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：明けて翌朝</font></br></td></tr>
+
+<tr id="jump002" />
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：神殿で調べ者をする知識ジャンルでキー判定にしようかと</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：そこで明らかになる衝撃の真実的なハイライトシーンが今回のヤマかなと</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：具体的には敵である茜丸が何者なのかここではっきりする感じですね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：物語がぐぐっと進むかと</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（ん～…警戒せずに寝られるっていうのも、幸せなモンだなあ）</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：あと倒し方の手がかりもつかめるとよいかな　それが今後のストーリーにつながるし</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：昇る朝日をぼけーっと浴びながら</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：ふむふむ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：やったぜ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：通常判定とキー判定って順序は別に決まってないんですか？</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：弟や妹達に手紙を書いています…あの子たち、元気にやっているかしら……</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：決まってないです</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：いえい！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：家のお手伝いをしています。多分朝食の準備</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：なのでこのキー判定のあとで最後に通常を考えてますよ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：なるほど、了解です！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…巻き込んだといえば、悪かったなあ」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：リレ姫も、無理やり連れてきたカンジだもんね…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「…昨日、言った通りですわ。私たちが前に進むと決めたんですもの。あなたが謝る必要もありません、それに…」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…それに？」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ほどよいところでプシケさんがお二人を朝食できたよと知らせて案内する流れで</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「今回の一件を通じてルビアが真の勇者に成長すれば、それをわたくしが倒せばバランタイン家の再興間違い無し、でしょう？」いたずらっぽく笑う</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「ははは」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：朝食の場面でこれからどうする　しらべものしようぜ　にしましょうか</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：はい！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…だな、なら…おれはリレのためにもがんばらないとな」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：じゃあ、サワヤカに笑ったところであさごはんによばれましょうか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「ルビアさん、リレさん、おはようございます！朝ごはんの準備ができましたよ！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「おはよう、プシケ。なんかわるいねえ」</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：もうしばらく見てたくてだいぶ待ってしまった笑</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：うんうん　お二人のかけあいよいですよね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「いえーお二人は大切なお客様ですから！」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：わかる</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：すみませぬ…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「朝ごはんがしっかり食べれる幸せを噛みしめますわ～！」</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：好き勝手やってしまいましたｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そんな和やかな日常風景</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：久方ぶりに感じるその暖かさをかみしめつつ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：間があったので、つい…ｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：食卓へ</font></br></td></tr>
+
+<tr id="jump003" />
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：招かれたテーブルにはあたたかな料理が並んでいた</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：朝食にしては豪華すぎないか？と思えるほどの</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ものですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ありゃ…これは豪勢な</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：（たぶんジェシカさん気合入ったんだろうね）</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「・・・ご、ごめんなさい。　作りすぎちゃったかしら？」照れながら</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（久しぶりの親子の朝食か～…うれしいんだろうな）</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「まったく。おまえはいちいち大げさなんだから。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「いや、ウマイです」がんばって食べないと非礼にあたる…気がするｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：（プシケと一緒に作るにあたって、良いところをみせようとしたんですのね…わかりみが深い…）</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「（鋭い眼光でグレッグを睨む）」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「それはそうと。これからどうするつもりなんだ？」話題をそらすムーブ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「ママといっしょに頑張りました…！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：えらいのう…えらいのう…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「ええ、とても美味しいです」食べ物は…無駄には出来ない…何を犠牲にしても…っ！という悲壮な覚悟</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「まずは何が起きているのかを調べようと思います…ここには、古代の文献も多く収蔵されているとか」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：残すわけにはいかない…ッ‼</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「そうだな。　たしかに、ここには古くからの資料が残されている。伝承でしか伝えられていないものも、口述筆記したものもある。」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「調べることはかまわないが、骨の折れる作業になるな・・・　何かとっかかりはあるのか？」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ここはあってもなくてもいいですよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：とっかかりかあ…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：《図書館》ロール‼　と叫べば調べられるというのはありがたいことなんだなあ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：まあ、そうね、憑依する魔</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もちろんそれでいいんです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：とかそういう線でどうでしょうね</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「憑依する魔・・・か。　私達ももちろん、手を貸すよ。」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：あらためて考えてみると</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：けっこうふんわり冒険しちゃうな…ｗ</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「さぁ、そうと決まれば食事を済ませたらさっそくとりかかるとするか。」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：「何者だっ、名を名乗れっ！！」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ええのです</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：とか</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：「ファハハ我が名は○○」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：って、けっこー大事なんだな…ｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：さてさて　若干こう冗長な場面になってきているので</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：朝食のシーンもこのへんで区切って</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そろそろキー判定に参りましょうか</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：プレイヤーフレンドリーな魔王様も好き・・・王道感はいいものです・・・！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おう！！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：キー判定は副次なしです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：はあい！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ジャンルは知識　目標値は８</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：はい！</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：今回はこう謎めいたやつです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：がんばるぞーい！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：ぞいぞい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ひとりずつ順番にやってきませう</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ルビアさんからクラス序列順で</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：極大魔力　知識　SR2で</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：キーは重いから、ここはなんとか通したいところ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：2ds<br>
+DetatokoSaga : 判定！　スキルレベル：2　フラグ：0　目標値：8 → 9[1,6,3] → 判定値：9 → 目標値以上！【成功】</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ふう…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：なーんか低空飛行だなあ；；</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：成功は成功です</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：成功すればいいのさ…続きます！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：やったぁ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：がんばってー；；</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：祈り：知識　SL1</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 6[1,5] → 判定値：6 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：つらみ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：フラグ１本行きますか…！判定値操作、フラグを１上昇して振り直します～！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 4[3,1] → 判定値：4 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おうふ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：あややや…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：きゃー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これもまた仕方なす</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：プシケちゃんに後を託しまする・・・がんばれ～！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：がんばれー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：プシケ、がんばります！まず〈浄化〉SR1</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 6[5,1] → 判定値：6 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：だめだー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：知識はまだある</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：がんばえー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：つづいて〈ドジ〉SR1</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 4[1,3] → 判定値：4 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ぐわー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：だめだー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ふぐぐぐぐ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：判定値変更！フラグを上げます！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：にゅわー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：出目に絶対1がある気が…；；</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 7[5,2] → 判定値：7 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ぐわー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：うわーだめでした……！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ひゃわー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではでは</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：どんまいん…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これは仕方なす</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：描写にはいるぞー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：やはり2D判定ではダメだ…！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：3Dha</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：欲しい…！！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：みんなで書庫で謎の魔術師の手がかりを探す</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：3d頼もしいですよねー……</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：しかし、思うように成果が得られずいたずらに時間がすぎる</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：いうて、目標値2D6で8ですもんね～</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：苛立ちがつのり、諦めようかというところで</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ルビアが手がかりとなる記述をみつけた</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：ですねえ…戦闘以外でもSLの重要性を感じるやつです……</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：3D…できたら4Dくらい振りたいですねえ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：かつて滅びたひとつの階層があった</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「あーもう！いくらなんでも多すぎですわ！！」苛立ちがつのる顔</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：苛立ち…つのり…諦観…あきらめ…ッ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：海の第一層　レイロン</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：サムライやシノビ、オンミョウジなどと呼ばれる戦士や術師がいたといわれる世界で</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこは魔術災害によって滅びてしまい　今は誰も住むことのできない</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：人外魔境の地としてポータルが封印され、途絶されている</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ほほお…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そのレイロンが滅びた元凶となる魔術災害に関わっている術師の名が茜丸というらしい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ポータルは封印されて途絶されていますが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：かつて世界を滅ぼしたものか…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：同じ海の階層なので、ルサ・リオールからはかなり遠回りですがポータル以外の経路があります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：なんと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：おお</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「サムラーイ、シノービ、オンミョージ…聞いたことがありませんわ……」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ほほー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ポータルよりも規模の小さい魔術装置で第三から第ニ、第一と経由すればどうにかたどり着けます</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：その簡易ポータルは儀式をすれば誰でもひらけるもので、公的には許可が必要なんですが別に無許可でやっても開きます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ここが第三階層だから…ふたつ上か</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いまどき簡易ポータルを開いてわざわざ旅する物好きなんてほとんどいないのでこれはたぶん勇者機構も盲点でしょう</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：滅びた世界で、なおかつ別の階層の話なので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：危ない旅になりそうですね…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：情報の欠落がおおく、流石にそれ以上はわかりませんでした</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：茜丸の特徴が、例の魔術師とほぼ一致しているのは確かですね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（妙な感覚だな…なんだこれは…くそっ…）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：などと、懊悩しつつ情報ゲットです！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はいな</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：あとは最後の通常判定</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「失われた第一階層の遺物とはね…」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：これは勇者機構の追手がやってきて神殿を追われる流れでいきますよ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：やったぜ！！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：やらないけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「あの孤面の魔術師が階層一つを滅ぼした魔術災害に関わってるんですか……」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「ええ、真相に至る道のりは険しいですわ…」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「もしかしたらこのままじゃグラン・エルスも……」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…嘘か真か…確かめてみる必要がありそうだね」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「・・・”破界の術師”、だと・・・？」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：知っているのか、グレッグさん</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：なんて便利なフレーズだろう”知っているのか？”</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「パパ、何か知っているんですか……？」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「ああ、知らないわけがないさ。」</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：思わず、知っていることを口にしてしまう魔のフレーズです…！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「当時、勇者機構がそれこそしつこいぐらいにレギアスの英雄譚として広めていたからな。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：レギアスさんか…</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「階層ひとつ滅んだっていうのに、それを”ひとつで済んだ”として、な。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：それほどまでに恐ろしいヤツなのですね…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すると・・・</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ゆらり　と空気がゆらぐような違和感を感じます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：この感覚は…</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：ワーディングエフェクト……！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：・・・まさかっ！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「くくく・・・　そうか。そんなところに隠れていたのか。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「っ！パパ！？」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：グレッグさんがなんかあれこれされるやつですー！！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「みぃつけた　隠れ鬼はここまで、だ　あはははは・・・！」　この笑い方には覚えがあります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「おまえ…グレッグさんじゃないな…誰だッ‼」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「・・・！？　あなた・・・？」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：プシケをかばうようにして、警戒しまする</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「そんな…プシケのご家族の身体をのっとるなんて…っ！」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「慌てるな　慌てるな・・・」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：【BGM 戦闘とか】</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：戦闘ではないけど緊迫感だすためにBGM変更な</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：ゆうゆうと周囲をみながら、つぶやく　「そう、か。ここは聖地リオール　海の階層か。懐かしいなぁ」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はーい、緊迫した雰囲気でおります</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「それより、君たちはのんびりしていていいのかな？　僕がここを知ったということは、勇者機構もここを知ったということだ。」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「逃げたほうがいいんじゃないかなぁ　くくくくく・・・」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：なんて親切な奴だ…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…一体なぜ…ちぃ…」</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：判定への誘導をしてくれるＮＰＣの鏡ですね…！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「そうだな。君たちをみつけることができて、今は気分がいい。だから答えてやろうか。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：流れのディティールを強調する意味でもお願いするぜ…‼</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「この男が”茜丸とレギアスの英雄譚”を伝えたからさ。」</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：なるほどー！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「なんだと…？ ま、まさか…」</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：名前を呼んではいけないお方…！</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「もっとも、今となっては呪詛の感染は順調に広まっている。　そうだな・・・・・・あと１０日もあればすべての階層に呪詛が広まり尽くすんじゃないかな？」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「言葉に呪いを乗せているのか…なんて奴だ…」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「・・・・・・あなたたち、彼の相手をしててはいけない。早くここを出て・・・！」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「これは時間稼ぎよ！」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「で、でもパパが……！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「ジェシカさん、しかし…</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「いいから、まかせなさい！」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「私が何年この人と連れ添ってると思ってるの？　伊達に夫婦やってないのよ。」</font></br></td></tr>
+
+<tr class="tab0 char5"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>グレッグ</b>：「ちぃ・・・　勘のいい女だな。」</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「・・・・・・プシケを、お願いね。」と母親の微笑みを浮かべて</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「…追っ手も近づいてくる。このままこの場所に留まっては、より被害が広まるだけですわ。」悔しそうに唇をかみつつ</font></br></td></tr>
+
+<tr class="tab0 char4"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>ジェシカ</b>：「さぁ、はやくいきなさい！」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「……っ！わかりました！行きましょう、お二人とも！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「ああ、任せてくれ…必ず…‼」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：さあ、何判定でもかかってこい！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：グレッグとジェシカがフレーバー緊迫のバトルを始めるのを背に、君たちは脱出する</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「ええ、わたくし達も、ジェシカさんとグレッグさんを信じます…！」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：だが、外に出るとそこには既に茜丸の呪詛に操られた市民たちが</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：この人たちを傷つけるわけにはいかない…操られているだけだ…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「そんな…！」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ここで通常判定です</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：操られた市民たちを傷つけること無く無力化したり、逃げたりしながらリオールを脱出するという場面</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：主ジャンルは肉体、副次は技術か感覚</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：くっ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：主は８で副次は１０の目標値です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：卑怯だぞ…おれのにがてな分野をピンポイントで…；；</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ふぅ～ん、技術っていうのもあるんだなあ；；</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ねらわれてれうー！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：むぅ　そうだな</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それじゃ副次に意志をいれよう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：いや、言うてみただけだよ。肉体は１つだけだけど…ある‼</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おけ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではではルビアくんからどぞう</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：それは…おれのなかにやどる…《希望の光》だァー‼　肉体SR1</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：勇者のスキルもね、意志とかすごい多いんですよコレが。</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：インスト兼ねつつ手探りプレイだからというのもあるが</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：けっこう１シーン時間かかっていてすまないね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 8[5,3] → 判定値：8 → 目標値以上！【成功】</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：よっしゃあ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：おおー</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：想定よりも尺かかってはいるので、本来ここまで時間かかるものではないとだけ伝えておく</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：やったぜ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：すごーい！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ほんとは、もうちょいさくさくやるかんじなのかにゃ</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ですねぇ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：希望の光：肉体ｗ</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：コンシューマーＲＰＧ遊んでる感じで楽しいです…ｗ</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：楽しんでもらってるならいいのです　ありがとねぇ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：結構ディテールというかご飯食べる描写とかちゃんとやってますものね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：次はリレさんどぞう</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：続きます！ここはSL2の逃げ足：感覚で行きまする</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：勇者、意志4に肉体2ってメチャ偏ってるのですなあ；；</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：うむ　そのへんのシーンはもすこしたたんでもいいんですよね</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ちかごろ、こういうディティールはなかなかやらないもんねえ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：2ds&gt;=10<br>
+DetatokoSaga : 判定！　スキルレベル：2　フラグ：0　目標値：10 → 8[6,2,2] → 判定値：8 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：実際のところ、たためばもっとさくさくできるんだけど</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：ああー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：10か…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おうふ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：フラグ１で達成値操作振り直しいきます・・・！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：・3D6で10もわりと高いよねえ；；</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：がんばれー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：2ds&gt;=10<br>
+DetatokoSaga : 判定！　スキルレベル：2　フラグ：0　目標値：10 → 8[3,4,4] → 判定値：8 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：あゆゆゆゆ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：しかたなす</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ぷ、ぷしけちゃんに後を託しまする・・・がんばえー！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：しっかりしろ…大丈夫だ…2D6は5、なら3D6は7.5だ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：がんばえー！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：あれ、でもこれって成功してもこれ以上は弱体化しないんじゃ＿</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：？</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：お</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：イエス</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうですね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：通常判定は人数分成功毎に弱体１と等価なので</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：やっぱこれはアレですなあ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：SRもう少し稼がないとですなあ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：この時点でもう通常は成功積んでもたりない</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：レベルを上げてSLをで殴らなきゃですねえ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：修行シーンとか提案せねばですね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：通常判定サポート系のスキルがこういうときに光る</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：って、まだメイン1シーン目か…ｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なのであとは失敗しても成功しても変わらないですが一応判定くだされ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：勇気は戦闘シーンの通常判定じゃないとなんですよねえええ；；</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：プシケさんどうぞう</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：じゃあ〈ドジ〉を使いたいのであえて低いジャンルで判定しよう。感覚〈応援〉SR1</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：1ds<br>
+DetatokoSaga : 判定！　スキルレベル：1　フラグ：0　目標値：8 → 7[2,5] → 判定値：7 → 目標値未満…【失敗】</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：失敗したので〈ドジ〉を使います！フラグ-1</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：うまい！！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：おいしい！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：うまいなぁ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：それでは描写へすすむよ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ワザが冴えてるぜプシケちゃん！！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：押し寄せる暴徒と化した市民たち</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おうよ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ルビアが峰打ちとかで穏便に無力化しつつ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：リレとプシケを連れてリオールの街を駆けているんですが</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：落ち着け…市民たち…この光で！！《ルカナン》‼</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：くっ、リレ姫とプシケちゃんを抱えながら</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：次第に追い詰められていく</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：走りつつ、壁とか障害物をタイミングよくボタンを押して回避するRTSがはじまるお</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうそう　迫る暴徒や積み上がった木箱が倒れてきたりして</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこでタイミングよくボタンを押すと回避したり反撃したりするあれです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（タイミングよく…△‼）</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「…重いとは言わせませんわよ！仮に重かったとしても、それは朝ごはんをたくさんいただいたからであって～」やんのやんの</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：シュッ…スサッ…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「こんなときに何を気にしてるんだよ…それ頭下げて！！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（×…△…‼）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：しかし、ふとしたタイミングでプシケさんが転んでしまう（ドジ発動）</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ああっ、インタラクティブムービーシーンおわりっ！！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：プシケの背後には暴徒が迫る</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「ひゃっ！」びたーん！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：見捨てることはできない、急いで駆け付けるぜ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「る、ルビアさん……！」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「立てるか⁉」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこにですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「だ、大丈夫です……！」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：突如として濃霧がたちこめる</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：どこからかCV石田彰が聞こえる　「・・・こっちだ、はやく」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（---テュィーン---）この感覚…石田彰⁉</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：迷っている時間は…ない、か…。プシケを抱えて、リレ姫を促す</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「プシケ、あともう少しですから頑張りましょう！…って、この声？？」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：暴徒たちは濃霧にまかれてルビアたちを見失う</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はぁ～…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：君たちは謎のCV石田彰に誘われて、使われていない倉庫へと身を隠すのであった</font></br></td></tr>
+
+<tr id="jump004" />
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…大丈夫か？」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：【BGM 冒険の旅】</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「はい……なんとか」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「ここならもう大丈夫だ。」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「・・・なんとか、逃げ切れましたけれど」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「いったい……あなたは？」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…あんた…きみはいったい？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「僕は・・・　そうだな。クロウ、と呼んでくれ。」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「クロウ…ええ、分かりましたわ。危ないところを助けて下さりありがとうございます・・・。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「心配はいらないよ。僕は茜丸の呪詛にはかからないからね。　それに勇者機構の手のものでもない。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「助かった…礼を言う…」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「礼儀正しいんだね。　いいことだ。」</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「クロウさん、ありがとうございました」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…だが、何者だ？ なぜそれを知っている…？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「はは、質問攻めだな。　無理もないけど、僕がそれに応じなきゃならない理由はないはずだ。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「ここで君たちが茜丸の手に落ちると、いろいろと不都合がある、それだけのことだよ。」</font></br></td></tr>
+
+<tr class="tab0 char7"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00aa00'><b>どどんとふ</b>：「プシケ」がログインしました。</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「事情を知っているらしいな…なら、そうもなるさ」</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：間違ってログアウトしてしまいました……</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「貴方は、わたくし達の味方なのですか、それとも・・・？？」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：あるある</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：あります～</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：あるあるですねい</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「それは君たち次第、さ。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「…どういう意味だ…？」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「本来ならまだ、君たちのまえに姿をみせるつもりはなかった。これはかなり予定外なんだよ。僕にとってもね。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ヤツからは6レベルくらいの圧を感じる…不用意に手出しもできないか…</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：圧倒的…レベル差…っ！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「どういう予定だ…。。。教えてくれ、一体何が起きているのか…‼」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「僕から伝えたところで、かえってややこしくなるだけだからね。」</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「なんだと…」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「そうだね・・・　それじゃ、ひとつだけ伝えておこう。」</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：なんだかんだいって教えてくれるんだから…‼</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「鍵となるのは救世の勇者だけではない、　魔を統べるのは魔の力。」</font></br></td></tr>
+
+<tr class="tab0 char6"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>クロウ</b>：「・・・　あとは自分で考えることだね。」そう言いながら、彼はすぅっと闇の中へと消えていく</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：「消えてしまいました……」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：GMが精一杯の石田彰パワーを絞り出してみたのぜ</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：めちゃ思わせぶりなこと言いますね笑笑</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：「クロウ…一体何者なんだ…」</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：「どこか、似ているような…いいえ、気のせいでしょう」</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：石田彰ぽいやろ？＜思わせぶり</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：きさまと呼びたいのに</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：きみと呼んじゃうじゃないですかッ！！</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：石田彰ポイント感謝祭…！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ヾ(o´∀｀o)ノワァーィ♪</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：5倍…10倍…15倍…ッ</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ヤマザキ秋の石田彰まつり！！</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：石田彰についてるシールを集めるとお皿がもらえる</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：窮地を脱したルビアたち</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：このあと、無事にリオールを脱出し</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：海の第一層　滅びの地レイロンへと向けて新たな旅を始めるのであった</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：石田彰皿でキッチンが埋まるやつ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：というところで</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：通常シーンは終わります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：最後に、成功数に応じて弱体化するよ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ここまで、なんとメインフェイズ1シーン目</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：通常成功は４成功、これは弱体化１回です</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：弱体化しろッ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そしてキー判定は１成功</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：皿はいいね。皿心を潤してくれる。リリンの生み出した文化の極みだよ。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これは弱体化１回</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：めちゃくちゃ弱体化しろッ…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なので合計で弱体化２回です</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：弱体化は、ラスボスに対して行われます</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：そうかな？ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：弱体化～！！（１回しか成功しなかった顔）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：１回ごとに次のいずれかをGMが選択します</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：・体力を１D６減らす</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：・スキルをひとつ選択して、以降はそのスキルを無効化する</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：・フラグを１増やす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：うぬぬぬぬ、プレイヤーにいちばん有利な弱体化を…しろーッ！！（願望</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：特になにもなければ体力を減らすやつになります</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：今回は体力で２回、なので２D６体力が減るよ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ラスボスは気力は存在しなくて体力だけあるという特殊なやつで</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：135点もあるんですね…</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：気力ダメージも体力に入ります</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではダイスふるねー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：2d<br>
+DetatokoSaga : (2D6) → 6[3,3] → 6</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これで１２９になった</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：すごい地道なやつです……</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：遠い…ｗ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：塵も積もればですねえ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では幕間へ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：今回は成功数少なかったからねぇ</font></br></td></tr>
+
+<tr id="jump005" />
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：【BGM 休憩/幕間】</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：というわけでまくあーい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はやく標準判定もランク伸ばさないとですなあ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：あっあっ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：プシケが〈平和な日常〉使います！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：誘発誘発！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：お褒めするのか</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どうぞどうぞ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：がんばれー！！（なにもないかお</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：お褒めの言葉！フラグが一番多いのは…わたくし！わたくしを褒めますｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：安定の自分で自分を褒める</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：自己肯定感高い</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：がんばった自分を自分で褒める、けなげひめ…</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：〈平和な日常〉で全員体力か気力に+4してください</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：これで戦闘シーンも通常シーンも幕間もひととおりやったので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：うおおお</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：なんて健気なのでしょう…わたくし、頑張ってますわ…超頑張ってますわ…！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：わあい！！</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：あとはインスト部分はほとんどもう終わってるから進行ペース軽くなるはず</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：お、おれも体力を+4させてもらって10</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：・・・・・・はず！！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ありがとうぷしけ・・・体力が安定ラインまで回復ちた・・・</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：みんなも流れは掴んだと思う。思いたい。</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：掴んだッス</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：弱体は死んでも稼げ、SRは命より重い</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：今回はちょっと厚めに通常シーンやったけど</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：重要じゃないシーンはもう少し省いてもいいかもだね</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ここでちょい談合坂なんですが</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではあらためて幕間へ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：みなさん、通常スキルってどんな分布です？</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：談合坂インターチェンジ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：勇者/魔王の場合</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：次のシーンプレイヤーはリレさんですね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：で。シーンの相談をしたいんですが・・・</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ここでちょっと早いんですがGMのお夕飯タイムが発生した感じなので</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：意志、知識、肉体、交渉のみです。これしかとれないｗ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おっと</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：リアル休憩はさんでよろしいでしょうか？？</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おっけーでーす</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：次のシーンを決めてから、幕間処理ですよね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ああ、シーン決めるところも既に幕間です</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：相談入ると時間かかりますので　先にお休憩いただきたいなぁという</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：知識x2、肉体なしそれ以外は1個ずつって感じですねぇ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：おお、万能系なんですね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：はーい大丈夫です！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：リレさんもよろしいです？？</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：予定の時間じゃなくてすみませんねぇ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：2D6で10は無理と悟り,今後はキー判定なりとも固めていった方がいいかな～なんて思ったり</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：大丈夫です～</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：（わたしは）</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：交渉２技術２知識１感覚１です・・・お姫様ザコだと交渉に偏る印象ですねえ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：*2はいずれにしろ被らないのですね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：今日は大丈夫です！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もしあれなら　私だけ数分いただければささっと済ませて戻りますし</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：戦闘シーンでなければ、少しスキル入れ替えや構成を考えて成功を拾わないとですね…！（和マンチ脳</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あ、よかった</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではでは</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：４０分でいいかな</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：早くもどったなら早く再開でもいいんですがそういう感じで</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：１９：２０再開　ということで</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：休憩にしますねー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：すみません　ではではご飯ささっととってきますー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はあい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：はい！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ちょっと、ごはんしつつスキルのやりくりを考えてきます～敵、たおす！！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：了解です！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もどりましーたー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：予定時間と違う休憩と、あと１シーンけっこう長くなっちゃってすみませんねぇ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：まだ休憩時間なのでゆるゆるどうぞです</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：そうそう。あんまり騙し討ちするつもりはないので</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：クロウが何者なのかとかなぜあんなことをしたのかとかはPLには普通にお伝えできますよ</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：GMも参加者なので、やりたいNPCやったりやりたい演出やったりして楽しむけど<br>
+そのためにみんなに秘密の真相を隠しておいて脳内当てクイズやるつもりはないですからね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：クロウが茜丸の呪詛にかからないのは。彼は夜の眷属、いわゆる吸血鬼だからです。</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：始祖吸血鬼という強烈な呪いがかかっているので、他のいかなる呪詛も打ち消してしまうためかからないのです。</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ルビアたちを助けたのは思惑があってのことですね。</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：勇者機構は迷惑だけど、茜丸はそれ以上に厄介なのでどうにかしてほしい、というのが彼の思惑。それをどうにかできそうのなのはルビアたちなので。</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：台無しにならない程度にしつつ脳内当ても避けたいというGMの気持ちでした。</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そろそろお時間よー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：戻りました！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おかえりなさーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：みなさん戻ったら再開しますね</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おりまーす</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：りょうかいです！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：魔王的なヤツなのかと思っていたのですが、魔族的第三極なのですね、らじゃーです</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：ですねー　第三極です</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：でも別に実はリレの兄だった！とかでもええですよ</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：そこはでたとこサーガなので</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：なんだと</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：そうかあ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：自由につなげたり</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：魔改造していいんですね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：クラス謎の便利なところは謎なんですよね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：それになんかリレさんが自分から兄様的なフラグたててきはるし</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：あ、あれそうなんですね</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：なるむむさんは油断ならないお人ですずぇ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：すみません！</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：戻りました</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：おかえりなさいまし</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：大丈夫です？？</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なんかあったとかならいってくださいませ　別に時間きつきつ進行でもないので</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：こちらも停電の折にはみなさん合わせていただいてますからねぇ</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：実はお兄様展開も素敵ですし、実はお兄様を騙るニセモノもそれはそれで好きの顔…。</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：さすがなるむむさん！！油断ならない両面構え</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：PCで謎やるのもけっこう楽しいやつです</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：了解です</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：大丈夫そうですね</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：停電はどうにもならないですよねえ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：こちらはまだそれほど台風の影響ないのですが</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：大丈夫です～！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：PC落ちたら、スマホでDM飛ばすくらいしかできませぬ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではでは再開していきますねー</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char0"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#000000'><b>GM</b>：うんうん</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：　</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：幕間からつづきです</font></br></td></tr>
+
+<tr class="tab1 char1"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff6600'><b>プシケ</b>：コンビニ行ってきたんですけど前回のことがあってか食料品とか軒並みなくなってました笑</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：次のシーンプレイヤーはリレさん</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：はあい！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：シーンプレイヤーは次のシーンを指定してくださいませ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ですよね…まだ半月と経っていないのに</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：戦闘シーン希望です（直球）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：また同じ規模の台風が来ると言われれば…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おおっ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：戦闘シーンの場合は、ボスを出すか出さないか指定できます</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：おお……</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：このへんのことは前に説明してあるのでインストは省くよ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：さすがに中ボスは早い気もするので、出さない方向でお願いしまする・・・</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではボス出さないコースで戦闘一丁</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：8レベルってねえ、どれくらいなのか…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：攻防4Dずつとすると、割と手も足も出ない可能性も…；；</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：２レベル上がるチャンスは大きいのですけれど、その危険性がありますものねえ；；</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：戦闘で出てくる敵の構成はGMがこしらえます</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：ザコ狩りで地道に成長、RPGの王道ですね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：戦闘が起こるのは既に確定なんですが</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：シーンは既に体験してもらっておわかりの通り、戦闘以外の場面や展開もあります</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：こいこい戦闘シーンの通常判定ィ！！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どんな展開にしたいかやんわりご希望いただければGMはそれに合わせますし　なにもなければGMがいい感じにシーンこしらえます</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：第一層に向かう道中で追っ手と出くわす…みたいな感じでしょうか</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：よっこら誠一郎</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：敵の構成できましたよ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：モブ２体とクロウさんですね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：クロウさーん！？</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：クロウさん敵なんですか！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これはあれですよ　今はまだ茜丸に挑むには早いルビアたちを敵対することで急激に実力を付けさせようとしているのかもしれない</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ほらなんか石田彰キャラにあるじゃんそういうの</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：そこに至る何かがあると…ｗ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：みもふたもないことを言うと、PCの戦力との兼ね合いでちょうどいい戦力構成にしたらこうなったというやつです</font></br></td></tr>
+
+<tr class="tab1 char3"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#ff00ff'><b>リレ</b>：南斗お願い拳は当分封印する予定だったのですけれど、クロウさん相手は思わず使いたくなってしまうやつです…！</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：じゃあ追手というより第三勢力との邂逅⇢戦闘がいいですかね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ですです！</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：お願い拳！！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：さすがに助けて直後に戦闘だと、クロウさんがただの情緒不安定な人になるので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：間に何かクッションをはさみますかあ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：アバター、分身、従者…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：おお、ウマいなあ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そうですなぁ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：格を下げずに戦わせる手管がうまい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：レイロンへもう到着してしまいましょうかまず</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：スチャッ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：残り10日とタイムリミットもきられてしまいましたしね</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そこでいろいろと新事実を知りつつ</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：なん…ですって…！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：再び謎めいて現れたクロウに力を試される的な</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：そういう流れでどうでしょうか</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：クロウとの戦いを経て、シーンプレイヤーのリレさんが何か新たな目的か力かなんかに目覚める的な</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：大事な部分がふんわりしていますが　そこはリレさん次第ということで</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：いかがでしょうか</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：おーけーです</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：ほえええええ！了解です！</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：リレ姫パワーアップ回</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：目覚める！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：パワーアップ（お褒めの言葉）</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：もし、クラスチェンジを検討しているなら前にもはなしましたが適当なところで好きに布石たてておいてね</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：王家の力が……</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：これはリレさんに限らずみんな</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：＜クラスチェンジのこと</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：はーい</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ではでは次のシーンの打ち合わせはこれで終了</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：続いてレベルアップ　・・・・・・は、今回は条件満たしてないのでなし</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：「おれたちはついに封印された第一階層に辿り着いた。そこであかされるバランタイン家の秘密…」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：レベルアップがないのでスキル入れ替えもないよ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：続いて、幕間回復</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：「封印されたリレの真の力が目覚めるとき…‼」</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：今回は前のシーンに全員登場しているので回復は１つずつ</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：どの回復をするのか宣言したうえで処理をどうぞ</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：今回はねえ、気力回復…</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：2D6<br>
+DetatokoSaga : (2D6) → 11[5,6] → 11</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：めちゃ高い笑</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：たっぷり</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：フラグ！フラグですわ！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：フラグは固定値ねー</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：同じく気力を回復しておきます</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい　ダイスどうぞ</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：2d6<br>
+DetatokoSaga : (2D6) → 5[1,4] → 5</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：まぁまぁ全快なので</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：あーっ、そうかレベルアップしないと</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：スキルが入れ替えられないじゃーん</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：ですねー</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：幕間回復おわりです</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：幕間の最後に、次のシーンへの登場宣言です</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：シーンプレイヤーのリレさんは登場確定で</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：搭乗しまーす‼</font></br></td></tr>
+
+<tr class="tab0 char1"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff6600'><b>プシケ</b>：登場します！</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：あいあい</font></br></td></tr>
+
+<tr class="tab0 char2"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#00cc66'><b>ルビア</b>：間違えた、登場します</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：なお、ここでもし登場しないと宣言してもデータ的に登場しないだけでフレーバー登場はできるものとしますからね</font></br></td></tr>
+
+<tr class="tab0 char3"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#ff00ff'><b>リレ</b>：発進しますわ！ｗ</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：ヤッター‼</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：じゃないと突然主要キャラが失踪するというサタスペやシノビガミめいた恐ろしい現象が起こる</font></br></td></tr>
+
+<tr class="tab1 char2"><td></td><td colspan="4" style="font-size:80%;background:#f9f9ff;"><font color='#00cc66'><b>ルビア</b>：次回『真の姿‼ リレロボ大発進‼』来週もよろしくな‼</font></br></td></tr>
+
+<tr class="tab0 char0"><td colspan="4" style="font-size:100%;background:#ffffff;"><font color='#000000'><b>GM</b>：では幕間終了です</font></br></td></tr>
+
+
+
+</table>
+</body>
+</html>
