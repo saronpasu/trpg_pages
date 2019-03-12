@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site:id" content="@eof_trpg" />
+    <meta name="twitter:creator:id" content="@eof_trpg" />
+    <meta name="twitter:title" content="S卓のページ" />
+    <meta name="twitter:description" content="S卓のページ" />
+    <title>S卓のページ</title>
+    <script type="text/javascript">
+    <!--
+    function UpdateTitle(subTitle) {
+        var mainTitle = 'S卓のページ';
+        var separator = ' | ';
+        document.title = mainTitle + separator + subTitle;
+
+        ClearUnderFrm();
+    }
+    function ClearUnderFrm() {
+        var under_frm = document.getElementsByTagName('iframe').item(1);
+        var under_cover = 'under_cover.html';
+        under_frm.src = under_cover;
+    }
+    function JumpUnderFrm(page) {
+        var under_frm = document.getElementsByTagName('iframe').item(1);
+        under_frm.src = page;
+    }
+    -->
+    </script>
+</head>
+<body>
+    <div class="navi">
+        ワールドガイド ［ <a href="world_guide/all_area.html" onclick="UpdateTitle('ガイド 大陸広域')" target="main_frm">大陸広域</a> | <a href="world_guide/west_area.html" onclick="UpdateTitle('ガイド 西方イムレア地方')" target="main_frm">西方イムレア地方</a> | <a href="world_guide/east_area.html" onclick="UpdateTitle('ガイド 東方ガイエン地方')" target="main_frm">東方ガイエン地方</a> | <a href="world_guide/south_area.html" onclick="UpdateTitle('ガイド 南方アガッサ地方')" target="main_frm">南方アガッサ地方</a> | <a href="world_guide/north_area.html" onclick="UpdateTitle('ガイド 北方ノルフォト地方')" target="main_frm">北方ノルフォト地方</a> | <a href="world_guide/central_area.html" onclick="UpdateTitle('ガイド 中央ゼノスフィア地方')" target="main_frm">中央ゼノスフィア地方</a> ］<br />
+        ワールドガイド ［ <a href="world_guide/word_dict.html" onclick="UpdateTitle('ガイド 用語集')" target="main_frm">用語集</a> | <a href="world_guide/history.html" onclick="UpdateTitle('ガイド 年表')" target="main_frm">年表</a> | <a href="world_guide/faq.html" onclick="UpdateTitle('ガイド Q&amp;A')" target="main_frm">Q&amp;A</a> | <a href="world_guide/other.html" onclick="UpdateTitle('ガイド その他')" target="main_frm">その他</a> ］<br />
+        冒険の記録 ［ <a href="not_yet_make.html" onclick="UpdateTitle('冒険記 メンバー紹介')" target="main_frm">メンバー紹介</a> | あらすじ <a href="not_yet_make.html" onclick="UpdateTitle('冒険記 あらすじ 0')" target="main_frm">[0]</a> [1] | <a href="not_yet_make.html" onclick="UpdateTitle('冒険記 共用資産')" target="main_frm">共用資産</a> | <a href="not_yet_make.html" onclick="UpdateTitle('冒険記 NPC名簿')" target="main_frm">NPC名簿</a> | <a href="not_yet_make.html" onclick="UpdateTitle('冒険記 リンク集')" target="main_frm">リンク集</a> ］<br />
+    </div>
+    <div class="book">
+        <iframe name="main_frm" src="./top.html" width="95%" height="65%">
+        </iframe>
+    </div>
+    <div class="under">
+        <iframe name="under_frm" src="./under_cover.html" width="95%" height="25%">
+        </iframe>
+    </div>
+</body>
+</html>
