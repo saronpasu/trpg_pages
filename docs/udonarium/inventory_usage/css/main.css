@@ -1,3 +1,7 @@
 ol > li {
-    float: left;
+    clear: both;
+}
+ol > div > img {
+    max-width: 900;
+    max-height: 500;
 }
