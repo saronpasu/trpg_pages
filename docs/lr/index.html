@@ -1,0 +1,566 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site:id" content="@eof_trpg" />
+        <meta name="twitter:creator:id" content="@eof_trpg" />
+        <meta name="twitter:title" content="ゆどボスくん" />
+        <meta name="twitter:description" content="ロストレコードのキャラシサイトからユドナリウムのコマを作るやつ" />
+        <title>ロストレコードのキャラシサイトからユドナリウムのコマを作るやつ</title>
+    </head>
+    <body>
+        <div><a href="https://character-sheets.appspot.com/lostrecord/">ロストレコードのキャラシサイト</a>からユドナリウムのコマをツクールくん</div>
+        <div>使い方
+            <li>1.「<a href="javascript:(function(){
+
+                    var scr1 = document.createElement('script');
+                    scr1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js';
+                    document.body.appendChild(scr1);
+                    var scr2 = document.createElement('script');
+                    scr2.src = 'https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js';
+                    document.body.appendChild(scr2);
+
+                    var source = window.document;
+                    var sourceURL = window.document.location;
+                    var validPattern = /^http(s)?:\/\/character-sheets\.appspot\.com\/lostrecord\/edit\.html/;
+                    if(validPattern.test(sourceURL) == false) {
+                        return;
+                    }
+
+                    /* ここからメイン処理 */
+                    /* 汎用関数 */
+                    function getByName(obj, name) {
+                        var elem = obj.getElementsByName(name)[0];
+                        if(elem != null) {
+                            return  elem.value;
+                        } else {
+                            return '';
+                        }
+                    }
+
+                    function getByIdSelected(obj, id) {
+                        var select = obj.getElementById(id);
+                        var result = null;
+                        if(select == null) {
+                            return '';
+                        }
+                        result = select.options[ select.selectedIndex ].value;
+                        if(result == null) {
+                            return '';
+                        } else {
+                            return result;
+                        }
+                    };
+
+                    function getById(obj, id) {
+                        var elem = obj.getElementById(id);
+
+                        if(elem != null) {
+                            if(elem.innerText != '') {
+                                return elem.innerText;
+                            } else if(elem.value != '') {
+                                return elem.value;
+                            } else if( !elem.innerText ) {
+                                return '';
+                            } else if( !elem.value ) {
+                                return '';
+                            }
+                        } else {
+                            return '';
+                        }
+                    };
+
+                    function getByIdChecked(obj, id) {
+                        var elem = obj.getElementById(id);
+                        if(elem != null) {
+
+                            if(elem.checked == true) {
+                                return '済';
+                            } else {
+                                return '';
+                            }
+                        } else {
+                            return '';
+                        }
+                    };
+
+                    function nonZeroAndEmpty(obj, name) {
+                        var value = getByName(obj, name);
+                        return (value != '' && value != '0');
+                    };
+
+
+                    /* データを取得したりとかする部分 */
+
+                    /* キャラ名を先に取得 */
+                    char_name = getById(source, 'base.name');
+
+                    /* Begin: 共通の雛形を生成 */
+                    xml = document.createElement('character');
+                    xml.setAttribute('location.name', 'table');
+                    xml.setAttribute('location.x', '0');
+                    xml.setAttribute('location.y', '0');
+                    xml.setAttribute('posZ', '0');
+
+                    char = document.createElement('data');
+                    char.setAttribute('name', 'character');
+
+                    img = document.createElement('data');
+                    img.setAttribute('name', 'image');
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'image');
+                    elem.setAttribute('name', 'imageIdentifier');
+                    elem.innerText = 'null';
+                    img.appendChild(elem);
+                    char.appendChild(img);
+
+                    common = document.createElement('data');
+                    common.setAttribute('name', 'common');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'name');
+                    elem.innerText = getById(source, 'base.name');
+                    common.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'size');
+                    elem.innerText = '2';
+                    common.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'クラス');
+                    elem.innerText = getById(source, 'base.class');
+                    common.appendChild(elem);
+                    char.appendChild(common);
+
+                    detail = document.createElement('data');
+                    detail.setAttribute('name', 'detail');
+                    /* End: 共通の雛形を生成 */
+
+                    /* Begin: 能力値の取得 */
+                    resources = document.createElement('data');
+                    resources.setAttribute('name', 'リソース');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '闘争');
+                    elem.innerText = getById(source, 'ability.struggle');
+                    resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '調和');
+                    elem.innerText = getById(source, 'ability.harmony');
+                    resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '生存');
+                    elem.innerText = getById(source, 'ability.survival');
+                    resources.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'numberResource');
+                    elem.setAttribute('name', '電力');
+                    current_power = getById(source, 'ability.electricpower.value');
+                    elem.setAttribute('currentValue', current_power );
+                    elem.innerText = getById(source, 'ability.electricpower.max');
+                    resources.appendChild(elem);
+                    /* End: 能力値を取得 */
+
+                    /* Begin: パーソナル設定の取得 */
+                    personal_data = document.createElement('data');
+                    personal_data.setAttribute('name', '個人情報');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '名前');
+                    elem.innerText = getById(source, 'base.name');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'カナ');
+                    elem.innerText = getById(source, 'base.nameKana');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '年齢');
+                    elem.innerText = getById(source, 'base.age');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '性別');
+                    elem.innerText = getById(source, 'base.sex');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '死後経過年数');
+                    elem.innerText = getById(source, 'base.afterdeath');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '地位');
+                    elem.innerText = getById(source, 'base.status');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '性格');
+                    elem.innerText = getById(source, 'base.character');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '外見');
+                    elem.innerText = getById(source, 'base.appearance');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '態度');
+                    elem.innerText = getById(source, 'base.attitude');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '口調');
+                    elem.innerText = getById(source, 'base.tone');
+                    personal_data.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('type', 'note');
+                    elem.setAttribute('name', '設定');
+                    elem.innerText = getById(source, 'base.memo');
+                    personal_data.appendChild(elem);
+                    /* End: パーソナル設定を取得 */
+
+                    /* Begin: 未練の取得 */
+                    unskilled = document.createElement('data');
+                    unskilled.setAttribute('name', '未練');
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '対象');
+                    elem.innerText = getById(source, 'unskilled.0.target');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'unskilled.0.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'リロール');
+                    elem.innerText = getByIdChecked(source, 'unskilled.0.reroll');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '告別');
+                    elem.innerText = getByIdChecked(source, 'unskilled.0.farewell');
+                    list.appendChild(elem);
+                    unskilled.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '対象');
+                    elem.innerText = getById(source, 'unskilled.001.target');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'unskilled.001.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'リロール');
+                    elem.innerText = getByIdChecked(source, 'unskilled.001.reroll');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '告別');
+                    elem.innerText = getByIdChecked(source, 'unskilled.001.farewell');
+                    list.appendChild(elem);
+                    unskilled.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '対象');
+                    elem.innerText = getById(source, 'unskilled.002.target');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'unskilled.002.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'リロール');
+                    elem.innerText = getByIdChecked(source, 'unskilled.002.reroll');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '告別');
+                    elem.innerText = getByIdChecked(source, 'unskilled.002.farewell');
+                    list.appendChild(elem);
+                    unskilled.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '対象');
+                    elem.innerText = getById(source, 'unskilled.003.target');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'unskilled.003.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'リロール');
+                    elem.innerText = getByIdChecked(source, 'unskilled.003.reroll');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '告別');
+                    elem.innerText = getByIdChecked(source, 'unskilled.003.farewell');
+                    list.appendChild(elem);
+                    unskilled.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '対象');
+                    elem.innerText = getById(source, 'unskilled.004.target');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'unskilled.004.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'リロール');
+                    elem.innerText = getByIdChecked(source, 'unskilled.004.reroll');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '告別');
+                    elem.innerText = getByIdChecked(source, 'unskilled.004.farewell');
+                    list.appendChild(elem);
+                    unskilled.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '対象');
+                    elem.innerText = getById(source, 'unskilled.005.target');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'unskilled.005.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'リロール');
+                    elem.innerText = getByIdChecked(source, 'unskilled.005.reroll');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '告別');
+                    elem.innerText = getByIdChecked(source, 'unskilled.005.farewell');
+                    list.appendChild(elem);
+                    unskilled.appendChild(list);
+                    /* End: 未練を取得 */
+
+                    /* Begin: レコードの取得 */
+                    records = document.createElement('data');
+                    records.setAttribute('name', 'レコード');
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'キーワード');
+                    elem.innerText = getById(source, 'record.0.keyword');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'record.0.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'FBE');
+                    elem.innerText = getById(source, 'record.0.fbe');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '効果・参照');
+                    elem.innerText = getById(source, 'record.0.effect');
+                    list.appendChild(elem);
+                    records.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'キーワード');
+                    elem.innerText = getById(source, 'record.001.keyword');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'record.001.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'FBE');
+                    elem.innerText = getById(source, 'record.001.fbe');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '効果・参照');
+                    elem.innerText = getById(source, 'record.001.effect');
+                    list.appendChild(elem);
+                    records.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'キーワード');
+                    elem.innerText = getById(source, 'record.002.keyword');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'record.002.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'FBE');
+                    elem.innerText = getById(source, 'record.002.fbe');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '効果・参照');
+                    elem.innerText = getById(source, 'record.002.effect');
+                    list.appendChild(elem);
+                    records.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'キーワード');
+                    elem.innerText = getById(source, 'record.003.keyword');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'record.003.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'FBE');
+                    elem.innerText = getById(source, 'record.003.fbe');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '効果・参照');
+                    elem.innerText = getById(source, 'record.003.effect');
+                    list.appendChild(elem);
+                    records.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'キーワード');
+                    elem.innerText = getById(source, 'record.004.keyword');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'record.004.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'FBE');
+                    elem.innerText = getById(source, 'record.004.fbe');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '効果・参照');
+                    elem.innerText = getById(source, 'record.004.effect');
+                    list.appendChild(elem);
+                    records.appendChild(list);
+
+                    list = document.createElement('data');
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'キーワード');
+                    elem.innerText = getById(source, 'record.005.keyword');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '内容');
+                    elem.innerText = getByIdSelected(source, 'record.005.type');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', 'FBE');
+                    elem.innerText = getById(source, 'record.005.fbe');
+                    list.appendChild(elem);
+                    elem = document.createElement('data');
+                    elem.setAttribute('name', '効果・参照');
+                    elem.innerText = getById(source, 'record.005.effect');
+                    list.appendChild(elem);
+                    records.appendChild(list);
+                    /* End: レコードを取得 */
+
+                    /* Begin: メモの取得 */
+                    notes = document.createElement('data');
+                    notes.setAttribute('name', 'メモ');
+
+                    source_notes = document.evaluate('//*[@id=\'memo\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    for(var i=0; i<source_notes.snapshotLength; i++) {
+                        note_elem = source_notes.snapshotItem(i);
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', '内容');
+                        content = note_elem.children[0].children[0].innerText;
+                        if(!content) {
+                            content = '';
+                        }
+                        elem.innerText = content;
+                        notes.appendChild(elem);
+                    }
+                    /* End: メモを取得 */
+
+                    /* Begin: 所持品の取得 */
+                    items = document.createElement('data');
+                    items.setAttribute('name', 'アイテム');
+
+                    source_items = document.evaluate('//*[@id=\'item\']/tbody/tr', source, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
+                    for(var i=0; i<source_items.snapshotLength; i++) {
+                        item_elem = source_items.snapshotItem(i);
+
+                        elem = document.createElement('data');
+                        elem.setAttribute('name', '内容');
+                        content = item_elem.children[0].children[0].innerText;
+                        if(!content) {
+                            content = '';
+                        }
+                        elem.innerText = content;
+                        items.appendChild(elem);
+                    }
+                    /* End: 所持品を取得 */
+
+                    /* Begin: 順番にキャラデータに取得した情報を設定 */
+                    detail.appendChild(resources);
+                    detail.appendChild(personal_data);
+                    detail.appendChild(unskilled);
+                    detail.appendChild(records);
+                    detail.appendChild(notes);
+                    detail.appendChild(items);
+                    char.appendChild(detail);
+                    /* End: 順番にキャラデータに取得した情報を設定 */
+
+                    cpd = document.createElement('chat-palette');
+
+                    /* Begin: チャットパレットの生成 */
+                    /* cpd.setAttribute('dicebot', 'LostRecord'); */
+                    cpd.setAttribute('dicebot', '');
+
+                    txt = '';
+                    txt += '\n';
+                    txt += '=========\n';
+                    txt += '判定\n';
+                    txt += '2d6+{闘争} 闘争判定\n';
+                    txt += '2d6+{調和} 調和判定\n';
+                    txt += '2d6+{生存} 生存判定\n';
+                    txt += '\n';
+
+                    cpd.innerText = txt;
+                    /* End: チャットパレットの生成 */
+
+                    /* チャットパレットを設定 */
+
+                    /* 雛形にキャラデータとチャットパレットを設定 */
+                    xml.appendChild(char);
+                    xml.appendChild(cpd);
+
+                    s = new XMLSerializer();
+
+                    out = s.serializeToString(xml);
+                    out = out.replace(/xmlns=.http:\/\/www\.w3\.org\/1999\/xhtml../, '');
+                    out = out.replace(/<br \/>/g, '\n');
+                    out = out.replace(/currentvalue/g, 'currentValue');
+
+                    zip = new JSZip();
+                    zip.file(`${char_name}.xml`, out);
+                    zip.generateAsync({type:'blob'})
+                    .then(function(blob) {
+                        saveAs(blob, `${char_name}.zip`);
+                    });
+
+            })();
+">ゆどボスくん</a>」をブックマークバーにドラックアンドドロップ</li>
+            <li>2.キャラシ倉庫で自分のキャラシを開く</li>
+            <li>3.ブックマークバーに登録した「ゆどボスくん」をクリック</li>
+            <li>4.ユドナリウム用のキャラデータ(zipファイル)がダウンロードされます</li>
+            <li>5.ユドナリウムにzipをドラックアンドドロップ</li>
+        </div>
+        <div>動作確認済みの対応バージョン
+            <li>ユドナリウム: v1.10.1</li>
+            <li>キャラクター保管所:2019/12/xx</li>
+            <li>ロストレコード(初版)</li>
+        </div>
+        <div>バージョンと機能とか
+            <li>version.1.0　とりあえずできた</li>
+        </div>
+        <div>アプデ方法、アンインストール方法
+            <li>ブックマークバーから削除して登録しなおすだけ</li>
+        </div>
+        <div>その他の説明
+            <li>キャラシサイトになるべく負荷がかからないようにブックマークレットにしています</li>
+            <li>キャラシサイトへ通信は行っていません</li>
+            <li>zip圧縮のため、JSZipというライブラリを利用しています</li>
+            <li>ファイル保存のため、FileSaverというライブラリを利用しています</li>
+            <li>ライブラリ読み込みのため、ネット接続を2回だけやっています</li>
+            <li>初回の読み込み時にエラーになるため、最初は2回クリックして下さい[既知の不具合]</li>
+            <li>著作権は放棄していません</li>
+            <li>キャラクターシート倉庫およびユドナリウムとは非保証の、個人が作ったツールです</li>
+            <li>ご利用は自己責任でお願いします</li>
+            <li>ライセンスはGPLv3です</li>
+        </div>
+    </body>
+</html>
