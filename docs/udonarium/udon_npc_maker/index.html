@@ -1,0 +1,113 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site:id" content="@eof_trpg" />
+    <meta name="twitter:creator:id" content="@eof_trpg" />
+    <meta name="twitter:title" content="NPCメーカー" />
+    <meta name="twitter:description" content="ユドナで汎用NPCコマをつくるやつ" />
+    <title>NPCメーカー</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.ico" />
+    <!-- Begin: 使っているライブラリたち -->
+    <script type="text/javascript" src="./js/core.min.js"></script>
+    <script type="text/javascript" src="./js/lib-typedarrays.min.js"></script>
+    <script type="text/javascript" src="./js/sha256.min.js"></script>
+    <script type="text/javascript" src="./js/FileSaver.min.js"></script>
+    <script type="text/javascript" src="./js/jszip.min.js"></script>
+    <!-- End: 使っているライブラリたち -->
+    <!-- ダイスボット一覧データ -->
+    <script type="text/javascript" src="./js/dicebotlist.js"></script>
+    <!-- スクリプト本体 -->
+    <script type="text/javascript" src="./js/main.js"></script>
+</head>
+<body>
+    NPCメーカー
+    <hr />
+    <div>
+        <div class="input_area">
+            名前:<input id="char_name" type="text" required></input>
+            サイズ:<input id="char_size" type="number" min="0" value="1"></input>
+            <div>
+            配置先の指定:<select id="place">
+                <option value="table" selected>テーブル</option>
+                <option value="common">共有インベントリ</option>
+                <option value="graveyard">墓地</option>
+            </select><br />
+            テーブル座標:<br />
+            X:<input id="x_pos" type="number" min="0" value="0" required />
+            Y:<input id="y_pos" type="number" min="0" value="0" required />
+            Z:<input id="z_pos" type="number" min="0" value="0" required /><br />
+            </div>
+            <div>
+                チャットパレット<br />
+                ダイスボット指定:<select id="dicebot">
+                    <option value="" selected>ダイスボット指定なし</option>
+                </select><br />
+                <textarea id="chat_pallet"></textarea>
+            </div>
+        </div>
+        <div class="image_area">
+            画像設定:<input id="image_file" type="file" accept="image/*" /><br />
+            <input id="image_clear_button" type="reset" value="画像クリア" onclick="clearImage();" /><br />
+            <div class="preview_area">
+                <img id="image_preview" class="no-refect" hidden />
+            </div>
+            <label>左右反転:<input id="x_lotate" type="checkbox" /></label>
+            <label>上下反転:<input id="y_lotate" type="checkbox" /></label>
+        </div>
+    </div>
+    <div class="under_area">
+        <input id="generate_button" type="button" value="コマ作成" onclick="generateCharactor();" />
+        <div id="message_area">
+        </div>
+    </div>
+    <hr />
+    <details id="information" close>
+        <summary>使い方の説明</summary>
+        <br />
+        <details open>
+            <summary>ツールの概要</summary>
+            このツールは、ゲームマスターが多数のNPCを設置、使用することを想定して作られたツールです。<br />
+            名前、画像を設定してチャットパレットにセリフをコピーアンドペーストして、さくっとNPCコマを作成する。<br />
+            そういった用途を想定して作られたものです。<br />
+            各種、入力箇所に入力してから、コマ作成ボタンを押すとZIPファイルが生成されます。<br />
+            正常にコマが生成できなかった場合、エラーメッセージが表示されます。<br />
+        </details>
+        <br />
+        <details close>
+            <summary>注意事項</summary>
+            必須の項目は、名前、サイズ、テーブル座標です。<br />
+            サイズは小数点以下も設定できます。 (例:1.5 など)<br />
+            チャットパレット設定は、コマを右クリックして表示されるチャットパレットの内容です。<br />
+            画像を指定できます。画像なしでもコマは作成できます。<br />
+            左右反転、上下反転を指定することで、配置されるコマが回転した状態で配置されます。<br />
+        </details>
+        <br />
+        <details close>
+            <summary>座標について</summary>
+            最初に読み込みを終えたときの視点を基準に、「X」は左右の軸、「Y」は前後の軸、「Z」は高さの軸にそれぞれ対応しています。<br />
+            <br />
+            初期値(X:0,Y:0,Z:0)のまま、変更しなくても問題ありません。<br />
+        </details>
+        <br />
+    </details>
+    <hr />
+    <div>
+        <details close>
+            <summary>更新履歴</summary>
+            2020/02/01: version 1.0.0   作成
+        </details>
+        <br />
+        <details close>
+            <summary>権利表記</summary>
+            使用しているライブラリ:JSZip,crypto-js,FileSaver<br />
+            作った人:<a href="https://twitter.com/eof_trpg">えおふ</a><br />
+            著作権は放棄しません。動作の保証はありません。<br />
+            改変や再配布はご自由にどうぞ。<br />
+        </details>
+        <br />
+        <a href="#" download="./content/udon_npc_maker.zip">udon_npc_maker.zip[DOWNLOAD]</a>
+    </div>
+</body>
+</html>
